@@ -32,11 +32,11 @@ namespace DTWorlds.Mobiles.AttackTypes
         public void Attack(int direction)
         {
             isAttacking = true;
-            Debug.Log(isAttacking);
             animationHandler.PlayAttackingAnimation(direction, false);
         }
 
-        private void AttackingEnds(){
+        private void AttackingEnds()
+        {
             isAttacking = false;
         }
     }

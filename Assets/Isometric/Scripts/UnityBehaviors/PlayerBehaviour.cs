@@ -12,6 +12,8 @@ namespace DTWorlds.UnityBehaviours
         public FixedJoystick joystick;
 
         private Player player;
+        float attackRate = 0.5f;
+        float nextAttack = 0;
 
         private void buildPlayer()
         {
@@ -26,6 +28,11 @@ namespace DTWorlds.UnityBehaviours
             buildPlayer();
         }
 
+        void Update()
+        {
+
+        }
+
         // Update is called once per frame
         void FixedUpdate()
         {
@@ -34,7 +41,11 @@ namespace DTWorlds.UnityBehaviours
 
         public void Attack()
         {
-            player.Attack();
+            if (Time.time > nextAttack)
+            {
+                nextAttack = Time.time + attackRate;
+                player.Attack();
+            }
         }
 
 
