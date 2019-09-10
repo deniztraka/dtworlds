@@ -10,11 +10,17 @@ namespace DTWorlds.Mobiles.AttackTypes
     {
         private GameObject weaponSlot;
         private AttackingAnimationHandler animationHandler;
-
+        private bool isAttacking;
+        public bool IsAttacking
+        {
+            get { return isAttacking; }
+            set { isAttacking = value; }
+        }
         public MeleeAttack(GameObject weaponSlot, AttackingAnimationHandler animationHandler)
         {
             this.animationHandler = animationHandler;
             this.weaponSlot = weaponSlot;
+            animationHandler.AttackEnds.AddListener(AttackingEnds);
         }
 
         public GameObject WeaponSlot
@@ -25,8 +31,13 @@ namespace DTWorlds.Mobiles.AttackTypes
 
         public void Attack(int direction)
         {
-            Debug.Log("MeleeAttack");
+            isAttacking = true;
+            Debug.Log(isAttacking);
             animationHandler.PlayAttackingAnimation(direction, false);
+        }
+
+        private void AttackingEnds(){
+            isAttacking = false;
         }
     }
 

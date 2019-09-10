@@ -51,7 +51,10 @@ namespace DTWorlds.Mobiles
 
         public void Move()
         {
-            CurrentDirection = this.movementType.Move();
+            if (!this.currentAttackType.IsAttacking)
+            {
+                CurrentDirection = this.movementType.Move();
+            }
         }
 
         public void Attack()

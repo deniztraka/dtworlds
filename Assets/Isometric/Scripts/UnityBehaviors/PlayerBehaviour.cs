@@ -16,7 +16,8 @@ namespace DTWorlds.UnityBehaviours
         private void buildPlayer()
         {
             player = new Player(gameObject, 1);
-            player.SetMovementType(new IsometricMovement(new JoyStickMovementInput(joystick)));
+            //player.SetMovementType(new IsometricMovement(new JoyStickMovementInput(joystick)));
+            player.SetMovementType(new IsometricMovement(new KeyboardMovementInput()));
         }
 
         // Start is called before the first frame update
