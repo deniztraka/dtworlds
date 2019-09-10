@@ -71,7 +71,7 @@ namespace DTWorlds.Mobiles
         }
 
         public float GetAttackRate(){
-            //stamina ticks =  current stamina / max stamina
+            //stamina ticks = max stamina / current stamina
             //float attackRate = ((Base Weapon Speed - Stamina Ticks) * (100.0 / (100 + Swing Speed Increase))) always round down
             return 1f;
         }

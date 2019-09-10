@@ -34,12 +34,12 @@ namespace DTWorlds.Mobiles.AttackTypes
             isAttacking = true;
             animationHandler.SetAttackSpeedMultiplier(speedMultiplier);
             animationHandler.PlayAttackingAnimation(direction, false);
-            Debug.Log("attacked");
+            //Debug.Log("attacked");
         }
 
         private void AttackingEnds()
         {
-            Debug.Log("bitti");
+            //Debug.Log("bitti");
             isAttacking = false;
         }
     }
