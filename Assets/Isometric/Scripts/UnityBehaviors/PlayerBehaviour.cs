@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DTWorlds.Mobiles;
 using DTWorlds.Mobiles.MovementTypes;
+using DTWorlds.Mobiles.MovementInputs;
 using UnityEngine;
 
 namespace DTWorlds.UnityBehaviours
@@ -13,7 +14,7 @@ namespace DTWorlds.UnityBehaviours
         private Player player;
 
         private void buildPlayer()
-        {            
+        {
             player = new Player(gameObject, 1);
             player.SetMovementType(new IsometricMovement(new JoyStickMovementInput(joystick)));
         }
@@ -28,6 +29,11 @@ namespace DTWorlds.UnityBehaviours
         void FixedUpdate()
         {
             player.Move();
+        }
+
+        public void Attack()
+        {
+            player.Attack();
         }
 
 

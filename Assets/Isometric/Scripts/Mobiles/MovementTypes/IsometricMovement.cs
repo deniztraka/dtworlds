@@ -12,9 +12,11 @@ namespace DTWorlds.Mobiles.MovementTypes
         private float movementSpeed;
         private GameObject gameObject;
 
-        private AnimationHandler animationHandler;
+        private MovementAnimationHandler animationHandler;
 
-        IMovementAxis movementAxis;
+        private IMovementAxis movementAxis;
+
+        public IMovementAxis MovementAxis { get => movementAxis; }
 
         public float MovementSpeed
         {
@@ -32,12 +34,16 @@ namespace DTWorlds.Mobiles.MovementTypes
             }
         }
 
-        private void setCurrentAnimation(Vector2 movement)
+
+        //returns currnet direction index
+        private int? setCurrentAnimation(Vector2 movement)
         {
             if (animationHandler != null)
             {
-                animationHandler.SetCharacterMovementAnimation(movement, false);
+               return animationHandler.SetCharacterMovementAnimation(movement, false);
             }
+
+            return null;
         }
 
         public IsometricMovement(IMovementAxis movementAxis)
@@ -54,11 +60,12 @@ namespace DTWorlds.Mobiles.MovementTypes
             var animationSpriteTransform = gameObject.transform.Find("AnimationSprite");
             if (animationSpriteTransform != null)
             {
-                animationHandler = animationSpriteTransform.gameObject.GetComponent<AnimationHandler>();
+                animationHandler = animationSpriteTransform.gameObject.GetComponent<MovementAnimationHandler>();
             }
         }
 
-        public void Move()
+        //returns current direction index
+        public int? Move()
         {
             Vector2 currentPos = rigidbody.position;
 
@@ -70,10 +77,10 @@ namespace DTWorlds.Mobiles.MovementTypes
             Vector2 movement = inputVector * movementSpeed * 1f;
             Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
             rigidbody.MovePosition(newPos);
-            setCurrentAnimation(movement);
+            return setCurrentAnimation(movement);
         }
 
-        
+
     }
 }
 

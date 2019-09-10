@@ -4,7 +4,7 @@ using UnityEngine;
 namespace DTWorlds.UnityBehaviours
 {
 
-    public class AnimationHandler : MonoBehaviour
+    public class MovementAnimationHandler : MonoBehaviour
     {
         public static readonly string[] staticDirections = { "human_base_m_idle_n", "human_base_m_idle_nw", "human_base_m_idle_w", "human_base_m_idle_sw", "human_base_m_idle_s", "human_base_m_idle_se", "human_base_m_idle_e", "human_base_m_idle_ne" };
 
@@ -25,7 +25,7 @@ namespace DTWorlds.UnityBehaviours
         }
 
 
-        public void SetCharacterMovementAnimation(Vector2 direction, bool isRunning)
+        public int SetCharacterMovementAnimation(Vector2 direction, bool isRunning)
         {
 
             //use the Run states by default
@@ -56,7 +56,7 @@ namespace DTWorlds.UnityBehaviours
 
             if (lastAnimationName == animationName)
             {
-                return;
+                return lastDirection;
             }
             //play base character animation
             animator.Play(animationName, -1, 0);
@@ -72,6 +72,7 @@ namespace DTWorlds.UnityBehaviours
             }
 
             lastAnimationName = animationName;
+            return lastDirection;
         }
 
         //helper functions
@@ -108,12 +109,6 @@ namespace DTWorlds.UnityBehaviours
             }
             return result;
         }
-
-
-
-
-
-
 
         //this function converts a string array to a int (animator hash) array.
         public static int[] AnimatorStringArrayToHashArray(string[] animationArray)

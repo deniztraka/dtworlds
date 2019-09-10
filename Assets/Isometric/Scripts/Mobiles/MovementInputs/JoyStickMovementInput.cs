@@ -1,21 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class JoyStickMovementInput : IMovementAxis
+namespace DTWorlds.Mobiles.MovementInputs
 {
-    FixedJoystick joystick;
-    public JoyStickMovementInput(FixedJoystick joystick)
+    public class JoyStickMovementInput : IMovementAxis
     {
-        this.joystick = joystick;
-    }
-    public float GetXAxis()
-    {
-        return joystick.Horizontal;
-    }
+        FixedJoystick joystick;
+        public JoyStickMovementInput(FixedJoystick joystick)
+        {
+            this.joystick = joystick;
+        }
+        public float GetXAxis()
+        {
+            return joystick.Horizontal;
+        }
 
-    public float GetYAxis()
-    {
-        return joystick.Vertical;
+        public float GetYAxis()
+        {
+            return joystick.Vertical;
+        }
     }
 }
