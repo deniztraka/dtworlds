@@ -41,6 +41,7 @@ namespace DTWorlds.UnityBehaviours
 
         public void Attack()
         {
+            //attackRate = ((Base Weapon Speed - Stamina Ticks) * (100.0 / (100 + Swing Speed Increase))) always round down
             if (Time.time > nextAttack)
             {
                 nextAttack = Time.time + attackRate;
