@@ -15,6 +15,11 @@ namespace DTWorlds.UnityBehaviours
         float attackRate = 0.5f;
         float nextAttack = 0;
 
+        private bool isAtacking = false;
+        public void SetAttacking(bool state){
+            this.isAtacking = state;
+        }
+
         private void buildPlayer()
         {
             player = new Player(gameObject, 1);
@@ -30,7 +35,9 @@ namespace DTWorlds.UnityBehaviours
 
         void Update()
         {
-
+            if(isAtacking){
+                Attack();
+            }
         }
 
         // Update is called once per frame
@@ -39,7 +46,7 @@ namespace DTWorlds.UnityBehaviours
             player.Move();
         }
 
-        public void Attack()
+        private void Attack()
         {
             //attackRate = ((Base Weapon Speed - Stamina Ticks) * (100.0 / (100 + Swing Speed Increase))) always round down
             if (Time.time > nextAttack)
