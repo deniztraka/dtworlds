@@ -17,7 +17,6 @@ namespace DTWorlds.Mobiles
         private IAttackType currentAttackType;
 
         public int? CurrentDirection;
-        public bool isAttacking;
 
         public float MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
 
@@ -29,7 +28,6 @@ namespace DTWorlds.Mobiles
         {
             this.gameObject = gameObject;
             this.movementSpeed = movementSpeed;
-            this.isAttacking = false;
 
             //setting up attacking system.
             var animationSpriteTransform = gameObject.transform.Find("AnimationSprite");
@@ -60,6 +58,11 @@ namespace DTWorlds.Mobiles
         public void Attack()
         {
             this.currentAttackType.Attack(CurrentDirection ?? 0);
+        }
+
+        public bool IsAttacking()
+        {
+            return this.currentAttackType.IsAttacking;
         }
 
         public void ChangeAttackType(int index)

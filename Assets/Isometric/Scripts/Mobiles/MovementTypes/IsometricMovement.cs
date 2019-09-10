@@ -71,7 +71,7 @@ namespace DTWorlds.Mobiles.MovementTypes
 
             float horizontalInput = movementAxis.GetXAxis();
             float verticalInput = movementAxis.GetYAxis();
-            Debug.LogFormat("{0}-{1}", horizontalInput, verticalInput);
+
             Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
             //inputVector = Vector2.ClampMagnitude(inputVector, 1);
             Vector2 movement = inputVector * movementSpeed * 1f;
