@@ -12,6 +12,10 @@ namespace DTWorlds.UnityBehaviours
 
         public UnityEvent AttackEnds;
 
+        private float attackSpeedMultiplier;
+        private const float minAttackSpeedMultiplier = 1.2f;
+        private const float defaultSpeedMultiplier = 1f;
+
         Animator animator;
 
         private void Awake()
@@ -20,15 +24,24 @@ namespace DTWorlds.UnityBehaviours
             animator = GetComponent<Animator>();
         }
 
+        public void SetAttackSpeedMultiplier(float multiplier)
+        {
+            //attackSpeedMultiplier = multiplier <= minAttackSpeedMultiplier ? minAttackSpeedMultiplier : multiplier;
+            attackSpeedMultiplier = multiplier;
+        }
+
         public void PlayAttackingAnimation(int currentDirectionIndex, bool isRanged)
         {
-            animator.Play(isRanged ? attackingBowDirections[currentDirectionIndex] : attackingDirections[currentDirectionIndex]);
+            var animationName = isRanged ? attackingBowDirections[currentDirectionIndex] : attackingDirections[currentDirectionIndex];
+            animator.SetFloat("speed", attackSpeedMultiplier);
+            animator.Play(animationName);
         }
 
         public void AttackEnded()
         {
             if (AttackEnds != null)
             {
+                animator.SetFloat("speed", defaultSpeedMultiplier);
                 AttackEnds.Invoke();
             }
         }

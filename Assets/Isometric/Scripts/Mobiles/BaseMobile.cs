@@ -56,8 +56,8 @@ namespace DTWorlds.Mobiles
         }
 
         public void Attack()
-        {
-            this.currentAttackType.Attack(CurrentDirection ?? 0);
+        {            
+            this.currentAttackType.Attack(CurrentDirection ?? 0, 1/GetAttackRate());
         }
 
         public bool IsAttacking()
@@ -68,6 +68,12 @@ namespace DTWorlds.Mobiles
         public void ChangeAttackType(int index)
         {
             this.currentAttackType = this.attackTypes[index];
+        }
+
+        public float GetAttackRate(){
+            //stamina ticks =  current stamina / max stamina
+            //float attackRate = ((Base Weapon Speed - Stamina Ticks) * (100.0 / (100 + Swing Speed Increase))) always round down
+            return 1f;
         }
     }
 }

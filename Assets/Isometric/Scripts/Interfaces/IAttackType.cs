@@ -9,7 +9,7 @@ namespace DTWorlds.Interfaces
         GameObject WeaponSlot { get; set; }
         bool IsAttacking { get; }
 
-        void Attack(int direction);
+        void Attack(int direction, float attackSpeedMultiplier);
     }
 }
 

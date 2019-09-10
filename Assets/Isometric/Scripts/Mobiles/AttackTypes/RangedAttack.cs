@@ -31,8 +31,9 @@ namespace DTWorlds.Mobiles.AttackTypes
             set { weaponSlot = value; }
         }
 
-        public void Attack(int direction)
+        public void Attack(int direction, float speedMultiplier)
         {
+            animationHandler.SetAttackSpeedMultiplier(speedMultiplier);
             animationHandler.PlayAttackingAnimation(direction, true);
         }
 

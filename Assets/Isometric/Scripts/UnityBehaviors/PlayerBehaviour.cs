@@ -12,7 +12,7 @@ namespace DTWorlds.UnityBehaviours
         public FixedJoystick joystick;
 
         private Player player;
-        float attackRate = 0.5f;
+        
         float nextAttack = 0;
 
         private bool isAtacking = false;
@@ -51,7 +51,7 @@ namespace DTWorlds.UnityBehaviours
             //attackRate = ((Base Weapon Speed - Stamina Ticks) * (100.0 / (100 + Swing Speed Increase))) always round down
             if (Time.time > nextAttack)
             {
-                nextAttack = Time.time + attackRate;
+                nextAttack = Time.time + player.GetAttackRate();
                 player.Attack();
             }
         }

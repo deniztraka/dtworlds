@@ -29,14 +29,17 @@ namespace DTWorlds.Mobiles.AttackTypes
             set { weaponSlot = value; }
         }
 
-        public void Attack(int direction)
+        public void Attack(int direction, float speedMultiplier)
         {
             isAttacking = true;
+            animationHandler.SetAttackSpeedMultiplier(speedMultiplier);
             animationHandler.PlayAttackingAnimation(direction, false);
+            Debug.Log("attacked");
         }
 
         private void AttackingEnds()
         {
+            Debug.Log("bitti");
             isAttacking = false;
         }
     }
