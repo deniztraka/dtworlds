@@ -11,7 +11,7 @@ namespace DTWorlds.Interfaces
 
         IMovementAxis MovementAxis { get; }
 
-        int? Move();
+        int? Move(float? speed);
         void Initialize(GameObject gameObject, float movementSpeed);
     }
 }

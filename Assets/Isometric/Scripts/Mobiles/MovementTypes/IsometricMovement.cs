@@ -36,11 +36,11 @@ namespace DTWorlds.Mobiles.MovementTypes
 
 
         //returns currnet direction index
-        private int? setCurrentAnimation(Vector2 movement)
+        private int? setCurrentAnimation(Vector2 movement, bool isRunning)
         {
             if (animationHandler != null)
             {
-                return animationHandler.SetCharacterMovementAnimation(movement, false);
+                return animationHandler.SetCharacterMovementAnimation(movement, isRunning);
             }
 
             return null;
@@ -65,8 +65,13 @@ namespace DTWorlds.Mobiles.MovementTypes
         }
 
         //returns current direction index
-        public int? Move()
+        public int? Move(float? speed)
         {
+            if (speed != null && speed.HasValue)
+            {
+                movementSpeed = speed.Value;
+            }
+            
             Vector2 currentPos = rigidbody.position;
 
             float horizontalInput = movementAxis.GetXAxis();
@@ -77,7 +82,7 @@ namespace DTWorlds.Mobiles.MovementTypes
             Vector2 movement = inputVector * movementSpeed * 1f;
             Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
             rigidbody.MovePosition(newPos);
-            return setCurrentAnimation(movement);
+            return setCurrentAnimation(movement, movementSpeed > 1);
         }
 
 

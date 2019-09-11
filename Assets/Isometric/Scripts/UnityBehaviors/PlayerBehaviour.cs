@@ -12,11 +12,12 @@ namespace DTWorlds.UnityBehaviours
         public FixedJoystick joystick;
 
         private Player player;
-        
+
         float nextAttack = 0;
 
         private bool isAtacking = false;
-        public void SetAttacking(bool state){
+        public void SetAttacking(bool state)
+        {
             this.isAtacking = state;
         }
 
@@ -35,7 +36,8 @@ namespace DTWorlds.UnityBehaviours
 
         void Update()
         {
-            if(isAtacking){
+            if (isAtacking)
+            {
                 Attack();
             }
         }
@@ -56,6 +58,9 @@ namespace DTWorlds.UnityBehaviours
             }
         }
 
-
+        public void SetRunning(bool val)
+        {
+            player.IsRunning = val;
+        }
     }
 }

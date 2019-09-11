@@ -18,6 +18,29 @@ namespace DTWorlds.Mobiles
 
         public int? CurrentDirection;
 
+        private bool isRunning;
+        public bool IsRunning
+        {
+            get
+            {
+                return isRunning;
+            }
+            set
+            {
+                if (value)
+                {
+                    //calculate movement speed in this case running
+                    movementSpeed = 2f;
+                }
+                else
+                {
+                    //calculate movement speed in this case walking
+                    movementSpeed = 1f;
+                }
+                isRunning = value;
+            }
+        }
+
         public float MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
 
         public BaseMobile()
@@ -51,13 +74,13 @@ namespace DTWorlds.Mobiles
         {
             if (!this.currentAttackType.IsAttacking)
             {
-                CurrentDirection = this.movementType.Move();
+                CurrentDirection = this.movementType.Move(movementSpeed);
             }
         }
 
         public void Attack()
-        {            
-            this.currentAttackType.Attack(CurrentDirection ?? 0, 1/GetAttackRate());
+        {
+            this.currentAttackType.Attack(CurrentDirection ?? 0, 1 / GetAttackRate());
         }
 
         public bool IsAttacking()
@@ -70,7 +93,8 @@ namespace DTWorlds.Mobiles
             this.currentAttackType = this.attackTypes[index];
         }
 
-        public float GetAttackRate(){
+        public float GetAttackRate()
+        {
             //stamina ticks = max stamina / current stamina
             //float attackRate = ((Base Weapon Speed - Stamina Ticks) * (100.0 / (100 + Swing Speed Increase))) always round down
             return 1f;
