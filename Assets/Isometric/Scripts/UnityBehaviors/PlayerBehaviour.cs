@@ -13,6 +13,11 @@ namespace DTWorlds.UnityBehaviours
 
         private Player player;
 
+        public Player Player
+        {
+            get { return player; }
+        }
+
         float nextAttack = 0;
 
         private bool isAtacking = false;
@@ -26,12 +31,17 @@ namespace DTWorlds.UnityBehaviours
             player = new Player(gameObject, 1);
             player.SetMovementType(new IsometricMovement(new JoyStickMovementInput(joystick)));
             //player.SetMovementType(new IsometricMovement(new KeyboardMovementInput()));
+        }        
+
+        void Awake()
+        {
+             buildPlayer();
         }
 
         // Start is called before the first frame update
         void Start()
         {
-            buildPlayer();
+             
         }
 
         void Update()
@@ -60,7 +70,7 @@ namespace DTWorlds.UnityBehaviours
 
         public void SetRunning(bool val)
         {
-            player.IsRunning = val;
+            player.IsRunning = val;           
         }
     }
 }

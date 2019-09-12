@@ -8,6 +8,7 @@ namespace DTWorlds.Mobiles
     {
         public Player(GameObject animationSprite, float movementSpeed) : base(animationSprite, movementSpeed)
         {
+
         }
     }
 }

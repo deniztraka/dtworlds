@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-namespace DTWorlds.UnityBehaviours
+namespace DTWorlds.UnityBehaviours.UI
 {
     public class RunningToggleBehaviour : MonoBehaviour
     {
@@ -35,6 +35,13 @@ namespace DTWorlds.UnityBehaviours
             }
         }
 
+        void Update()
+        {
+            if(this.playerBehaviour.Player.Stamina.CurrentValue <= 0 && isRunning){
+                Toggle();
+            }
+        }
+
         public void Toggle()
         {
 
@@ -50,7 +57,8 @@ namespace DTWorlds.UnityBehaviours
                 image.sprite = WalkingSprite;
             }
 
-            if(playerBehaviour != null){
+            if (playerBehaviour != null)
+            {
                 playerBehaviour.SetRunning(isRunning);
             }
         }

@@ -4,6 +4,8 @@ using DTWorlds.Interfaces;
 using UnityEngine;
 using DTWorlds.Mobiles.AttackTypes;
 using DTWorlds.UnityBehaviours;
+using DTWorlds.Mobiles.DamagableProperties;
+
 namespace DTWorlds.Mobiles
 {
     public abstract class BaseMobile
@@ -11,14 +13,21 @@ namespace DTWorlds.Mobiles
         private GameObject gameObject;
         private float movementSpeed;
         private IMovement movementType;
-        private IAttackType attackType;
+        private IAttackType attackType;        
 
         private List<IAttackType> attackTypes;
         private IAttackType currentAttackType;
 
+        public BaseDamagableProperty Health;
+
+        public BaseDamagableProperty Stamina;
+
+        public BaseDamagableProperty Hunger;
+
         public int? CurrentDirection;
 
         private bool isRunning;
+
         public bool IsRunning
         {
             get
@@ -42,15 +51,21 @@ namespace DTWorlds.Mobiles
         }
 
         public float MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
+       
 
         public BaseMobile()
         {
+            
         }
 
         public BaseMobile(GameObject gameObject, float movementSpeed)
         {
             this.gameObject = gameObject;
             this.movementSpeed = movementSpeed;
+
+            Health = new Health(this);
+            Stamina = new Stamina(this);
+            Hunger = new Hunger(this);
 
             //setting up attacking system.
             var animationSpriteTransform = gameObject.transform.Find("AnimationSprite");
@@ -75,6 +90,12 @@ namespace DTWorlds.Mobiles
             if (!this.currentAttackType.IsAttacking)
             {
                 CurrentDirection = this.movementType.Move(movementSpeed);
+                
+                if(isRunning && !(this.movementType.MovementAxis.GetXAxis() == 0 && this.movementType.MovementAxis.GetYAxis() == 0)){
+                    Stamina.CurrentValue -= 0.1f;
+                }else{
+                    Stamina.CurrentValue += 0.01f;
+                }
             }
         }
 
