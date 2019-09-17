@@ -72,5 +72,9 @@ namespace DTWorlds.UnityBehaviours
         {
             player.IsRunning = val;           
         }
+
+        public void ModifyHunger(float amount){
+            player.Hunger.CurrentValue += amount;
+        }
     }
 }
