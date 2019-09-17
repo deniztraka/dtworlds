@@ -7,7 +7,7 @@ namespace TimeOfTheDay
     public class IconBehaviour : UIBehaviour
     {
         float targetAngle = 360;
-        float turnSpeed = 0.1f;
+        //float turnSpeed = 0.1f;
 
         void Start()
         {
