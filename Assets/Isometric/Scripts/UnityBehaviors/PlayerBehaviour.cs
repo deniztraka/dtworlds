@@ -31,17 +31,11 @@ namespace DTWorlds.UnityBehaviours
             player = new Player(gameObject, 1);
             player.SetMovementType(new IsometricMovement(new JoyStickMovementInput(joystick)));
             //player.SetMovementType(new IsometricMovement(new KeyboardMovementInput()));
-        }        
+        }
 
         void Awake()
         {
-             buildPlayer();
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-             
+            buildPlayer();
         }
 
         void Update()
@@ -52,7 +46,6 @@ namespace DTWorlds.UnityBehaviours
             }
         }
 
-        // Update is called once per frame
         void FixedUpdate()
         {
             player.Move();
@@ -70,10 +63,11 @@ namespace DTWorlds.UnityBehaviours
 
         public void SetRunning(bool val)
         {
-            player.IsRunning = val;           
+            player.IsRunning = val;
         }
 
-        public void ModifyHunger(float amount){
+        public void ModifyHunger(float amount)
+        {
             player.Hunger.CurrentValue += amount;
         }
     }
