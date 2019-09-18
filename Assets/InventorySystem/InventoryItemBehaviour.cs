@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TimeOfTheDay
+
+namespace InventorySystem
 {
 
-    public class ItemSlotBehaviour : MonoBehaviour
+    public class InventoryItemBehaviour : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
