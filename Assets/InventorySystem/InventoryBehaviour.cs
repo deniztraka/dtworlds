@@ -8,7 +8,7 @@ namespace InventorySystem
     {
         public GameObject InventorySlotPrefab;
         public GameObject ExampleInventoryItemPrefab;
-        private int sizeX = 7;
+        private int sizeX = 4;
         private int sizeY = 4;
         private bool isInitialized;
         private GameObject[][] SlotGrid;
