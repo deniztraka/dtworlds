@@ -8,8 +8,8 @@ namespace InventorySystem
     {
         public GameObject InventorySlotPrefab;
         public GameObject ExampleInventoryItemPrefab;
-        private int sizeX = 4;
-        private int sizeY = 4;
+        private int sizeX = 5;
+        private int sizeY = 7;
         private bool isInitialized;
         private GameObject[][] SlotGrid;
 
@@ -17,7 +17,10 @@ namespace InventorySystem
         void Start()
         {
             Initialize();
-            PlaceExampleItem();
+            if (ExampleInventoryItemPrefab != null)
+            {
+                PlaceExampleItem();
+            }
         }
 
         void Initialize()
