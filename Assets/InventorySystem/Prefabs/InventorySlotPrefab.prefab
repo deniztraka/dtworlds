@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 885745773598845749}
   - component: {fileID: 885745773598853087}
   - component: {fileID: 2174729671834756272}
+  - component: {fileID: 1878737970}
   m_Layer: 5
   m_Name: InventorySlotPrefab
   m_TagString: Untagged
@@ -91,7 +92,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellType: 0
   empty: {r: 0.32156864, g: 0.32156864, b: 0.32156864, a: 0.29411766}
-  full: {r: 0.32156864, g: 0.32156864, b: 0.32156864, a: 0.29411766}
+  full: {r: 0, g: 0, b: 0, a: 0}
+  selectedColor: {r: 0, g: 0, b: 0, a: 0.6862745}
   unlimitedSource: 0
 --- !u!114 &2174729671834756272
 MonoBehaviour:
@@ -102,6 +104,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 885745773588098863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a9d3c3a470143aadad7025fba731, type: 3}
+  m_Script: {fileID: 11500000, guid: f7f84c99ff0e0fb4a933c2d5317f80ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1878737970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885745773588098863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2174729671834756272}
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null

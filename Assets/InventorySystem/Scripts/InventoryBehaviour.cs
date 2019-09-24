@@ -43,6 +43,7 @@ namespace InventorySystem
                     SlotGrid[x][y] = Instantiate(InventorySlotPrefab, Vector3.zero, Quaternion.identity, gameObject.transform);
                 }
             }
+            isInitialized = true;
         }
 
         // Update is called once per frame
