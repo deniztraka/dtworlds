@@ -46,10 +46,48 @@ namespace InventorySystem
             isInitialized = true;
         }
 
-        // Update is called once per frame
-        void Update()
+        public void AddItem(DragAndDropItem item)
         {
+            var emptySlot = GetEmptySlot();
+            if (emptySlot == null)
+            {
+                return;
+            }
 
+            emptySlot.AddItem(item);
+        }
+
+        public InventorySlotBehaviour GetEmptySlot()
+        {
+            if (!isInitialized)
+            {
+                return null;
+            }
+
+            InventorySlotBehaviour slotToBeReturned = null;
+
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    if (SlotGrid[x][y] != null)
+                    {
+                        var inventoryItem = SlotGrid[x][y].GetComponentInChildren<DragAndDropItem>();
+                        if (inventoryItem == null)
+                        {
+                            slotToBeReturned = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>();
+                            break;
+                        }
+                    }
+                }
+
+                if (slotToBeReturned != null)
+                {
+                    break;
+                }
+            }
+
+            return slotToBeReturned;
         }
 
         void PlaceExampleItem()
