@@ -13,8 +13,10 @@ namespace InventorySystem.UI
 
         void Start()
         {
-            ItemImage.sprite = null;
+            ItemImage.sprite = null;            
             tempColor = ItemImage.color;
+            tempColor.a = 0;
+            ItemImage.color = tempColor;
         }
 
         void OnInventoryItemSelected(IInventoryItem inventoryItem)
