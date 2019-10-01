@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08daf5fa09ae25409b48a4cd59c4b6c, type: 3}
+  m_Name: ShortPants
+  m_EditorClassIdentifier: 
+  ItemName: Short Pants
+  Icon: {fileID: 7865619620764070842, guid: d2f7535940953f84d8ff0ca3a73efceb, type: 3}
+  ItemPrefab: {fileID: 5678345001401821203, guid: 511bbeba69ee6ea4ab42142699a12c20,
+    type: 3}

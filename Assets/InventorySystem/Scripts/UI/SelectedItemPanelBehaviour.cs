@@ -19,11 +19,11 @@ namespace InventorySystem.UI
             ItemImage.color = tempColor;
         }
 
-        void OnInventoryItemSelected(IInventoryItem inventoryItem)
+        void OnInventoryItemSelected(InventoryItemBehaviour inventoryItem)
         {
             if (inventoryItem != null)
             {
-                ItemImage.sprite = inventoryItem.Icon.sprite;
+                ItemImage.sprite = inventoryItem.ItemInstance.ItemTemplate.Icon;
                 tempColor.a = 1;
                 ItemImage.color = tempColor;
             }

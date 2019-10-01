@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 669539752547087545}
   - component: {fileID: 669539752528042739}
   - component: {fileID: 669539752528039281}
+  - component: {fileID: -8112856068513984191}
   m_Layer: 5
   m_Name: InventoryItemPrefab
   m_TagString: Untagged
@@ -66,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: aca4d14f34d5ddf4e8170528623d5ba7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88,4 +89,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c67a56d62e94747b8f17db1b0ffc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipmentType: 1
+  equipmentType: 0
+--- !u!114 &-8112856068513984191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669539752533328869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c64065d78548c4e813c7fea190dcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

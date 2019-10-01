@@ -17,7 +17,7 @@ namespace DTWorlds.UnityBehaviours.UI
             if (isOpened)
             {
                 InventoryPanel.transform.localScale = new Vector3(0, 0, 0);     
-                           
+                VicinityPackBehaviour.Clear();
             }
             else
             {

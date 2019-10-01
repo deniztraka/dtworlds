@@ -4,12 +4,15 @@ using DTWorlds.Mobiles;
 using DTWorlds.Mobiles.MovementTypes;
 using DTWorlds.Mobiles.MovementInputs;
 using UnityEngine;
+using InventorySystem;
 
 namespace DTWorlds.UnityBehaviours
 {
     public class PlayerBehaviour : MonoBehaviour
     {
         public FixedJoystick joystick;
+
+        public InventoryBehaviour InventoryBehaviour;
 
         private Player player;
 

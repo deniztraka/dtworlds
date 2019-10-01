@@ -131,8 +131,8 @@ public class DragAndDropCell : MonoBehaviour, IDropHandler
             {
                 if ((item != null) && (sourceCell != this))
                 {
-                    if (item.equipmentType.Equals(equipmentType) || equipmentType.Equals(EquipmentType.Generic))
-                    {
+                    // if (item.equipmentType.Equals(equipmentType) || equipmentType.Equals(EquipmentType.Generic))
+                    // {
 
                         DropEventDescriptor desc = new DropEventDescriptor();
                         switch (cellType)                                       // Check this cell's type
@@ -204,7 +204,7 @@ public class DragAndDropCell : MonoBehaviour, IDropHandler
                                 break;
                         }
                     }
-                }
+                //}
             }
             if (item != null)
             {

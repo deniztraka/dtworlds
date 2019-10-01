@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using DTWorlds.Items.Behaviours;
 using UnityEngine;
 
 namespace InventorySystem
@@ -11,19 +13,15 @@ namespace InventorySystem
         private int sizeX = 5;
         private int sizeY = 7;
         private bool isInitialized;
-        private GameObject[][] SlotGrid;
+        public GameObject[][] SlotGrid;
 
         // Start is called before the first frame update
         void Start()
         {
-            Initialize();
-            if (ExampleInventoryItemPrefab != null)
-            {
-                PlaceExampleItem();
-            }
+            Initialize();            
         }
 
-        void Initialize()
+        protected void Initialize()
         {
             if (isInitialized)
             {
@@ -41,20 +39,24 @@ namespace InventorySystem
                 for (int y = 0; y < SlotGrid[x].Length; y++)
                 {
                     SlotGrid[x][y] = Instantiate(InventorySlotPrefab, Vector3.zero, Quaternion.identity, gameObject.transform);
+                    var slotBehaviour = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>();
+                    slotBehaviour.SlotIndex = String.Format("{0}_{1}", x, y);
                 }
             }
             isInitialized = true;
         }
 
-        public void AddItem(DragAndDropItem item)
+        public InventorySlotBehaviour AddItem(ItemBehaviour item)
         {
             var emptySlot = GetEmptySlot();
             if (emptySlot == null)
             {
-                return;
+                return null;
             }
 
-            emptySlot.AddItem(item);
+            emptySlot.AddItem(item.ItemInstance);
+
+            return emptySlot;
         }
 
         public InventorySlotBehaviour GetEmptySlot()
@@ -88,13 +90,6 @@ namespace InventorySystem
             }
 
             return slotToBeReturned;
-        }
-
-        void PlaceExampleItem()
-        {
-            var slotBehaviour = SlotGrid[0][0].GetComponent<InventorySlotBehaviour>();
-            var dragAndDropItemObj = Instantiate(ExampleInventoryItemPrefab, Vector3.zero, Quaternion.identity, gameObject.transform);
-            slotBehaviour.AddItem(dragAndDropItemObj.GetComponent<DragAndDropItem>());
         }
     }
 }

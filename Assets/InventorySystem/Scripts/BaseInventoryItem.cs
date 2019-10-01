@@ -3,24 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using InventorySystem.Interfaces;
 using UnityEngine.UI;
+using DTWorlds.Items;
 
 namespace InventorySystem
 {
-    public abstract class BaseInventoryItem : IInventoryItem
+    public abstract class BaseInventoryItem : MonoBehaviour
     {
-        private Image icon;
-        public Image Icon
-        {
-            get { return icon; }
-            set { icon = value; }
-        }
-        
-        private string name;
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        public BaseItem Item;
+
+        public GameObject ItemQuantityPanel;
+        public GameObject ItemTexturePanel;
         
     }
 }

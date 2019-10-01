@@ -1,22 +1,41 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using DTWorlds.Items;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 namespace InventorySystem
 {
 
     public class InventoryItemBehaviour : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField]
+        private ItemInstance itemInstance;
+        public ItemInstance ItemInstance
         {
-
+            get { return itemInstance; }
+            set
+            {
+                itemInstance = value;
+                SetItem();
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        internal void SetItem()
         {
+            var itemImage = GetComponent<Image>();
+            if (ItemInstance != null)
+            {
+                
+                itemImage.sprite = itemInstance.ItemTemplate.Icon;
+
+                var rectTransform = gameObject.GetComponent<RectTransform>();
+                rectTransform.anchoredPosition3D = new Vector3(0f, 0f, 0f);
+                rectTransform.anchoredPosition = new Vector2(0f, 0f);
+            }else{
+                itemImage.sprite = null;
+            }
 
         }
     }

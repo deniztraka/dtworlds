@@ -18,9 +18,7 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
 	public delegate void DragEvent(DragAndDropItem item);
 	public static event DragEvent OnItemDragStartEvent;                             // Drag start event
-	public static event DragEvent OnItemDragEndEvent;    
-	
-	public EquipmentType equipmentType = EquipmentType.Generic;                              // Drag end event
+	public static event DragEvent OnItemDragEndEvent;    							 // Drag end event
 
 	private static Canvas canvas;                                                   // Canvas for item drag operation
 	private static string canvasName = "DragAndDropCanvas";                   		// Name of canvas
