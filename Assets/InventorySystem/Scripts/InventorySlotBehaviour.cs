@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using InventorySystem.Interfaces;
-using InventorySystem.Items;
 using UnityEngine.UI;
 
 namespace InventorySystem
@@ -28,14 +27,17 @@ namespace InventorySystem
             dragAndDropCell.ToggleSelected();
             if (dragAndDropCell.IsSelected)
             {
-                gameObject.SendMessageUpwards("OnInventoryItemSelected", GetItem(), SendMessageOptions.DontRequireReceiver);
+                var item = GetItem();
+                if (item != null)
+                {
+                    gameObject.SendMessageUpwards("OnInventoryItemSelected", item, SendMessageOptions.DontRequireReceiver);
+                }
             }
-            else
-            {
-                gameObject.SendMessageUpwards("OnInventoryItemUnSelected", null, SendMessageOptions.DontRequireReceiver);
-            }
-
-
+            // }
+            // else
+            // {
+            //     gameObject.SendMessageUpwards("OnInventoryItemUnSelected", null, SendMessageOptions.DontRequireReceiver);
+            // }
         }
 
         public void AddItem(DragAndDropItem item)
@@ -50,11 +52,8 @@ namespace InventorySystem
             {
                 return null;
             }
-
-            var invItem = new TestItem();
-            invItem.Icon = dragAndDropItem.GetComponent<Image>();
-            invItem.Name = "hede";
-            return invItem;
+            //TODO: GET Selected Item;
+            return null;
         }
     }
 }
