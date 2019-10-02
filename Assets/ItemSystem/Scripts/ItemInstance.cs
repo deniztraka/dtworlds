@@ -10,10 +10,6 @@ namespace DTWorlds.Items
     public class ItemInstance
     {
         public BaseItem ItemTemplate;
-
-        public string ItemName;
-        public float Weight;
-        public int MaxStack;
         public int Quantity;
 
         public T getCopy<T>()

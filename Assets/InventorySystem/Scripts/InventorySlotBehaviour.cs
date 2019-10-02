@@ -22,9 +22,9 @@ namespace InventorySystem
 
         public bool IsSelected = false;
 
-        public delegate void InventorySlotEventHandler(ItemInstance inventoryItem);
-        public event InventorySlotEventHandler OnSelected;
-        public event InventorySlotEventHandler OnUnSelected;
+        //public delegate void InventorySlotEventHandler(ItemInstance inventoryItem);
+        //public event InventorySlotEventHandler OnSelected;
+        //public event InventorySlotEventHandler OnUnSelected;
 
         // Start is called before the first frame update
         void Awake()

@@ -29,7 +29,6 @@ namespace DTWorlds.Items
         public Sprite Icon;
         public float Weight;
         public int MaxStack;
-        public int Quantity;
         
         public ItemType Type;   
 

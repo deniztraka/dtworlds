@@ -46,6 +46,26 @@ namespace InventorySystem
             isInitialized = true;
         }
 
+        public InventorySlotBehaviour GetSelectedSlot()
+        {
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    if (SlotGrid[x][y] != null)
+                    {
+                        var slotBehaviour = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>();
+                        if (slotBehaviour.IsSelected && slotBehaviour.HasItem)
+                        {
+                            return slotBehaviour;
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
         public InventorySlotBehaviour AddItem(ItemBehaviour item)
         {
             var emptySlot = GetEmptySlot();
