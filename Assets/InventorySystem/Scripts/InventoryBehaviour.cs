@@ -16,7 +16,7 @@ namespace InventorySystem
         public GameObject[][] SlotGrid;
 
         // Start is called before the first frame update
-        void Start()
+        public virtual void Start()
         {
             Initialize();
         }

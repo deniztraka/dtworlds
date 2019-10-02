@@ -123,7 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemInstance:
     ItemTemplate: {fileID: 11400000, guid: afb9ea6e6489f1047b6ce1c02c9af593, type: 2}
-    ItemName: Short Pants
-    Weight: 0
-    MaxStack: 0
-    Quantity: 0
+    Quantity: 1

@@ -6,9 +6,11 @@ using UnityEngine.UI;
 using DTWorlds.Items;
 using static DragAndDropCell;
 using System;
+using InventorySystem.UI;
 
 namespace InventorySystem
 {
+
 
     public class InventorySlotBehaviour : MonoBehaviour
     {
@@ -60,8 +62,9 @@ namespace InventorySystem
                 var item = GetInventoryItem();
 
                 ToggleSelected();
-
-                gameObject.SendMessageUpwards(IsSelected ? "OnInventoryItemSelected" : "OnInventoryItemUnSelected", IsSelected ? item : null, SendMessageOptions.DontRequireReceiver);
+                
+                var message = new SelectedItemMessage(IsSelected ? item : null, GetComponentInParent<InventoryBehaviour>().GetType() == typeof(InventoryBehaviour));
+                gameObject.SendMessageUpwards(IsSelected ? "OnInventoryItemSelected" : "OnInventoryItemUnSelected", message, SendMessageOptions.DontRequireReceiver);
             }
         }
 
