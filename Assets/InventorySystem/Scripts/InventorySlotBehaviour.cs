@@ -4,6 +4,8 @@ using UnityEngine;
 using InventorySystem.Interfaces;
 using UnityEngine.UI;
 using DTWorlds.Items;
+using static DragAndDropCell;
+using System;
 
 namespace InventorySystem
 {
@@ -18,6 +20,8 @@ namespace InventorySystem
 
         public bool HasItem = false;
 
+        public bool IsSelected = false;
+
         public delegate void InventorySlotEventHandler(ItemInstance inventoryItem);
         public event InventorySlotEventHandler OnSelected;
         public event InventorySlotEventHandler OnUnSelected;
@@ -28,23 +32,44 @@ namespace InventorySystem
             dragAndDropCell = GetComponent<DragAndDropCell>();
         }
 
+        public void OnSimpleDragAndDropEvent(DropEventDescriptor desc)
+        {
+            gameObject.SendMessageUpwards("OnInventoryItemUnSelected", null, SendMessageOptions.DontRequireReceiver);
+
+            var sourceSlot = desc.sourceCell.GetComponent<InventorySlotBehaviour>();
+            sourceSlot.Refresh();
+
+            var targetSlot = desc.destinationCell.GetComponent<InventorySlotBehaviour>();
+            targetSlot.Refresh();
+        }
+
+        private void Refresh()
+        {
+            var inventoryItem = GetInventoryItem();
+            HasItem = inventoryItem != null;
+            IsSelected = false;
+            dragAndDropCell.UpdateBackgroundState(IsSelected);
+        }
+
+
         // Update is called once per frame
         public void OnClick()
         {
-            dragAndDropCell.ToggleSelected();
-            if (dragAndDropCell.IsSelected)
+            if (HasItem)
             {
                 var item = GetInventoryItem();
-                if (item != null)
-                {
-                    gameObject.SendMessageUpwards("OnInventoryItemSelected", item, SendMessageOptions.DontRequireReceiver);
-                }
+
+                ToggleSelected();
+
+                gameObject.SendMessageUpwards(IsSelected ? "OnInventoryItemSelected" : "OnInventoryItemUnSelected", IsSelected ? item : null, SendMessageOptions.DontRequireReceiver);
             }
-            // }
-            // else
-            // {
-            //     gameObject.SendMessageUpwards("OnInventoryItemUnSelected", null, SendMessageOptions.DontRequireReceiver);
-            // }
+        }
+
+        private void ToggleSelected()
+        {
+            IsSelected = !IsSelected;
+
+            dragAndDropCell.UpdateBackgroundState(IsSelected);
         }
 
         public void AddItem(ItemInstance item)
@@ -57,7 +82,7 @@ namespace InventorySystem
                 inventoryItemBehaviour.SetItem();
                 dragAndDropCell.AddItem(inventoryItem.GetComponent<DragAndDropItem>());
                 HasItem = true;
-            }         
+            }
         }
 
         public InventoryItemBehaviour GetInventoryItem()
@@ -67,15 +92,17 @@ namespace InventorySystem
             {
                 return null;
             }
-            
+
             return dragAndDropItem.GetComponent<InventoryItemBehaviour>();
         }
 
-        public void DeleteItem(){
+        public void DeleteItem()
+        {
             var inventoryItem = GetComponentInChildren<InventoryItemBehaviour>();
-            if(inventoryItem != null){
+            if (inventoryItem != null)
+            {
                 inventoryItem.ItemInstance = null;
-                Destroy(inventoryItem.gameObject);
+                HasItem = false;
             }
         }
     }
