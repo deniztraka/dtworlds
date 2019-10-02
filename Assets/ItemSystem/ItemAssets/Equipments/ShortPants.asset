@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Short Pants
   Icon: {fileID: 7865619620764070842, guid: d2f7535940953f84d8ff0ca3a73efceb, type: 3}
+  Weight: 0
+  MaxStack: 0
+  Quantity: 0
+  Type: 0
   ItemPrefab: {fileID: 5678345001401821203, guid: 511bbeba69ee6ea4ab42142699a12c20,
     type: 3}
