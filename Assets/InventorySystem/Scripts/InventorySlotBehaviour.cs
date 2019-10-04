@@ -7,6 +7,7 @@ using DTWorlds.Items;
 using static DragAndDropCell;
 using System;
 using InventorySystem.UI;
+using DTWorlds.Items.Behaviours;
 
 namespace InventorySystem
 {
@@ -43,6 +44,29 @@ namespace InventorySystem
 
             var targetSlot = desc.destinationCell.GetComponent<InventorySlotBehaviour>();
             targetSlot.Refresh();
+
+            var sourceTypeName = sourceSlot.GetComponentInParent<InventoryBehaviour>().GetType().Name;
+            var targetTypeName = desc.item.GetComponentInParent<InventoryBehaviour>().GetType().Name;
+
+            // Debug.Log(sourceSlot.GetComponentInParent<InventoryBehaviour>().GetType().Name + "__" +
+            //     desc.item.GetComponentInParent<InventoryBehaviour>().GetType().Name);
+
+            if (sourceTypeName.Equals("VicinityPackBehaviour") && targetTypeName.Equals("InventoryBehaviour"))
+            {
+                Debug.Log("pickedup from floor");
+                var vicinityBehaviour = sourceSlot.GetComponentInParent<VicinityPackBehaviour>();
+                vicinityBehaviour.DeleteRelatedItem(sourceSlot.SlotIndex);
+            }
+            else if (sourceTypeName.Equals("InventoryBehaviour") && targetTypeName.Equals("VicinityPackBehaviour"))
+            {
+                var draggedItemInstance = desc.item.GetComponentInParent<InventoryItemBehaviour>().ItemInstance;
+
+                var createdGameObject = GameObject.Instantiate(draggedItemInstance.ItemTemplate.ItemPrefab, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
+                var itemBehaviour = createdGameObject.GetComponent<ItemBehaviour>();
+                itemBehaviour.ItemInstance.Quantity = draggedItemInstance.Quantity;
+                var vicinityBehaviour = targetSlot.GetComponentInParent<VicinityPackBehaviour>();
+                vicinityBehaviour.AddItemRelation(targetSlot.SlotIndex, itemBehaviour.gameObject);
+            }
         }
 
         private void Refresh()
@@ -62,7 +86,7 @@ namespace InventorySystem
                 var item = GetInventoryItem();
 
                 ToggleSelected();
-                
+
                 var message = new SelectedItemMessage(IsSelected ? item : null, GetComponentInParent<InventoryBehaviour>().GetType() == typeof(InventoryBehaviour));
                 gameObject.SendMessageUpwards(IsSelected ? "OnInventoryItemSelected" : "OnInventoryItemUnSelected", message, SendMessageOptions.DontRequireReceiver);
             }

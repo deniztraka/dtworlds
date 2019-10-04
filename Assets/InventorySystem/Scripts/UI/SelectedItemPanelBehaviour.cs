@@ -87,5 +87,16 @@ namespace InventorySystem.UI
             }
             // 
         }
+
+        public void OnDropButtonClicked()
+        {
+            if (inventoryItemBehaviour != null)
+            {
+
+                inventoryBehaviour.DropSelectedItem();
+                OnInventoryItemUnSelected();
+            }
+            // 
+        }
     }
 }

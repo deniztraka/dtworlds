@@ -111,5 +111,26 @@ namespace InventorySystem
 
             return slotToBeReturned;
         }
+
+        internal void DropSelectedItem()
+        {
+            var selectedSlot = GetSelectedSlot();
+            if (selectedSlot != null)
+            {
+                var inventoryItem = selectedSlot.GetInventoryItem();
+                if (inventoryItem != null)
+                {
+                    var createdGameObject = GameObject.Instantiate(inventoryItem.ItemInstance.ItemTemplate.ItemPrefab, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
+                    var itemBehaviour = createdGameObject.GetComponent<ItemBehaviour>();
+                    itemBehaviour.ItemInstance.Quantity = inventoryItem.ItemInstance.Quantity;
+
+                    selectedSlot.DeleteItem();
+                }
+            }
+
+
+            // var vicinityBehaviour = targetSlot.GetComponentInParent<VicinityPackBehaviour>();
+            // vicinityBehaviour.AddItemRelation(targetSlot.SlotIndex, itemBehaviour.gameObject);
+        }
     }
 }

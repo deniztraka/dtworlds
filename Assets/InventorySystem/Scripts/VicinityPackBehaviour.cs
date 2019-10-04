@@ -65,6 +65,12 @@ namespace InventorySystem
             relations = new Dictionary<string, GameObject>();
         }
 
+        internal void DeleteRelatedItem(string slotIndex)
+        {
+            Destroy(relations[slotIndex].GetComponent<ItemBehaviour>().gameObject);
+            relations.Remove(slotIndex);
+        }
+
         internal ItemBehaviour GetSelectedRelatedItem()
         {
             var selectedSlot = GetSelectedSlot();
@@ -87,6 +93,11 @@ namespace InventorySystem
             var selectedSlot = GetSelectedSlot();
             selectedSlot.DeleteItem();
             Destroy(actualItem.gameObject);
+        }
+
+        internal void AddItemRelation(string slotIndex, GameObject gameObject)
+        {
+            relations.Add(slotIndex, gameObject);
         }
     }
 }
