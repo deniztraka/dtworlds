@@ -687,6 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemImage: {fileID: 158377968}
+  vicinityPackBehaviour: {fileID: 1061926095}
   DropButton: {fileID: 828633327}
   EquipButton: {fileID: 727000594}
   PickUpButton: {fileID: 1286376867}
@@ -970,6 +971,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &589910835
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5678345001401821203, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortPants (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 511bbeba69ee6ea4ab42142699a12c20, type: 3}
 --- !u!1 &597353153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2234,8 @@ MonoBehaviour:
     type: 3}
   ExampleInventoryItemPrefab: {fileID: 669539752533328869, guid: 76d11cd9cf6684b429471198a6613168,
     type: 3}
+  SizeX: 5
+  SizeY: 7
 --- !u!114 &885769222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2405,6 +2477,8 @@ MonoBehaviour:
   InventorySlotPrefab: {fileID: 885745773588098863, guid: 073f9c39d7e661144afa78c3e27c3ef1,
     type: 3}
   ExampleInventoryItemPrefab: {fileID: 0}
+  SizeX: 5
+  SizeY: 7
   PlayerObject: {fileID: 891147808}
 --- !u!1001 &1115115139
 PrefabInstance:

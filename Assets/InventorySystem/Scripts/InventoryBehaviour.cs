@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DTWorlds.Items.Behaviours;
 using UnityEngine;
+using static DragAndDropCell;
 
 namespace InventorySystem
 {
@@ -10,8 +11,8 @@ namespace InventorySystem
     {
         public GameObject InventorySlotPrefab;
         public GameObject ExampleInventoryItemPrefab;
-        private int sizeX = 5;
-        private int sizeY = 7;
+        public int SizeX = 5;
+        public int SizeY = 7;
         private bool isInitialized;
         public GameObject[][] SlotGrid;
 
@@ -21,6 +22,8 @@ namespace InventorySystem
             Initialize();
         }
 
+       
+
         protected void Initialize()
         {
             if (isInitialized)
@@ -28,13 +31,13 @@ namespace InventorySystem
                 return;
             }
 
-            SlotGrid = new GameObject[sizeX][];
+            SlotGrid = new GameObject[SizeX][];
 
             for (int x = 0; x < SlotGrid.Length; x++)
             {
                 if (SlotGrid[x] == null)
                 {
-                    SlotGrid[x] = new GameObject[sizeY];
+                    SlotGrid[x] = new GameObject[SizeY];
                 }
                 for (int y = 0; y < SlotGrid[x].Length; y++)
                 {

@@ -33,11 +33,23 @@ namespace InventorySystem
                     //add found items to vicinity pack
                     for (int i = 0; i < resultCount; i++)
                     {
-                        var itemBehaviour = results[0].GetComponent<ItemBehaviour>();
-                        // make relations in case of pickups
-                        var slot = AddItem(itemBehaviour);
-
-                        relations.Add(slot.SlotIndex, results[i].gameObject);
+                        var itemBehaviour = results[i].GetComponent<ItemBehaviour>();
+                        //check already pickedupItems
+                        var foundSame = false;
+                        foreach (var entry in relations)
+                        {
+                            if (entry.Value.Equals(results[i].gameObject))
+                            {
+                                foundSame = true;                                
+                            }
+                            break;
+                        }
+                        if (!foundSame)
+                        {                           
+                            // make relations in case of pickups
+                            var slot = AddItem(itemBehaviour);
+                            relations.Add(slot.SlotIndex, results[i].gameObject);
+                        }
                     }
                 }
             }
@@ -92,7 +104,9 @@ namespace InventorySystem
 
             var selectedSlot = GetSelectedSlot();
             selectedSlot.DeleteItem();
+            relations.Remove(selectedSlot.SlotIndex);
             Destroy(actualItem.gameObject);
+            Debug.Log(relations);
         }
 
         internal void AddItemRelation(string slotIndex, GameObject gameObject)

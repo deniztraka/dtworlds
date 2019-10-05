@@ -22,6 +22,7 @@ namespace InventorySystem.UI
         public Image ItemImage;
         private Color tempColor;
         private InventoryItemBehaviour inventoryItemBehaviour;
+        public VicinityPackBehaviour vicinityPackBehaviour;
         private InventoryBehaviour inventoryBehaviour;
         public Button DropButton;
         public Button EquipButton;
@@ -95,6 +96,7 @@ namespace InventorySystem.UI
 
                 inventoryBehaviour.DropSelectedItem();
                 OnInventoryItemUnSelected();
+                vicinityPackBehaviour.CheckVicinity();
             }
             // 
         }
