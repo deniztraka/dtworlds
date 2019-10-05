@@ -106,7 +106,7 @@ namespace InventorySystem
             selectedSlot.DeleteItem();
             relations.Remove(selectedSlot.SlotIndex);
             Destroy(actualItem.gameObject);
-            Debug.Log(relations);
+            //Debug.Log(relations);
         }
 
         internal void AddItemRelation(string slotIndex, GameObject gameObject)

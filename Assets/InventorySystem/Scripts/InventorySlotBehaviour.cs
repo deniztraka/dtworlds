@@ -53,7 +53,7 @@ namespace InventorySystem
 
             if (sourceTypeName.Equals("VicinityPackBehaviour") && targetTypeName.Equals("InventoryBehaviour"))
             {
-                Debug.Log("pickedup from floor");
+                //Debug.Log("pickedup from floor");
                 var vicinityBehaviour = sourceSlot.GetComponentInParent<VicinityPackBehaviour>();
                 vicinityBehaviour.DeleteRelatedItem(sourceSlot.SlotIndex);
             }
@@ -67,6 +67,13 @@ namespace InventorySystem
                 var vicinityBehaviour = targetSlot.GetComponentInParent<VicinityPackBehaviour>();
                 vicinityBehaviour.AddItemRelation(targetSlot.SlotIndex, itemBehaviour.gameObject);
             }
+        }
+
+        internal void SetSelected(bool selected)
+        {
+            IsSelected = selected;
+
+            dragAndDropCell.UpdateBackgroundState(IsSelected);
         }
 
         private void Refresh()

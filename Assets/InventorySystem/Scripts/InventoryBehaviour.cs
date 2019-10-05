@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DTWorlds.Items.Behaviours;
+using InventorySystem.UI;
 using UnityEngine;
 using static DragAndDropCell;
 
@@ -20,6 +21,19 @@ namespace InventorySystem
         public virtual void Start()
         {
             Initialize();
+        }
+
+        public void OnInventoryItemSelected(SelectedItemMessage msg){
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {                
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var inventorySlotBehaviour = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>();
+                    if(!msg.InventoryItemBehaviour.GetComponentInParent<InventorySlotBehaviour>().SlotIndex.Equals(inventorySlotBehaviour.SlotIndex)){
+                        inventorySlotBehaviour.SetSelected(false);
+                    }
+                }
+            }
         }
 
        
