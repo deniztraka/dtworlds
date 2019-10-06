@@ -148,6 +148,8 @@ namespace InventorySystem.UI
                     
                     //equip it
                     playerBehaviour.Equip(chosenSlot, inventoryItemBehaviour);
+                    var selectedSlot = inventoryBehaviour.GetSelectedSlot();
+                    selectedSlot.DeleteItem();
                 }
             }
         }

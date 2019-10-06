@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5678345001401821205}
   - component: {fileID: 5678345001401821202}
   - component: {fileID: 5678345001401821204}
-  - component: {fileID: 3507156674408821259}
+  - component: {fileID: 93324972581196617}
   m_Layer: 8
   m_Name: ShortPants
   m_TagString: Untagged
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22512507, y: 0.33241534}
   m_EdgeRadius: 0
---- !u!114 &3507156674408821259
+--- !u!114 &93324972581196617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,9 +118,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5678345001401821203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a47cd44950d314fbf0dd365367cb53, type: 3}
+  m_Script: {fileID: 11500000, guid: b6514bf765f34eb40ac6af20c6733b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ItemInstance:
     ItemTemplate: {fileID: 11400000, guid: afb9ea6e6489f1047b6ce1c02c9af593, type: 2}
     Quantity: 1
+  EquippableItemSprite: {fileID: 21300000, guid: 65e931585e1b77f469578c21d8549de8,
+    type: 3}
