@@ -33,5 +33,7 @@ namespace DTWorlds.Items
         public ItemType Type;   
 
         public GameObject ItemPrefab;
+
+        public string ItemDescription;
     }
 }

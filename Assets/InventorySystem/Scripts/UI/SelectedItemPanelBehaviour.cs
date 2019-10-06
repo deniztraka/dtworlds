@@ -1,3 +1,4 @@
+using System;
 using DTWorlds.Items.Behaviours;
 using DTWorlds.UnityBehaviours;
 using UnityEngine;
@@ -20,6 +21,9 @@ namespace InventorySystem.UI
     public class SelectedItemPanelBehaviour : MonoBehaviour
     {
         public Image ItemImage;
+        public Text TitleText;
+        public Text DescText;
+        public Text StatsText;
         private Color tempColor;
         private InventoryItemBehaviour inventoryItemBehaviour;
         public VicinityPackBehaviour vicinityPackBehaviour;
@@ -34,6 +38,9 @@ namespace InventorySystem.UI
             tempColor = ItemImage.color;
             tempColor.a = 0;
             ItemImage.color = tempColor;
+            TitleText.text = String.Empty;
+            DescText.text = String.Empty;
+            StatsText.text = String.Empty;
 
             inventoryBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().InventoryBehaviour;
         }
@@ -48,6 +55,9 @@ namespace InventorySystem.UI
                 tempColor.a = 1;
                 ItemImage.color = tempColor;
 
+                TitleText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemName;
+                DescText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemDescription;
+
                 DropButton.interactable = msg.IsInPlayerInventory;
                 PickUpButton.interactable = !msg.IsInPlayerInventory && inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>().GetEmptySlot() != null;
             }
@@ -60,6 +70,9 @@ namespace InventorySystem.UI
             ItemImage.sprite = null;
             tempColor.a = 0;
             ItemImage.color = tempColor;
+
+            TitleText.text = String.Empty;
+            DescText.text = String.Empty;
 
             DropButton.interactable = false;
             EquipButton.interactable = false;
