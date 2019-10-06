@@ -8,6 +8,7 @@ using static DragAndDropCell;
 using System;
 using InventorySystem.UI;
 using DTWorlds.Items.Behaviours;
+using DTWorlds.UnityBehaviours;
 
 namespace InventorySystem
 {
@@ -35,8 +36,12 @@ namespace InventorySystem
             dragAndDropCell = GetComponent<DragAndDropCell>();
         }
 
-        public void OnSimpleDragAndDropEvent(DropEventDescriptor desc)
+        public virtual void OnSimpleDragAndDropEvent(DropEventDescriptor desc)
         {
+            //Identify every drag and drop operation source and destination slots
+            //and do the required operations
+            //Debug.Log("asd");
+
             gameObject.SendMessageUpwards("OnInventoryItemUnSelected", null, SendMessageOptions.DontRequireReceiver);
 
             var sourceSlot = desc.sourceCell.GetComponent<InventorySlotBehaviour>();
@@ -51,27 +56,45 @@ namespace InventorySystem
 
 
                 var sourceTypeName = inventoryComponent.GetType().Name;
-                var targetTypeName = desc.item.GetComponentInParent<InventoryBehaviour>().GetType().Name;
-
-                // Debug.Log(sourceSlot.GetComponentInParent<InventoryBehaviour>().GetType().Name + "__" +
-                //     desc.item.GetComponentInParent<InventoryBehaviour>().GetType().Name);
-
-                if (sourceTypeName.Equals("VicinityPackBehaviour") && targetTypeName.Equals("InventoryBehaviour"))
+                var inventoryBehaviour = desc.item.GetComponentInParent<InventoryBehaviour>();
+                if (inventoryBehaviour != null)
                 {
-                    //Debug.Log("pickedup from floor");
-                    var vicinityBehaviour = sourceSlot.GetComponentInParent<VicinityPackBehaviour>();
-                    vicinityBehaviour.DeleteRelatedItem(sourceSlot.SlotIndex);
-                }
-                else if (sourceTypeName.Equals("InventoryBehaviour") && targetTypeName.Equals("VicinityPackBehaviour"))
-                {
-                    var draggedItemInstance = desc.item.GetComponentInParent<InventoryItemBehaviour>().ItemInstance;
+                    var targetTypeName = inventoryBehaviour.GetType().Name;
 
-                    var createdGameObject = GameObject.Instantiate(draggedItemInstance.ItemTemplate.ItemPrefab, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
-                    var itemBehaviour = createdGameObject.GetComponent<ItemBehaviour>();
-                    itemBehaviour.ItemInstance.Quantity = draggedItemInstance.Quantity;
-                    var vicinityBehaviour = targetSlot.GetComponentInParent<VicinityPackBehaviour>();
-                    vicinityBehaviour.AddItemRelation(targetSlot.SlotIndex, itemBehaviour.gameObject);
+
+
+                    // Debug.Log(sourceSlot.GetComponentInParent<InventoryBehaviour>().GetType().Name + "__" +
+                    //     desc.item.GetComponentInParent<InventoryBehaviour>().GetType().Name);
+
+                    if (sourceTypeName.Equals("VicinityPackBehaviour") && targetTypeName.Equals("InventoryBehaviour"))
+                    {
+                        //Debug.Log("pickedup from floor");
+                        var vicinityBehaviour = sourceSlot.GetComponentInParent<VicinityPackBehaviour>();
+                        vicinityBehaviour.DeleteRelatedItem(sourceSlot.SlotIndex);
+                    }
+                    else if (sourceTypeName.Equals("InventoryBehaviour") && targetTypeName.Equals("VicinityPackBehaviour"))
+                    {
+
+                        //this is drop operation
+                        var draggedItemInstance = desc.item.GetComponentInParent<InventoryItemBehaviour>().ItemInstance;
+
+                        var createdGameObject = GameObject.Instantiate(draggedItemInstance.ItemTemplate.ItemPrefab, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
+                        var itemBehaviour = createdGameObject.GetComponent<ItemBehaviour>();
+                        itemBehaviour.ItemInstance.Quantity = draggedItemInstance.Quantity;
+                        var vicinityBehaviour = targetSlot.GetComponentInParent<VicinityPackBehaviour>();
+                        vicinityBehaviour.AddItemRelation(targetSlot.SlotIndex, itemBehaviour.gameObject);
+                    }
+
                 }
+            }
+
+            //it means this is unequip operation
+            else
+            {
+                var playerBehaviour = GameObject.FindWithTag("Player").GetComponent<PlayerBehaviour>();
+                var characterSlotBehaviour = sourceSlot.GetComponent<CharacterSlotBehaviour>();
+                playerBehaviour.Unequip(desc.item.GetComponentInParent<InventoryItemBehaviour>());
+                characterSlotBehaviour.UpdateImage();                
             }
         }
 
@@ -92,10 +115,11 @@ namespace InventorySystem
 
 
         // Update is called once per frame
-        public void OnClick()
+        public virtual void OnClick()
         {
             if (HasItem)
             {
+
                 var item = GetInventoryItem();
 
                 ToggleSelected();
@@ -105,10 +129,9 @@ namespace InventorySystem
             }
         }
 
-        private void ToggleSelected()
+        protected void ToggleSelected()
         {
             IsSelected = !IsSelected;
-
             dragAndDropCell.UpdateBackgroundState(IsSelected);
         }
 

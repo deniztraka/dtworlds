@@ -31,10 +31,9 @@ namespace DTWorlds.Items.Equipments
                 mobile.Armor.AddModifier(new StatModifier(ArmorBonus, StatModType.Flat, this));
         }
 
-        public void RemoveModifiers(PlayerBehaviour playerBehaviour)
+        public void RemoveModifiers(BaseMobile mobile)
         {
-            playerBehaviour.Player.Armor.RemoveAllModifiersFromSource(this);
-
+            mobile.Armor.RemoveAllModifiersFromSource(this);
         }
     }
 }

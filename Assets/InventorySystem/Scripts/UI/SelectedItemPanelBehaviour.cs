@@ -64,7 +64,12 @@ namespace InventorySystem.UI
 
                 DropButton.interactable = msg.IsInPlayerInventory;
                 PickUpButton.gameObject.SetActive(true);
-                PickUpButton.interactable = !msg.IsInPlayerInventory && inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>().GetEmptySlot() != null;
+
+                var vicinityPackBehaviour = inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>();
+                if (vicinityPackBehaviour != null)
+                {
+                    PickUpButton.interactable = !msg.IsInPlayerInventory && inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>().GetEmptySlot() != null;
+                }
 
                 EquipButton.gameObject.SetActive(false);
                 EquipButton.interactable = false;
@@ -74,6 +79,13 @@ namespace InventorySystem.UI
                     EquipButton.gameObject.SetActive(true);
                     EquipButton.interactable = true;
                     PickUpButton.gameObject.SetActive(false);
+                }
+                else if (inventoryItemBehaviour.ItemInstance.ItemTemplate is BaseEquipment && vicinityPackBehaviour == null)
+                {
+                    EquipButton.gameObject.SetActive(false);
+                    EquipButton.interactable = false;
+                    //Debug.Log("character slot selected");
+                    //TODO:make Unequip button visible
                 }
             }
         }
@@ -137,15 +149,17 @@ namespace InventorySystem.UI
                 //find right slot to equip
                 var dragAndDropCell = CharacterSlotsList.Find(s => s.equipmentType == equippableItem.EquipmentType).GetComponent<DragAndDropCell>();
                 if (dragAndDropCell != null)
-                {                    
-                    var chosenSlot = dragAndDropCell.GetComponent<InventorySlotBehaviour>();
+                {
+                    var chosenSlot = dragAndDropCell.GetComponent<CharacterSlotBehaviour>();
 
+                    //TODO: UNEQUIP FIFRST
                     //if has item, uneqip it first
                     // if (chosenSlot.HasItem)
                     // {
                     //     playerBehaviour.Unequip(chosenSlot.GetInventoryItem());
+                    //     characterSlotBehaviour.UpdateImage();
                     // }
-                    
+
                     //equip it
                     playerBehaviour.Equip(chosenSlot, inventoryItemBehaviour);
                     var selectedSlot = inventoryBehaviour.GetSelectedSlot();

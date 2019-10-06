@@ -7,6 +7,7 @@ using UnityEngine;
 using InventorySystem;
 using DTWorlds.Items.Equipments;
 using System;
+using InventorySystem.UI;
 
 namespace DTWorlds.UnityBehaviours
 {
@@ -77,24 +78,21 @@ namespace DTWorlds.UnityBehaviours
         }
 
         public void Equip(InventorySlotBehaviour chosenSlot, InventoryItemBehaviour inventoryItem)
-        {
+        {            
             if (inventoryItem.ItemInstance.ItemTemplate is BaseEquipment)
             {
                 chosenSlot.AddItem(inventoryItem.ItemInstance);
 
                 var equipmentItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
-
-                //Do physical equip operations
-                //Update character panel
-                //update player equipment slot
-                //run animations
+                //TODO: arrange animations
                 equipmentItem.SetModifiers(this.player);
-            }
+            }            
         }
 
         internal void Unequip(InventoryItemBehaviour inventoryItemBehaviour)
         {
-            throw new NotImplementedException();
+            var equipmentItem = inventoryItemBehaviour.ItemInstance.ItemTemplate as BaseEquipment;
+            equipmentItem.RemoveModifiers(this.Player);
         }
     }
 }
