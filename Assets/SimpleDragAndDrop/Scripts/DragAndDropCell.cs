@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
+using DTWorlds.Items.Equipments;
 
 /// <summary>
 /// Every item's cell must contain this script
@@ -15,17 +16,6 @@ public class DragAndDropCell : MonoBehaviour, IDropHandler
         DropOnly,                                                           // Item will be dropped into cell
         DragOnly                                                            // Item will be dragged from this cell
     }
-
-    public enum EquipmentType
-    {
-        Generic,
-        RightHand,
-        LeftHand,
-        Chest,
-        Legs,
-        Boots
-    }
-
     public enum TriggerType                                                 // Types of drag and drop events
     {
         DropRequest,                                                        // Request for item drop from one cell to another

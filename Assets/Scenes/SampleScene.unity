@@ -366,6 +366,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90167254}
   m_CullTransparentMesh: 0
+--- !u!114 &93144103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 885745773598853087, guid: 073f9c39d7e661144afa78c3e27c3ef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1679020456}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da939f57a39b418499aab24d12218148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &114641759
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +785,12 @@ MonoBehaviour:
   DropButton: {fileID: 828633327}
   EquipButton: {fileID: 727000594}
   PickUpButton: {fileID: 1286376867}
+  CharacterSlotsList:
+  - {fileID: 1962708001}
+  - {fileID: 93144103}
+  - {fileID: 1269099304}
+  - {fileID: 1067768584}
+  - {fileID: 1522520108}
 --- !u!1 &358706228
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +973,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 885745773598853087, guid: 073f9c39d7e661144afa78c3e27c3ef1,
+        type: 3}
+      propertyPath: equipmentType
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 073f9c39d7e661144afa78c3e27c3ef1, type: 3}
@@ -1731,7 +1754,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 727000595}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 303708834}
+        m_MethodName: OnEquipButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &727000595
@@ -2562,6 +2596,18 @@ MonoBehaviour:
   SizeX: 5
   SizeY: 7
   PlayerObject: {fileID: 891147808}
+--- !u!114 &1067768584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 885745773598853087, guid: 073f9c39d7e661144afa78c3e27c3ef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1246140164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da939f57a39b418499aab24d12218148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1115115139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3196,6 +3242,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 885745773598853087, guid: 073f9c39d7e661144afa78c3e27c3ef1,
+        type: 3}
+      propertyPath: equipmentType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 073f9c39d7e661144afa78c3e27c3ef1, type: 3}
 --- !u!224 &1246140165 stripped
@@ -3357,6 +3408,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267231066}
   m_CullTransparentMesh: 0
+--- !u!114 &1269099304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 885745773598853087, guid: 073f9c39d7e661144afa78c3e27c3ef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 377093853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da939f57a39b418499aab24d12218148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276875869
 GameObject:
   m_ObjectHideFlags: 0
@@ -4329,6 +4392,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1522520108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 885745773598853087, guid: 073f9c39d7e661144afa78c3e27c3ef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1542412647}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da939f57a39b418499aab24d12218148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1542412647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4445,6 +4520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 885745773598853087, guid: 073f9c39d7e661144afa78c3e27c3ef1,
+        type: 3}
+      propertyPath: equipmentType
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 073f9c39d7e661144afa78c3e27c3ef1, type: 3}
@@ -4969,6 +5049,11 @@ PrefabInstance:
       propertyPath: cellEquipmentType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 885745773598853087, guid: 073f9c39d7e661144afa78c3e27c3ef1,
+        type: 3}
+      propertyPath: equipmentType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 073f9c39d7e661144afa78c3e27c3ef1, type: 3}
 --- !u!224 &1679020457 stripped
@@ -5349,6 +5434,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922991662}
   m_CullTransparentMesh: 0
+--- !u!114 &1962708001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 885745773598853087, guid: 073f9c39d7e661144afa78c3e27c3ef1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1826001287}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da939f57a39b418499aab24d12218148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1978937279 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8997016649889323046, guid: 48daaf9a661f91442b6faae0d76c3a87,

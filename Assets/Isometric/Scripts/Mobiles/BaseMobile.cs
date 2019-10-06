@@ -5,11 +5,15 @@ using UnityEngine;
 using DTWorlds.Mobiles.AttackTypes;
 using DTWorlds.UnityBehaviours;
 using DTWorlds.Mobiles.DamagableProperties;
+using Kryz.CharacterStats;
 
 namespace DTWorlds.Mobiles
 {
     public abstract class BaseMobile
     {
+        
+        public CharacterStat Armor;
+
         private GameObject gameObject;
         private float movementSpeed;
         private IMovement movementType;
@@ -66,6 +70,8 @@ namespace DTWorlds.Mobiles
             Health = new Health(this);
             Stamina = new Stamina(this);
             Hunger = new Hunger(this);
+
+            Armor = new CharacterStat();
 
             //setting up attacking system.
             var animationSpriteTransform = gameObject.transform.Find("AnimationSprite");

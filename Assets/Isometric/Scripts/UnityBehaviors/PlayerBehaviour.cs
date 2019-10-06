@@ -5,6 +5,8 @@ using DTWorlds.Mobiles.MovementTypes;
 using DTWorlds.Mobiles.MovementInputs;
 using UnityEngine;
 using InventorySystem;
+using DTWorlds.Items.Equipments;
+using System;
 
 namespace DTWorlds.UnityBehaviours
 {
@@ -72,6 +74,27 @@ namespace DTWorlds.UnityBehaviours
         public void ModifyHunger(float amount)
         {
             player.Hunger.CurrentValue += amount;
+        }
+
+        public void Equip(InventorySlotBehaviour chosenSlot, InventoryItemBehaviour inventoryItem)
+        {
+            if (inventoryItem.ItemInstance.ItemTemplate is BaseEquipment)
+            {
+                chosenSlot.AddItem(inventoryItem.ItemInstance);
+
+                var equipmentItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
+
+                //Do physical equip operations
+                //Update character panel
+                //update player equipment slot
+                //run animations
+                equipmentItem.SetModifiers(this.player);
+            }
+        }
+
+        internal void Unequip(InventoryItemBehaviour inventoryItemBehaviour)
+        {
+            throw new NotImplementedException();
         }
     }
 }

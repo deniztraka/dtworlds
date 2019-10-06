@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using DTWorlds.Items.Behaviours;
+using DTWorlds.Items.Equipments;
 using DTWorlds.UnityBehaviours;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,6 +34,8 @@ namespace InventorySystem.UI
         public Button EquipButton;
         public Button PickUpButton;
 
+        public List<DragAndDropCell> CharacterSlotsList;
+
         void Start()
         {
             ItemImage.sprite = null;
@@ -59,7 +63,18 @@ namespace InventorySystem.UI
                 DescText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemDescription;
 
                 DropButton.interactable = msg.IsInPlayerInventory;
+                PickUpButton.gameObject.SetActive(true);
                 PickUpButton.interactable = !msg.IsInPlayerInventory && inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>().GetEmptySlot() != null;
+
+                EquipButton.gameObject.SetActive(false);
+                EquipButton.interactable = false;
+
+                if (inventoryItemBehaviour.ItemInstance.ItemTemplate is BaseEquipment && msg.IsInPlayerInventory)
+                {
+                    EquipButton.gameObject.SetActive(true);
+                    EquipButton.interactable = true;
+                    PickUpButton.gameObject.SetActive(false);
+                }
             }
         }
 
@@ -106,12 +121,35 @@ namespace InventorySystem.UI
         {
             if (inventoryItemBehaviour != null)
             {
-
                 inventoryBehaviour.DropSelectedItem();
                 OnInventoryItemUnSelected();
                 vicinityPackBehaviour.CheckVicinity();
             }
-            // 
+        }
+
+        public void OnEquipButtonClicked()
+        {
+            if (inventoryItemBehaviour != null)
+            {
+                var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
+                var equippableItem = inventoryItemBehaviour.ItemInstance.ItemTemplate as BaseEquipment;
+
+                //find right slot to equip
+                var dragAndDropCell = CharacterSlotsList.Find(s => s.equipmentType == equippableItem.EquipmentType).GetComponent<DragAndDropCell>();
+                if (dragAndDropCell != null)
+                {                    
+                    var chosenSlot = dragAndDropCell.GetComponent<InventorySlotBehaviour>();
+
+                    //if has item, uneqip it first
+                    // if (chosenSlot.HasItem)
+                    // {
+                    //     playerBehaviour.Unequip(chosenSlot.GetInventoryItem());
+                    // }
+                    
+                    //equip it
+                    playerBehaviour.Equip(chosenSlot, inventoryItemBehaviour);
+                }
+            }
         }
     }
 }
