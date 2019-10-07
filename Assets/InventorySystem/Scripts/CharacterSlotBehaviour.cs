@@ -19,10 +19,20 @@ namespace InventorySystem
         {
             base.OnSimpleDragAndDropEvent(desc);
 
+            //Debug.Log("Equipped");
+
             //var characterSlotBehaviour = desc.item.GetComponentInParent<CharacterSlotBehaviour>();            
 
             if (desc.triggerType == TriggerType.ItemAdded || desc.triggerType == TriggerType.DropEventEnd)
             {
+                var inventorySlot = desc.sourceCell.GetComponentInParent<InventorySlotBehaviour>();
+                var vicinityBehaviour = inventorySlot.GetComponentInParent<VicinityPackBehaviour>();
+                //if it is picked from vicinity, clear relation
+                if (vicinityBehaviour != null)
+                {
+                    vicinityBehaviour.DeleteRelatedItem(inventorySlot.SlotIndex);
+                }
+
                 UpdateImage();
             }
         }
@@ -60,6 +70,17 @@ namespace InventorySystem
                 var message = new SelectedItemMessage(IsSelected ? item : null, false);
                 gameObject.SendMessageUpwards(IsSelected ? "OnInventoryItemSelected" : "OnInventoryItemUnSelected", message, SendMessageOptions.DontRequireReceiver);
             }
+        }
+
+        internal void DropItem()
+        {
+            var inventoryItem = GetInventoryItem();
+            var createdGameObject = GameObject.Instantiate(inventoryItem.ItemInstance.ItemTemplate.ItemPrefab, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
+            var itemBehaviour = createdGameObject.GetComponent<ItemBehaviour>();
+            itemBehaviour.ItemInstance.Quantity = inventoryItem.ItemInstance.Quantity;
+
+            DeleteItem();
+            UpdateImage();
         }
     }
 }

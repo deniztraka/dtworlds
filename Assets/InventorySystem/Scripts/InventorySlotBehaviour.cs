@@ -38,6 +38,7 @@ namespace InventorySystem
 
         public virtual void OnSimpleDragAndDropEvent(DropEventDescriptor desc)
         {
+            //TODO:
             //Identify every drag and drop operation source and destination slots
             //and do the required operations
             //Debug.Log("asd");
@@ -68,13 +69,14 @@ namespace InventorySystem
 
                     if (sourceTypeName.Equals("VicinityPackBehaviour") && targetTypeName.Equals("InventoryBehaviour"))
                     {
+                        Debug.Log("Pickedup From Floor");
                         //Debug.Log("pickedup from floor");
                         var vicinityBehaviour = sourceSlot.GetComponentInParent<VicinityPackBehaviour>();
                         vicinityBehaviour.DeleteRelatedItem(sourceSlot.SlotIndex);
                     }
                     else if (sourceTypeName.Equals("InventoryBehaviour") && targetTypeName.Equals("VicinityPackBehaviour"))
                     {
-
+                        Debug.Log("Dropped");
                         //this is drop operation
                         var draggedItemInstance = desc.item.GetComponentInParent<InventoryItemBehaviour>().ItemInstance;
 
@@ -88,13 +90,15 @@ namespace InventorySystem
                 }
             }
 
-            //it means this is unequip operation
+            //Todo:!
+            //it means this is unequip operation or it is?
             else
             {
+                Debug.Log("Unequipped");
                 var playerBehaviour = GameObject.FindWithTag("Player").GetComponent<PlayerBehaviour>();
                 var characterSlotBehaviour = sourceSlot.GetComponent<CharacterSlotBehaviour>();
                 playerBehaviour.Unequip(desc.item.GetComponentInParent<InventoryItemBehaviour>());
-                characterSlotBehaviour.UpdateImage();                
+                characterSlotBehaviour.UpdateImage();
             }
         }
 

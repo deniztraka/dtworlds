@@ -32,7 +32,13 @@ namespace InventorySystem.UI
         private InventoryBehaviour inventoryBehaviour;
         public Button DropButton;
         public Button EquipButton;
+        public Button UnequipButton;
         public Button PickUpButton;
+
+        public Button[] CharacterSlotSelectedButtons;
+        public Button[] VicinitySlotSelectedButtons;
+        public Button[] InventorySlotSelectedButtons;
+        public Button[] StorageSlotSelectedButtons;
 
         public List<DragAndDropCell> CharacterSlotsList;
 
@@ -49,10 +55,26 @@ namespace InventorySystem.UI
             inventoryBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().InventoryBehaviour;
         }
 
+        void MakeAllButtonsDisabled()
+        {
+            SetButtonsStatus(new Button[] { DropButton, EquipButton, UnequipButton, PickUpButton }, false);
+        }
+
+        void SetButtonsStatus(Button[] buttonList, bool status)
+        {
+            foreach (var button in buttonList)
+            {
+                button.gameObject.SetActive(status);
+                button.interactable = status;
+            }
+        }
+
         void OnInventoryItemSelected(SelectedItemMessage msg)
         {
             if (msg.InventoryItemBehaviour != null)
             {
+                MakeAllButtonsDisabled();
+
                 inventoryItemBehaviour = msg.InventoryItemBehaviour;
 
                 ItemImage.sprite = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.Icon;
@@ -62,30 +84,19 @@ namespace InventorySystem.UI
                 TitleText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemName;
                 DescText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemDescription;
 
-                DropButton.interactable = msg.IsInPlayerInventory;
-                PickUpButton.gameObject.SetActive(true);
-
                 var vicinityPackBehaviour = inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>();
-                if (vicinityPackBehaviour != null)
-                {
-                    PickUpButton.interactable = !msg.IsInPlayerInventory && inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>().GetEmptySlot() != null;
-                }
 
-                EquipButton.gameObject.SetActive(false);
-                EquipButton.interactable = false;
-
-                if (inventoryItemBehaviour.ItemInstance.ItemTemplate is BaseEquipment && msg.IsInPlayerInventory)
+                if (msg.IsInPlayerInventory)
                 {
-                    EquipButton.gameObject.SetActive(true);
-                    EquipButton.interactable = true;
-                    PickUpButton.gameObject.SetActive(false);
+                    SetButtonsStatus(InventorySlotSelectedButtons, true);
                 }
-                else if (inventoryItemBehaviour.ItemInstance.ItemTemplate is BaseEquipment && vicinityPackBehaviour == null)
+                else if (vicinityPackBehaviour != null)
                 {
-                    EquipButton.gameObject.SetActive(false);
-                    EquipButton.interactable = false;
-                    //Debug.Log("character slot selected");
-                    //TODO:make Unequip button visible
+                    SetButtonsStatus(VicinitySlotSelectedButtons, true);
+                }
+                else if (inventoryItemBehaviour.GetComponentInParent<CharacterSlotBehaviour>() != null)
+                {
+                    SetButtonsStatus(CharacterSlotSelectedButtons, true);
                 }
             }
         }
@@ -101,9 +112,7 @@ namespace InventorySystem.UI
             TitleText.text = String.Empty;
             DescText.text = String.Empty;
 
-            DropButton.interactable = false;
-            EquipButton.interactable = false;
-            PickUpButton.interactable = false;
+            MakeAllButtonsDisabled();
         }
 
         public void OnPickupButtonClicked()
@@ -122,19 +131,27 @@ namespace InventorySystem.UI
 
                         //default:
                 }
-
-
-
             }
-            // 
         }
 
         public void OnDropButtonClicked()
         {
             if (inventoryItemBehaviour != null)
             {
-                inventoryBehaviour.DropSelectedItem();
+
+                var characterSlot = inventoryItemBehaviour.GetComponentInParent<CharacterSlotBehaviour>();
+                if (characterSlot != null)
+                {
+                    //this is already equipped item
+                    characterSlot.DropItem();
+                }
+                else// it is in inventory
+                {
+                    inventoryBehaviour.DropSelectedItem();
+                }
+
                 OnInventoryItemUnSelected();
+
                 vicinityPackBehaviour.CheckVicinity();
             }
         }
@@ -167,5 +184,14 @@ namespace InventorySystem.UI
                 }
             }
         }
+
+        public void OnUnEquipButtonClicked()
+        {
+            if (inventoryItemBehaviour != null)
+            {
+
+            }
+        }
     }
 }
+
