@@ -98,6 +98,16 @@ namespace InventorySystem.UI
                 {
                     SetButtonsStatus(CharacterSlotSelectedButtons, true);
                 }
+
+                var equipment = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate as BaseEquipment;
+                if (equipment == null)
+                {
+                    if (EquipButton.interactable)
+                    {
+                        EquipButton.gameObject.SetActive(true);
+                        EquipButton.interactable = false;
+                    }
+                }
             }
         }
 
@@ -139,7 +149,7 @@ namespace InventorySystem.UI
         {
             if (inventoryItemBehaviour != null)
             {
-                
+
                 var characterSlot = inventoryItemBehaviour.GetComponentInParent<CharacterSlotBehaviour>();
                 if (characterSlot != null)
                 {

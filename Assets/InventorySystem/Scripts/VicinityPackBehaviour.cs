@@ -19,6 +19,15 @@ namespace InventorySystem
         {
             base.Start();
             playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().InventoryBehaviour;
+
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    SlotGrid[x][y].GetComponent<DragAndDropCell>().cellType = DragAndDropCell.CellType.DropOnly;
+                }
+            }
         }
 
         public void CheckVicinity()
