@@ -876,7 +876,7 @@ RectTransform:
   m_GameObject: {fileID: 303708830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 802417238}
   - {fileID: 2106523774}
@@ -4692,6 +4692,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581215749}
   m_CullTransparentMesh: 0
+--- !u!1 &1611335199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1217970917918465158, guid: 5504902ffd2dd144796295fffe778f61,
+    type: 3}
+  m_PrefabInstance: {fileID: 1217970918899316071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1624426250
 GameObject:
   m_ObjectHideFlags: 0
@@ -5852,7 +5858,42 @@ PrefabInstance:
     - target: {fileID: 1217970917918465158, guid: 5504902ffd2dd144796295fffe778f61,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217970917918465158, guid: 5504902ffd2dd144796295fffe778f61,
+        type: 3}
+      propertyPath: m_Name
+      value: LegsSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217970918245168900, guid: 5504902ffd2dd144796295fffe778f61,
+        type: 3}
+      propertyPath: LegsSlot
+      value: 
+      objectReference: {fileID: 1611335199}
+    - target: {fileID: 1217970917383635521, guid: 5504902ffd2dd144796295fffe778f61,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217970917383635521, guid: 5504902ffd2dd144796295fffe778f61,
+        type: 3}
+      propertyPath: m_Name
+      value: LegsSpriteAnimator
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217970917383635523, guid: 5504902ffd2dd144796295fffe778f61,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217970917383635523, guid: 5504902ffd2dd144796295fffe778f61,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217970917383635532, guid: 5504902ffd2dd144796295fffe778f61,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5504902ffd2dd144796295fffe778f61, type: 3}
@@ -6199,26 +6240,6 @@ PrefabInstance:
     - target: {fileID: 5678345001401821205, guid: 511bbeba69ee6ea4ab42142699a12c20,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 93324972581196617, guid: 511bbeba69ee6ea4ab42142699a12c20,
-        type: 3}
-      propertyPath: ItemInstance.Quantity
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678345001401821202, guid: 511bbeba69ee6ea4ab42142699a12c20,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678345001401821202, guid: 511bbeba69ee6ea4ab42142699a12c20,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678345001401821202, guid: 511bbeba69ee6ea4ab42142699a12c20,
-        type: 3}
-      propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

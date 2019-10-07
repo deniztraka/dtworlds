@@ -21,10 +21,6 @@ namespace InventorySystem
         {
             base.OnSimpleDragAndDropEvent(desc);
 
-            //Debug.Log("Equipped");
-
-            //var characterSlotBehaviour = desc.item.GetComponentInParent<CharacterSlotBehaviour>();            
-
             if (desc.triggerType == TriggerType.ItemAdded || desc.triggerType == TriggerType.DropEventEnd)
             {
                 var inventorySlot = desc.sourceCell.GetComponentInParent<InventorySlotBehaviour>();
@@ -35,7 +31,11 @@ namespace InventorySystem
                     vicinityBehaviour.DeleteRelatedItem(inventorySlot.SlotIndex);
                 }
 
+
+
                 UpdateImage();
+                var movementAnimationHandler = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementAnimationHandler>();
+                SetAnimation(desc.item.GetComponent<InventoryItemBehaviour>().ItemInstance.ItemTemplate as BaseEquipment);
             }
         }
 
@@ -68,6 +68,8 @@ namespace InventorySystem
 
         public override void OnClick()
         {
+
+
             if (HasItem)
             {
                 var item = GetInventoryItem();
@@ -88,6 +90,9 @@ namespace InventorySystem
 
             DeleteItem();
             UpdateImage();
+            var equippableItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
+
+            RemoveAnimation(equippableItem.EquipmentType);
         }
 
         internal void Unequip()
@@ -108,12 +113,56 @@ namespace InventorySystem
 
                 var equipmentItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
                 equipmentItem.RemoveModifiers(playerBehaviour.Player);
+                RemoveAnimation(equipmentItem.EquipmentType);
                 DeleteItem();
-                UpdateImage();
+                UpdateImage();                
+                
             }
             else
             {
                 DropItem();
+            }
+        }
+
+        void SetAnimation(BaseEquipment equipment)
+        {
+            var movementAnimationHandler = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementAnimationHandler>();
+            Animator animator = null;
+            switch (equipment.EquipmentType)
+            {
+                case EquipmentType.Chest:
+                    break;
+                case EquipmentType.Legs:
+                    animator = movementAnimationHandler.LegsSlot.GetComponentInChildren<Animator>();
+                    animator.runtimeAnimatorController =
+                        equipment.ItemPrefab.GetComponent<EquippableItemBehaviour>().AnimatorController;
+                    break;
+                case EquipmentType.Boots:
+                    break;
+                case EquipmentType.RightHand:
+                    break;
+                case EquipmentType.LeftHand:
+                    break;
+            }
+        }
+
+        void RemoveAnimation(EquipmentType equipmentType)
+        {
+            switch (equipmentType)
+            {
+                case EquipmentType.Chest:
+                    break;
+                case EquipmentType.Legs:
+                    var movementAnimationHandler = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementAnimationHandler>();
+                    var animator = movementAnimationHandler.LegsSlot.GetComponentInChildren<Animator>();
+                    animator.runtimeAnimatorController = null;
+                    break;
+                case EquipmentType.Boots:
+                    break;
+                case EquipmentType.RightHand:
+                    break;
+                case EquipmentType.LeftHand:
+                    break;
             }
         }
     }

@@ -7,5 +7,6 @@ namespace DTWorlds.Items.Behaviours
     public class EquippableItemBehaviour : ItemBehaviour
     {
         public Sprite EquippableItemSprite;
+        public RuntimeAnimatorController AnimatorController;
     }
 }

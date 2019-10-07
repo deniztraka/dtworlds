@@ -16,7 +16,7 @@ namespace DTWorlds.UnityBehaviours
         int lastDirection;
         string lastAnimationName = "";
 
-        public GameObject pantsSlot;
+        public GameObject LegsSlot;
 
         private void Awake()
         {
@@ -62,12 +62,12 @@ namespace DTWorlds.UnityBehaviours
             animator.Play(animationName, -1, 0);
 
             //play pants animation if exists
-            if (pantsSlot != null)
-            {
-                var pantsAnimator = pantsSlot.GetComponentInChildren<Animator>();
-                if (pantsAnimator != null)
+            if (LegsSlot != null)
+            {                
+                var legsAnimator = LegsSlot.GetComponentInChildren<Animator>();                
+                if (legsAnimator != null)
                 {
-                    pantsAnimator.Play(animationName, -1, 0);
+                    legsAnimator.Play("walking_north", -1, 0);
                 }
             }
 
