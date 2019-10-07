@@ -78,7 +78,7 @@ namespace DTWorlds.UnityBehaviours
         }
 
         public void Equip(InventorySlotBehaviour chosenSlot, InventoryItemBehaviour inventoryItem)
-        {            
+        {
             if (inventoryItem.ItemInstance.ItemTemplate is BaseEquipment)
             {
                 chosenSlot.AddItem(inventoryItem.ItemInstance);
@@ -86,13 +86,7 @@ namespace DTWorlds.UnityBehaviours
                 var equipmentItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
                 //TODO: arrange animations
                 equipmentItem.SetModifiers(this.player);
-            }            
-        }
-
-        internal void Unequip(InventoryItemBehaviour inventoryItemBehaviour)
-        {
-            var equipmentItem = inventoryItemBehaviour.ItemInstance.ItemTemplate as BaseEquipment;
-            equipmentItem.RemoveModifiers(this.Player);
+            }
         }
     }
 }

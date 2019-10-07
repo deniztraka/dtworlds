@@ -89,17 +89,6 @@ namespace InventorySystem
 
                 }
             }
-
-            //Todo:!
-            //it means this is unequip operation or it is?
-            else
-            {
-                Debug.Log("Unequipped");
-                var playerBehaviour = GameObject.FindWithTag("Player").GetComponent<PlayerBehaviour>();
-                var characterSlotBehaviour = sourceSlot.GetComponent<CharacterSlotBehaviour>();
-                playerBehaviour.Unequip(desc.item.GetComponentInParent<InventoryItemBehaviour>());
-                characterSlotBehaviour.UpdateImage();
-            }
         }
 
         internal void SetSelected(bool selected)

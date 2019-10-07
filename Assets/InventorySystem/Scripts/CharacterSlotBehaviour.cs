@@ -8,6 +8,8 @@ using static DragAndDropCell;
 using System;
 using InventorySystem.UI;
 using DTWorlds.Items.Behaviours;
+using DTWorlds.UnityBehaviours;
+using DTWorlds.Items.Equipments;
 
 namespace InventorySystem
 {
@@ -81,6 +83,33 @@ namespace InventorySystem
 
             DeleteItem();
             UpdateImage();
+        }
+
+        internal void Unequip()
+        {
+            var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
+
+            var inventoryBehaviour = playerBehaviour.InventoryBehaviour;
+            var emptySlot = inventoryBehaviour.GetEmptySlot();
+            if (emptySlot != null)
+            {
+                var inventoryItem = GetInventoryItem();
+                var clonedItem = GameObject.Instantiate(inventoryItem.ItemInstance.ItemTemplate.ItemPrefab);
+                var actualItem = clonedItem.GetComponent<ItemBehaviour>();
+                actualItem.ItemInstance.Quantity = inventoryItem.ItemInstance.Quantity;
+                inventoryBehaviour.AddItem(actualItem);
+
+                GameObject.Destroy(actualItem.gameObject);
+
+                var equipmentItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
+                equipmentItem.RemoveModifiers(playerBehaviour.Player);
+                DeleteItem();
+                UpdateImage();
+            }
+            else
+            {
+                DropItem();
+            }
         }
     }
 }

@@ -167,18 +167,17 @@ namespace InventorySystem.UI
                 var dragAndDropCell = CharacterSlotsList.Find(s => s.equipmentType == equippableItem.EquipmentType).GetComponent<DragAndDropCell>();
                 if (dragAndDropCell != null)
                 {
-                    var chosenSlot = dragAndDropCell.GetComponent<CharacterSlotBehaviour>();
+                    var characterSlot = dragAndDropCell.GetComponent<CharacterSlotBehaviour>();
 
-                    //TODO: UNEQUIP FIFRST
                     //if has item, uneqip it first
-                    // if (chosenSlot.HasItem)
-                    // {
-                    //     playerBehaviour.Unequip(chosenSlot.GetInventoryItem());
-                    //     characterSlotBehaviour.UpdateImage();
-                    // }
+                    if (characterSlot.HasItem)
+                    {
+                        characterSlot.Unequip();
+                        //characterSlotBehaviour.UpdateImage();
+                    }
 
                     //equip it
-                    playerBehaviour.Equip(chosenSlot, inventoryItemBehaviour);
+                    playerBehaviour.Equip(characterSlot, inventoryItemBehaviour);
                     var selectedSlot = inventoryBehaviour.GetSelectedSlot();
                     selectedSlot.DeleteItem();
                 }
@@ -189,7 +188,8 @@ namespace InventorySystem.UI
         {
             if (inventoryItemBehaviour != null)
             {
-
+                var chosenSlot = inventoryItemBehaviour.GetComponentInParent<CharacterSlotBehaviour>();
+                chosenSlot.Unequip();
             }
         }
     }
