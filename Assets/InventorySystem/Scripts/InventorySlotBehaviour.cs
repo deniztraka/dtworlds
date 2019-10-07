@@ -143,13 +143,7 @@ namespace InventorySystem
 
         public InventoryItemBehaviour GetInventoryItem()
         {
-            var dragAndDropItem = dragAndDropCell.GetItem();
-            if (dragAndDropItem == null)
-            {
-                return null;
-            }
-
-            return dragAndDropItem.GetComponent<InventoryItemBehaviour>();
+            return GetComponentInChildren<InventoryItemBehaviour>();
         }
 
         public void DeleteItem()
@@ -157,8 +151,10 @@ namespace InventorySystem
             var inventoryItem = GetComponentInChildren<InventoryItemBehaviour>();
             if (inventoryItem != null)
             {
-                inventoryItem.ItemInstance = null;
+                //inventoryItem.ItemInstance = null;
+                Destroy(inventoryItem.gameObject);
                 HasItem = false;
+                IsSelected = false;
             }
         }
     }

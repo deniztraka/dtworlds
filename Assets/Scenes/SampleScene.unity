@@ -5868,16 +5868,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChestSlot
       objectReference: {fileID: 0}
-    - target: {fileID: 2176527912348110235, guid: 9ec3c5e74511c0141b403c2ae833cc8d,
-        type: 3}
-      propertyPath: RelatedImage
-      value: 
-      objectReference: {fileID: 34458639}
-    - target: {fileID: 1332600998882292096, guid: 9ec3c5e74511c0141b403c2ae833cc8d,
-        type: 3}
-      propertyPath: cellType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1332600998858625412, guid: 9ec3c5e74511c0141b403c2ae833cc8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5983,6 +5973,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1332600998882292096, guid: 9ec3c5e74511c0141b403c2ae833cc8d,
+        type: 3}
+      propertyPath: cellType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2176527912141271661, guid: 9ec3c5e74511c0141b403c2ae833cc8d,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5993,6 +5988,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClick
       objectReference: {fileID: 0}
+    - target: {fileID: 2176527912348110235, guid: 9ec3c5e74511c0141b403c2ae833cc8d,
+        type: 3}
+      propertyPath: RelatedImage
+      value: 
+      objectReference: {fileID: 34458639}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ec3c5e74511c0141b403c2ae833cc8d, type: 3}
 --- !u!1001 &5474394500205243979
@@ -6007,11 +6007,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BootsSlot
       objectReference: {fileID: 0}
-    - target: {fileID: 5474394499872427469, guid: 4dbdbcdfec1008246869d34a9c27a1ac,
-        type: 3}
-      propertyPath: RelatedImage
-      value: 
-      objectReference: {fileID: 637124807}
     - target: {fileID: 5166255347516199159, guid: 4dbdbcdfec1008246869d34a9c27a1ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6132,6 +6127,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClick
       objectReference: {fileID: 0}
+    - target: {fileID: 5474394499872427469, guid: 4dbdbcdfec1008246869d34a9c27a1ac,
+        type: 3}
+      propertyPath: RelatedImage
+      value: 
+      objectReference: {fileID: 637124807}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dbdbcdfec1008246869d34a9c27a1ac, type: 3}
 --- !u!1001 &5678345001406091689
@@ -6201,6 +6201,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 93324972581196617, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: ItemInstance.Quantity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821202, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821202, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678345001401821202, guid: 511bbeba69ee6ea4ab42142699a12c20,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 511bbeba69ee6ea4ab42142699a12c20, type: 3}
 --- !u!1001 &6370550870271870316
@@ -6214,16 +6234,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LegsSlot
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370550870253524170, guid: 77ea08fa396da004abf36e30a66f5dc0,
-        type: 3}
-      propertyPath: RelatedImage
-      value: 
-      objectReference: {fileID: 46728867}
-    - target: {fileID: 6062534858661631415, guid: 77ea08fa396da004abf36e30a66f5dc0,
-        type: 3}
-      propertyPath: cellType
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6062534858663146931, guid: 77ea08fa396da004abf36e30a66f5dc0,
         type: 3}
@@ -6330,6 +6340,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6062534858661631415, guid: 77ea08fa396da004abf36e30a66f5dc0,
+        type: 3}
+      propertyPath: cellType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6370550870767146586, guid: 77ea08fa396da004abf36e30a66f5dc0,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6340,6 +6355,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClick
       objectReference: {fileID: 0}
+    - target: {fileID: 6370550870253524170, guid: 77ea08fa396da004abf36e30a66f5dc0,
+        type: 3}
+      propertyPath: RelatedImage
+      value: 
+      objectReference: {fileID: 46728867}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ea08fa396da004abf36e30a66f5dc0, type: 3}
 --- !u!1001 &7015698615921936193
@@ -6353,16 +6373,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightHandSlot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7015698615552899778, guid: 1bc7df137c5ff4148892091661097eff,
-        type: 3}
-      propertyPath: RelatedImage
-      value: 
-      objectReference: {fileID: 1361444084}
-    - target: {fileID: 7860480845055086873, guid: 1bc7df137c5ff4148892091661097eff,
-        type: 3}
-      propertyPath: cellType
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7860480845046116637, guid: 1bc7df137c5ff4148892091661097eff,
         type: 3}
@@ -6469,6 +6479,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7860480845055086873, guid: 1bc7df137c5ff4148892091661097eff,
+        type: 3}
+      propertyPath: cellType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7015698615936471796, guid: 1bc7df137c5ff4148892091661097eff,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6479,6 +6494,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClick
       objectReference: {fileID: 0}
+    - target: {fileID: 7015698615552899778, guid: 1bc7df137c5ff4148892091661097eff,
+        type: 3}
+      propertyPath: RelatedImage
+      value: 
+      objectReference: {fileID: 1361444084}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bc7df137c5ff4148892091661097eff, type: 3}
 --- !u!1001 &8907947667619456509
@@ -6492,16 +6512,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftHandSlot
-      objectReference: {fileID: 0}
-    - target: {fileID: 8907947667920398059, guid: 9452bbc59e506954292b461333635887,
-        type: 3}
-      propertyPath: RelatedImage
-      value: 
-      objectReference: {fileID: 1054414635}
-    - target: {fileID: 8634999329767043978, guid: 9452bbc59e506954292b461333635887,
-        type: 3}
-      propertyPath: cellType
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8634999329783354254, guid: 9452bbc59e506954292b461333635887,
         type: 3}
@@ -6608,6 +6618,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8634999329767043978, guid: 9452bbc59e506954292b461333635887,
+        type: 3}
+      propertyPath: cellType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8907947667746893927, guid: 9452bbc59e506954292b461333635887,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6618,6 +6633,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClick
       objectReference: {fileID: 0}
+    - target: {fileID: 8907947667920398059, guid: 9452bbc59e506954292b461333635887,
+        type: 3}
+      propertyPath: RelatedImage
+      value: 
+      objectReference: {fileID: 1054414635}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9452bbc59e506954292b461333635887, type: 3}
 --- !u!1001 &8997016651704154009

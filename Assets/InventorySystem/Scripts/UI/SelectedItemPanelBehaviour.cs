@@ -103,6 +103,7 @@ namespace InventorySystem.UI
 
         void OnInventoryItemUnSelected()
         {
+
             inventoryItemBehaviour = null;
 
             ItemImage.sprite = null;
@@ -138,7 +139,7 @@ namespace InventorySystem.UI
         {
             if (inventoryItemBehaviour != null)
             {
-
+                
                 var characterSlot = inventoryItemBehaviour.GetComponentInParent<CharacterSlotBehaviour>();
                 if (characterSlot != null)
                 {
@@ -160,6 +161,8 @@ namespace InventorySystem.UI
         {
             if (inventoryItemBehaviour != null)
             {
+                var selectedInventorySlot = inventoryItemBehaviour.GetComponentInParent<InventorySlotBehaviour>();
+
                 var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
                 var equippableItem = inventoryItemBehaviour.ItemInstance.ItemTemplate as BaseEquipment;
 
@@ -173,7 +176,8 @@ namespace InventorySystem.UI
                     if (characterSlot.HasItem)
                     {
                         characterSlot.Unequip();
-                        //characterSlotBehaviour.UpdateImage();
+                        //Select again after unequip
+                        inventoryItemBehaviour = selectedInventorySlot.GetInventoryItem();
                     }
 
                     //equip it

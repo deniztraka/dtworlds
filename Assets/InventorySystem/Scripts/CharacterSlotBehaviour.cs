@@ -43,12 +43,17 @@ namespace InventorySystem
         {
             if (HasItem)
             {
-                var equippable = GetInventoryItem().ItemInstance.ItemTemplate.ItemPrefab.GetComponent<EquippableItemBehaviour>();
-                RelatedImage.sprite = equippable.EquippableItemSprite;
+                var inventoryItem = GetInventoryItem();
+                if (inventoryItem != null)
+                {
+                    var equippable = inventoryItem.ItemInstance.ItemTemplate.ItemPrefab.GetComponent<EquippableItemBehaviour>();
+                    RelatedImage.sprite = equippable.EquippableItemSprite;
 
-                var tempColor = RelatedImage.color;
-                tempColor.a = 1;
-                RelatedImage.color = tempColor;
+                    var tempColor = RelatedImage.color;
+                    tempColor.a = 1;
+                    RelatedImage.color = tempColor;
+                }
+
             }
             else
             {
