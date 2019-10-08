@@ -77,16 +77,17 @@ namespace DTWorlds.UnityBehaviours
             player.Hunger.CurrentValue += amount;
         }
 
-        public void Equip(InventorySlotBehaviour chosenSlot, InventoryItemBehaviour inventoryItem)
+        public void Equip(CharacterSlotBehaviour chosenSlot, InventoryItemBehaviour inventoryItem)
         {
             if (inventoryItem.ItemInstance.ItemTemplate is BaseEquipment)
             {
                 chosenSlot.AddItem(inventoryItem.ItemInstance);
-
-                var equipmentItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
-                //TODO: arrange animations
-                equipmentItem.SetModifiers(this.player);
             }
+        }
+
+        internal void Unequip(CharacterSlotBehaviour chosenSlot)
+        {
+            chosenSlot.Unequip();
         }
     }
 }

@@ -221,8 +221,11 @@ namespace InventorySystem.UI
         {
             if (inventoryItemBehaviour != null)
             {
-                var chosenSlot = inventoryItemBehaviour.GetComponentInParent<CharacterSlotBehaviour>();
-                chosenSlot.Unequip();
+                 var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
+                 var chosenSlot = inventoryItemBehaviour.GetComponentInParent<CharacterSlotBehaviour>();
+                 playerBehaviour.Unequip(chosenSlot);
+                
+               
             }
         }
     }

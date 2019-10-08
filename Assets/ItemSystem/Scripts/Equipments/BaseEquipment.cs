@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using DTWorlds.Mobiles;
 using DTWorlds.UnityBehaviours;
 using Kryz.CharacterStats;
@@ -34,6 +36,16 @@ namespace DTWorlds.Items.Equipments
         public void RemoveModifiers(BaseMobile mobile)
         {
             mobile.Armor.RemoveAllModifiersFromSource(this);
+        }
+
+        public string GetStatsText()
+        {
+            var statsText = String.Empty;
+
+            var sb = new StringBuilder(statsText);
+            sb.AppendFormat("<b>Ar:</b>", ArmorBonus);
+
+            return statsText;
         }
     }
 }

@@ -115,8 +115,8 @@ namespace InventorySystem
                 equipmentItem.RemoveModifiers(playerBehaviour.Player);
                 RemoveAnimation(equipmentItem.EquipmentType);
                 DeleteItem();
-                UpdateImage();                
-                
+                UpdateImage();
+
             }
             else
             {
@@ -144,6 +144,14 @@ namespace InventorySystem
                 case EquipmentType.LeftHand:
                     break;
             }
+        }
+
+        public override void AddItem(ItemInstance item)
+        {
+            base.AddItem(item);
+
+            var equipmentItem = item.ItemTemplate as BaseEquipment;
+            equipmentItem.SetModifiers(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().Player);
         }
 
         void RemoveAnimation(EquipmentType equipmentType)

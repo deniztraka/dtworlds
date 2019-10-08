@@ -22,7 +22,7 @@ namespace InventorySystem
 
             for (int x = 0; x < SlotGrid.Length; x++)
             {
-                
+
                 for (int y = 0; y < SlotGrid[x].Length; y++)
                 {
                     SlotGrid[x][y].GetComponent<DragAndDropCell>().cellType = DragAndDropCell.CellType.DropOnly;
@@ -49,12 +49,12 @@ namespace InventorySystem
                         {
                             if (entry.Value.Equals(results[i].gameObject))
                             {
-                                foundSame = true;                                
+                                foundSame = true;
                             }
                             break;
                         }
                         if (!foundSame)
-                        {                           
+                        {
                             // make relations in case of pickups
                             var slot = AddItem(itemBehaviour);
                             relations.Add(slot.SlotIndex, results[i].gameObject);

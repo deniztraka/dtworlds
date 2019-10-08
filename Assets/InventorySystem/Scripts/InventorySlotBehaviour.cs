@@ -128,7 +128,7 @@ namespace InventorySystem
             dragAndDropCell.UpdateBackgroundState(IsSelected);
         }
 
-        public void AddItem(ItemInstance item)
+        public virtual void AddItem(ItemInstance item)
         {
             if (item != null)
             {
