@@ -58,10 +58,6 @@ namespace InventorySystem.UI
             inventoryBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().InventoryBehaviour;
         }
 
-        public void RefreshSelectedSlot(){
-            prevInventorySlotBehaviour = null;
-        }
-
         void MakeAllButtonsDisabled()
         {
             SetButtonsStatus(new Button[] { DropButton, EquipButton, UnequipButton, PickUpButton }, false);
@@ -80,6 +76,13 @@ namespace InventorySystem.UI
         {
             if (msg.InventoryItemBehaviour != null)
             {
+
+                var tempInventorySlotBehaviour = msg.InventoryItemBehaviour.GetComponentInParent<InventorySlotBehaviour>();
+                if (!tempInventorySlotBehaviour.Equals(prevInventorySlotBehaviour))
+                {
+                    if (prevInventorySlotBehaviour != null) { prevInventorySlotBehaviour.SetSelected(false); }
+                    prevInventorySlotBehaviour = tempInventorySlotBehaviour;
+                }
 
                 SelectedItemPanel.gameObject.SetActive(true);
                 CharacterStatsPanel.gameObject.SetActive(false);
