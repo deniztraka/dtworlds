@@ -112,12 +112,12 @@ namespace InventorySystem
         {
             if (HasItem)
             {
-
+                var inventoryBehaviour = GetComponentInParent<InventoryBehaviour>();
                 var item = GetInventoryItem();
 
                 ToggleSelected();
 
-                var message = new SelectedItemMessage(IsSelected ? item : null, GetComponentInParent<InventoryBehaviour>().GetType() == typeof(InventoryBehaviour));
+                var message = new SelectedItemMessage(IsSelected ? item : null, inventoryBehaviour.GetType() == typeof(InventoryBehaviour));
                 gameObject.SendMessageUpwards(IsSelected ? "OnInventoryItemSelected" : "OnInventoryItemUnSelected", message, SendMessageOptions.DontRequireReceiver);
             }
         }

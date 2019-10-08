@@ -23,20 +23,22 @@ namespace InventorySystem
             Initialize();
         }
 
-        public void OnInventoryItemSelected(SelectedItemMessage msg){
+        public void OnInventoryItemSelected(SelectedItemMessage msg)
+        {
             for (int x = 0; x < SlotGrid.Length; x++)
-            {                
+            {
                 for (int y = 0; y < SlotGrid[x].Length; y++)
                 {
                     var inventorySlotBehaviour = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>();
-                    if(!msg.InventoryItemBehaviour.GetComponentInParent<InventorySlotBehaviour>().SlotIndex.Equals(inventorySlotBehaviour.SlotIndex)){
+                    if (!msg.InventoryItemBehaviour.GetComponentInParent<InventorySlotBehaviour>().SlotIndex.Equals(inventorySlotBehaviour.SlotIndex))
+                    {
                         inventorySlotBehaviour.SetSelected(false);
                     }
                 }
             }
         }
 
-       
+
 
         protected void Initialize()
         {

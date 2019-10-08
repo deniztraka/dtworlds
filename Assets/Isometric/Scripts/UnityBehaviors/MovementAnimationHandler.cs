@@ -65,7 +65,7 @@ namespace DTWorlds.UnityBehaviours
             if (LegsSlot != null)
             {                
                 var legsAnimator = LegsSlot.GetComponentInChildren<Animator>();                
-                if (legsAnimator != null)
+                if (legsAnimator != null && legsAnimator.runtimeAnimatorController != null)
                 {
                     legsAnimator.Play("walking_north", -1, 0);
                 }

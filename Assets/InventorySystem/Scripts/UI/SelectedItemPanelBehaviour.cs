@@ -22,25 +22,28 @@ namespace InventorySystem.UI
 
     public class SelectedItemPanelBehaviour : MonoBehaviour
     {
+        private Color tempColor;
+        private InventoryItemBehaviour inventoryItemBehaviour;
+        private InventoryBehaviour inventoryBehaviour;
+
+        private InventorySlotBehaviour prevInventorySlotBehaviour;
+
         public Image ItemImage;
         public Text TitleText;
         public Text DescText;
         public Text StatsText;
-        private Color tempColor;
-        private InventoryItemBehaviour inventoryItemBehaviour;
         public VicinityPackBehaviour vicinityPackBehaviour;
-        private InventoryBehaviour inventoryBehaviour;
         public Button DropButton;
         public Button EquipButton;
         public Button UnequipButton;
         public Button PickUpButton;
-
         public Button[] CharacterSlotSelectedButtons;
         public Button[] VicinitySlotSelectedButtons;
         public Button[] InventorySlotSelectedButtons;
         public Button[] StorageSlotSelectedButtons;
-
         public List<DragAndDropCell> CharacterSlotsList;
+        public RectTransform CharacterStatsPanel;
+        public RectTransform SelectedItemPanel;
 
         void Start()
         {
@@ -53,6 +56,10 @@ namespace InventorySystem.UI
             StatsText.text = String.Empty;
 
             inventoryBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().InventoryBehaviour;
+        }
+
+        public void RefreshSelectedSlot(){
+            prevInventorySlotBehaviour = null;
         }
 
         void MakeAllButtonsDisabled()
@@ -73,6 +80,9 @@ namespace InventorySystem.UI
         {
             if (msg.InventoryItemBehaviour != null)
             {
+
+                SelectedItemPanel.gameObject.SetActive(true);
+                CharacterStatsPanel.gameObject.SetActive(false);
                 MakeAllButtonsDisabled();
 
                 inventoryItemBehaviour = msg.InventoryItemBehaviour;
@@ -109,11 +119,17 @@ namespace InventorySystem.UI
                     }
                 }
             }
+            else
+            {
+                CharacterStatsPanel.gameObject.SetActive(true);
+                SelectedItemPanel.gameObject.SetActive(false);
+            }
         }
 
         void OnInventoryItemUnSelected()
         {
-
+            CharacterStatsPanel.gameObject.SetActive(true);
+            SelectedItemPanel.gameObject.SetActive(false);
             inventoryItemBehaviour = null;
 
             ItemImage.sprite = null;
