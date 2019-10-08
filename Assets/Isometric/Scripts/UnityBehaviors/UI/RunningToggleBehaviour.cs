@@ -37,7 +37,7 @@ namespace DTWorlds.UnityBehaviours.UI
 
         void Update()
         {
-            if(this.playerBehaviour.Player.Stamina.CurrentValue <= 0 && isRunning){
+            if(this.playerBehaviour.Player.Energy.CurrentValue <= 0 && isRunning){
                 Toggle();
             }
         }

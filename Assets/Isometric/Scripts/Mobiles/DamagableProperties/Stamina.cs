@@ -4,9 +4,9 @@ using DTWorlds.Interfaces;
 using UnityEngine;
 namespace DTWorlds.Mobiles.DamagableProperties
 {
-    public class Stamina : BaseDamagableProperty
+    public class Energy : BaseDamagableProperty
     {
-        public Stamina(BaseMobile mobile) :base(mobile)
+        public Energy(BaseMobile mobile) :base(mobile)
         {            
             CurrentValue = 100;
         }

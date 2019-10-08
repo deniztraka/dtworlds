@@ -14,6 +14,10 @@ namespace DTWorlds.Mobiles
         
         public CharacterStat Armor;
 
+        public CharacterStat Strength;
+
+        public CharacterStat Dexterity;
+
         private GameObject gameObject;
         private float movementSpeed;
         private IMovement movementType;
@@ -24,7 +28,7 @@ namespace DTWorlds.Mobiles
 
         public BaseDamagableProperty Health;
 
-        public BaseDamagableProperty Stamina;
+        public BaseDamagableProperty Energy;
 
         public BaseDamagableProperty Hunger;
 
@@ -68,10 +72,12 @@ namespace DTWorlds.Mobiles
             this.movementSpeed = movementSpeed;
 
             Health = new Health(this);
-            Stamina = new Stamina(this);
+            Energy = new Energy(this);
             Hunger = new Hunger(this);
 
             Armor = new CharacterStat();
+            Dexterity = new CharacterStat();
+            Strength = new CharacterStat();
 
             //setting up attacking system.
             var animationSpriteTransform = gameObject.transform.Find("AnimationSprite");
@@ -98,9 +104,9 @@ namespace DTWorlds.Mobiles
                 CurrentDirection = this.movementType.Move(movementSpeed);
                 
                 if(isRunning && !(this.movementType.MovementAxis.GetXAxis() == 0 && this.movementType.MovementAxis.GetYAxis() == 0)){
-                    Stamina.CurrentValue -= 0.1f;
+                    Energy.CurrentValue -= 0.1f;
                 }else{
-                    Stamina.CurrentValue += 0.01f;
+                    Energy.CurrentValue += 0.01f;
                 }
             }
         }

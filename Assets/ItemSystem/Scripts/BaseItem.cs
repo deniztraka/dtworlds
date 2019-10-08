@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,5 +17,7 @@ namespace DTWorlds.Items
         public GameObject ItemPrefab;
 
         public string ItemDescription;
+
+        public abstract string GetStatsText();
     }
 }

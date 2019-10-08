@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: ShortPants
   m_EditorClassIdentifier: 
   ItemName: Short Pants
-  Icon: {fileID: 7865619620764070842, guid: d2f7535940953f84d8ff0ca3a73efceb, type: 3}
+  Icon: {fileID: 21300000, guid: 6a63e3bebd010f4448d31f2e40258aaa, type: 3}
   Weight: 1
   MaxStack: 1
   ItemPrefab: {fileID: 5678345001401821203, guid: 511bbeba69ee6ea4ab42142699a12c20,
     type: 3}
   ItemDescription: to make things hidden
   EquipmentType: 4
-  ArmorBonus: 1
+  ArmorBonus: 0
+  DexterityBonus: 0
+  StrengthBonus: 0

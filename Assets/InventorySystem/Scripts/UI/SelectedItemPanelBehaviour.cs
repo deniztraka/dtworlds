@@ -96,6 +96,7 @@ namespace InventorySystem.UI
 
                 TitleText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemName;
                 DescText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemDescription;
+                StatsText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.GetStatsText();
 
                 var vicinityPackBehaviour = inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>();
 
@@ -141,7 +142,7 @@ namespace InventorySystem.UI
 
             TitleText.text = String.Empty;
             DescText.text = String.Empty;
-
+            StatsText.text = String.Empty;
             MakeAllButtonsDisabled();
         }
 
