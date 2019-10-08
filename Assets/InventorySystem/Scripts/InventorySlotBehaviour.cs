@@ -91,7 +91,7 @@ namespace InventorySystem
             }
         }
 
-        internal void SetSelected(bool selected)
+        internal virtual void SetSelected(bool selected)
         {
             IsSelected = selected;
 

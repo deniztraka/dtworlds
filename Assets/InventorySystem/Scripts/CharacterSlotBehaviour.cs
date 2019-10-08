@@ -36,6 +36,10 @@ namespace InventorySystem
                 UpdateImage();
                 var movementAnimationHandler = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementAnimationHandler>();
                 SetAnimation(desc.item.GetComponent<InventoryItemBehaviour>().ItemInstance.ItemTemplate as BaseEquipment);
+                var tempColor = RelatedImage.color;
+                tempColor.a = (float)175 / 255;
+                RelatedImage.color = tempColor;
+                HideSlotItemImage();
             }
         }
 
@@ -48,10 +52,6 @@ namespace InventorySystem
                 {
                     var equippable = inventoryItem.ItemInstance.ItemTemplate.ItemPrefab.GetComponent<EquippableItemBehaviour>();
                     RelatedImage.sprite = equippable.EquippableItemSprite;
-
-                    var tempColor = RelatedImage.color;
-                    tempColor.a = 1;
-                    RelatedImage.color = tempColor;
                 }
 
             }
@@ -63,18 +63,19 @@ namespace InventorySystem
                 tempColor.a = 0;
                 RelatedImage.color = tempColor;
             }
-
         }
 
         public override void OnClick()
         {
-
-
             if (HasItem)
             {
                 var item = GetInventoryItem();
 
                 ToggleSelected();
+
+                var tempRelatedImageColor = RelatedImage.color;
+                tempRelatedImageColor.a = IsSelected ? 1 : (float)175 / 255;
+                RelatedImage.color = tempRelatedImageColor;
 
                 var message = new SelectedItemMessage(IsSelected ? item : null, false);
                 gameObject.SendMessageUpwards(IsSelected ? "OnInventoryItemSelected" : "OnInventoryItemUnSelected", message, SendMessageOptions.DontRequireReceiver);
@@ -93,6 +94,10 @@ namespace InventorySystem
             var equippableItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
 
             RemoveAnimation(equippableItem.EquipmentType);
+
+            var tempRelatedImageColor = RelatedImage.color;
+            tempRelatedImageColor.a = 0;
+            RelatedImage.color = tempRelatedImageColor;
         }
 
         internal void Unequip()
@@ -117,10 +122,36 @@ namespace InventorySystem
                 DeleteItem();
                 UpdateImage();
 
+                var tempRelatedImageColor = RelatedImage.color;
+                tempRelatedImageColor.a = 0;
+                RelatedImage.color = tempRelatedImageColor;
+
             }
             else
             {
                 DropItem();
+            }
+        }
+
+        private void HideSlotItemImage()
+        {
+            Debug.Log(transform.name);
+            var itemImage = transform.GetChild(0).GetComponent<Image>();
+            var tempItemImageColor = itemImage.color;
+            tempItemImageColor.a = 0;
+            itemImage.color = tempItemImageColor;
+        }
+
+        internal override void SetSelected(bool selected)
+        {
+            base.SetSelected(selected);
+            if (selected)
+            {
+                HideSlotItemImage();
+            }else{
+                 var tempRelatedImageColor = RelatedImage.color;
+                tempRelatedImageColor.a = IsSelected ? 1 : (float)175 / 255;
+                RelatedImage.color = tempRelatedImageColor;
             }
         }
 
@@ -152,6 +183,12 @@ namespace InventorySystem
 
             var equipmentItem = item.ItemTemplate as BaseEquipment;
             equipmentItem.SetModifiers(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().Player);
+
+            var tempColor = RelatedImage.color;
+            tempColor.a = (float)175 / 255;
+            RelatedImage.color = tempColor;
+
+            HideSlotItemImage();
         }
 
         void RemoveAnimation(EquipmentType equipmentType)
