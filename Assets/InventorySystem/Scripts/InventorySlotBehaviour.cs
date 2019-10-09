@@ -57,7 +57,7 @@ namespace InventorySystem
 
 
                 var sourceTypeName = inventoryComponent.GetType().Name;
-                var inventoryBehaviour = desc.item.GetComponentInParent<InventoryBehaviour>();
+                var inventoryBehaviour = targetSlot.GetComponentInParent<InventoryBehaviour>();
                 if (inventoryBehaviour != null)
                 {
                     var targetTypeName = inventoryBehaviour.GetType().Name;
@@ -87,7 +87,33 @@ namespace InventorySystem
                         vicinityBehaviour.AddItemRelation(targetSlot.SlotIndex, itemBehaviour.gameObject);
                     }
 
+
                 }
+                else if (targetSlot.GetComponent<CharacterSlotBehaviour>() != null)
+                {
+                    //target is character slot
+                    var targetCharacterSlot = targetSlot.GetComponent<CharacterSlotBehaviour>();
+                    if (desc.triggerType == TriggerType.DropRequest)
+                    {
+                        //if has item, uneqip it first
+                        if (targetCharacterSlot.HasItem)
+                        {
+                            targetCharacterSlot.Unequip();
+                        }
+                    }
+                    else if (desc.triggerType == TriggerType.DropEventEnd)
+                    {
+                        var inventoryItem = desc.item;
+                        if (!inventoryItem.name.StartsWith("CharacterSlotItemPrefab"))
+                        {
+                            var characterSlotInventoryItem = GameObject.Instantiate(InventoryItemPrefab, GameObject.FindWithTag("Player").transform.position, Quaternion.identity, targetCharacterSlot.transform).GetComponent<InventoryItemBehaviour>();
+                            characterSlotInventoryItem.ItemInstance = inventoryItem.GetComponent<InventoryItemBehaviour>().ItemInstance;
+                            Destroy(inventoryItem.gameObject);
+                        }
+                        targetCharacterSlot.HideSlotItemImage();
+                    }
+                }
+
             }
         }
 

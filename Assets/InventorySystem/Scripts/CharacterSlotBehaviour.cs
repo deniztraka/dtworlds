@@ -31,15 +31,15 @@ namespace InventorySystem
                     vicinityBehaviour.DeleteRelatedItem(inventorySlot.SlotIndex);
                 }
 
-
+                SetAnimation(desc.item.GetComponent<InventoryItemBehaviour>().ItemInstance.ItemTemplate as BaseEquipment);
 
                 UpdateImage();
-                var movementAnimationHandler = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementAnimationHandler>();
-                SetAnimation(desc.item.GetComponent<InventoryItemBehaviour>().ItemInstance.ItemTemplate as BaseEquipment);
                 var tempColor = RelatedImage.color;
                 tempColor.a = (float)175 / 255;
                 RelatedImage.color = tempColor;
                 HideSlotItemImage();
+
+                SetAnimation(desc.item.GetComponent<InventoryItemBehaviour>().ItemInstance.ItemTemplate as BaseEquipment);
             }
         }
 
@@ -133,7 +133,7 @@ namespace InventorySystem
             }
         }
 
-        private void HideSlotItemImage()
+        public void HideSlotItemImage()
         {
             var inventoryItem = GetInventoryItem();
             var itemImage = inventoryItem.GetComponent<Image>();
