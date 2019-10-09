@@ -87,7 +87,7 @@ namespace InventorySystem
             var inventoryItem = GetInventoryItem();
             var createdGameObject = GameObject.Instantiate(inventoryItem.ItemInstance.ItemTemplate.ItemPrefab, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
             var itemBehaviour = createdGameObject.GetComponent<ItemBehaviour>();
-            itemBehaviour.ItemInstance.Quantity = inventoryItem.ItemInstance.Quantity;
+            itemBehaviour.ItemInstance = inventoryItem.ItemInstance;
 
             DeleteItem();
             UpdateImage();
@@ -111,13 +111,13 @@ namespace InventorySystem
                 var inventoryItem = GetInventoryItem();
                 var clonedItem = GameObject.Instantiate(inventoryItem.ItemInstance.ItemTemplate.ItemPrefab);
                 var actualItem = clonedItem.GetComponent<ItemBehaviour>();
-                actualItem.ItemInstance.Quantity = inventoryItem.ItemInstance.Quantity;
+                actualItem.ItemInstance = inventoryItem.ItemInstance;
                 inventoryBehaviour.AddItem(actualItem);
 
                 GameObject.Destroy(actualItem.gameObject);
 
                 var equipmentItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
-                equipmentItem.RemoveModifiers(playerBehaviour.Player);
+                inventoryItem.ItemInstance.RemoveModifiers(playerBehaviour.Player);
                 RemoveAnimation(equipmentItem.EquipmentType);
                 DeleteItem();
                 UpdateImage();
@@ -183,8 +183,7 @@ namespace InventorySystem
         {
             base.AddItem(item);
 
-            var equipmentItem = item.ItemTemplate as BaseEquipment;
-            equipmentItem.SetModifiers(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().Player);
+            item.SetModifiers(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().Player);
 
             var tempColor = RelatedImage.color;
             tempColor.a = (float)175 / 255;

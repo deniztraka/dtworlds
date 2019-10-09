@@ -82,7 +82,7 @@ namespace InventorySystem
 
                         var createdGameObject = GameObject.Instantiate(draggedItemInstance.ItemTemplate.ItemPrefab, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
                         var itemBehaviour = createdGameObject.GetComponent<ItemBehaviour>();
-                        itemBehaviour.ItemInstance.Quantity = draggedItemInstance.Quantity;
+                        itemBehaviour.ItemInstance = draggedItemInstance;
                         var vicinityBehaviour = targetSlot.GetComponentInParent<VicinityPackBehaviour>();
                         vicinityBehaviour.AddItemRelation(targetSlot.SlotIndex, itemBehaviour.gameObject);
                     }

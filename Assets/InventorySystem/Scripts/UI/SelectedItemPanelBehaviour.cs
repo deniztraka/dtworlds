@@ -96,7 +96,7 @@ namespace InventorySystem.UI
 
                 TitleText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemName;
                 DescText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemDescription;
-                StatsText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.GetStatsText();
+                StatsText.text = msg.InventoryItemBehaviour.ItemInstance.GetStatsText();
 
                 var vicinityPackBehaviour = inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>();
 

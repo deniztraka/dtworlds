@@ -141,7 +141,7 @@ namespace InventorySystem
                 {
                     var createdGameObject = GameObject.Instantiate(inventoryItem.ItemInstance.ItemTemplate.ItemPrefab, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
                     var itemBehaviour = createdGameObject.GetComponent<ItemBehaviour>();
-                    itemBehaviour.ItemInstance.Quantity = inventoryItem.ItemInstance.Quantity;
+                    itemBehaviour.ItemInstance = inventoryItem.ItemInstance;
 
                     selectedSlot.DeleteItem();
                 }
