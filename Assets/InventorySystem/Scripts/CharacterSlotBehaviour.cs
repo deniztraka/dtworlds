@@ -135,7 +135,8 @@ namespace InventorySystem
 
         private void HideSlotItemImage()
         {
-            var itemImage = transform.GetChild(0).GetComponent<Image>();
+            var inventoryItem = GetInventoryItem();
+            var itemImage = inventoryItem.GetComponent<Image>();
             var tempItemImageColor = itemImage.color;
             tempItemImageColor.a = 0;
             itemImage.color = tempItemImageColor;
