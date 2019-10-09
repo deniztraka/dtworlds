@@ -41,7 +41,7 @@ namespace InventorySystem
             //TODO:
             //Identify every drag and drop operation source and destination slots
             //and do the required operations
-            //Debug.Log("asd");
+
 
             gameObject.SendMessageUpwards("OnInventoryItemUnSelected", null, SendMessageOptions.DontRequireReceiver);
 

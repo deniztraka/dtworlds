@@ -135,7 +135,6 @@ namespace InventorySystem
 
         private void HideSlotItemImage()
         {
-            Debug.Log(transform.name);
             var itemImage = transform.GetChild(0).GetComponent<Image>();
             var tempItemImageColor = itemImage.color;
             tempItemImageColor.a = 0;
@@ -148,8 +147,10 @@ namespace InventorySystem
             if (selected)
             {
                 HideSlotItemImage();
-            }else{
-                 var tempRelatedImageColor = RelatedImage.color;
+            }
+            else if (HasItem)
+            {
+                var tempRelatedImageColor = RelatedImage.color;
                 tempRelatedImageColor.a = IsSelected ? 1 : (float)175 / 255;
                 RelatedImage.color = tempRelatedImageColor;
             }
