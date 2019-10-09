@@ -30,6 +30,7 @@ namespace InventorySystem.UI
 
         public Image ItemImage;
         public Text TitleText;
+        public Text QualityText;
         public Text DescText;
         public Text StatsText;
         public VicinityPackBehaviour vicinityPackBehaviour;
@@ -54,6 +55,7 @@ namespace InventorySystem.UI
             TitleText.text = String.Empty;
             DescText.text = String.Empty;
             StatsText.text = String.Empty;
+            QualityText.text = String.Empty;
 
             inventoryBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().InventoryBehaviour;
         }
@@ -96,6 +98,7 @@ namespace InventorySystem.UI
 
                 TitleText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemName;
                 DescText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemDescription;
+                QualityText.text = msg.InventoryItemBehaviour.ItemInstance.GetQualityText();
                 StatsText.text = msg.InventoryItemBehaviour.ItemInstance.GetStatsText();
 
                 var vicinityPackBehaviour = inventoryItemBehaviour.GetComponentInParent<VicinityPackBehaviour>();
@@ -142,6 +145,7 @@ namespace InventorySystem.UI
 
             TitleText.text = String.Empty;
             DescText.text = String.Empty;
+            QualityText.text = String.Empty;
             StatsText.text = String.Empty;
             MakeAllButtonsDisabled();
         }

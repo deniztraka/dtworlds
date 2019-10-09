@@ -77,5 +77,10 @@ namespace DTWorlds.Items
             }
             return sb.ToString();
         }
+
+        internal string GetQualityText()
+        {
+            return String.Format("- {0} -",this.Quality.ToString());
+        }
     }
 }
