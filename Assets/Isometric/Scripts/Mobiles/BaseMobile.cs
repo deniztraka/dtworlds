@@ -11,7 +11,7 @@ namespace DTWorlds.Mobiles
 {
     public abstract class BaseMobile
     {
-        
+
         public CharacterStat Armor;
 
         public CharacterStat Strength;
@@ -21,7 +21,7 @@ namespace DTWorlds.Mobiles
         private GameObject gameObject;
         private float movementSpeed;
         private IMovement movementType;
-        private IAttackType attackType;        
+        private IAttackType attackType;
 
         private List<IAttackType> attackTypes;
         private IAttackType currentAttackType;
@@ -59,11 +59,11 @@ namespace DTWorlds.Mobiles
         }
 
         public float MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
-       
+
 
         public BaseMobile()
         {
-            
+
         }
 
         public BaseMobile(GameObject gameObject, float movementSpeed)
@@ -71,13 +71,17 @@ namespace DTWorlds.Mobiles
             this.gameObject = gameObject;
             this.movementSpeed = movementSpeed;
 
+            Armor = new CharacterStat();
+            Dexterity = new CharacterStat();
+            Dexterity.BaseValue = 10;
+            Strength = new CharacterStat();
+            Strength.BaseValue = 10;
+
             Health = new Health(this);
             Energy = new Energy(this);
             Hunger = new Hunger(this);
 
-            Armor = new CharacterStat();
-            Dexterity = new CharacterStat();
-            Strength = new CharacterStat();
+
 
             //setting up attacking system.
             var animationSpriteTransform = gameObject.transform.Find("AnimationSprite");
@@ -102,12 +106,16 @@ namespace DTWorlds.Mobiles
             if (!this.currentAttackType.IsAttacking)
             {
                 CurrentDirection = this.movementType.Move(movementSpeed);
-                
-                if(isRunning && !(this.movementType.MovementAxis.GetXAxis() == 0 && this.movementType.MovementAxis.GetYAxis() == 0)){
-                    Energy.CurrentValue -= 0.1f;
-                }else{
-                    Energy.CurrentValue += 0.01f;
-                }
+
+                // TODO: Energy lowers quicker when running
+                // if (isRunning && !(this.movementType.MovementAxis.GetXAxis() == 0 && this.movementType.MovementAxis.GetYAxis() == 0))
+                // {
+                //     Energy.CurrentValue -= 0.1f;
+                // }
+                // else
+                // {
+                //     Energy.CurrentValue += 0.01f;
+                // }
             }
         }
 

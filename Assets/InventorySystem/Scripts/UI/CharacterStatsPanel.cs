@@ -44,7 +44,10 @@ namespace InventorySystem.UI
 
         private void OnHealthChanged(float beforeValue, float afterValue)
         {
-            HealthValueText.text = String.Format("{0}", Math.Floor(afterValue));
+            if (HealthValueText != null)
+            {
+                HealthValueText.text = String.Format("{0}", Math.Floor(afterValue));
+            }
         }
 
         private void OnHungerChanged(float beforeValue, float afterValue)
@@ -54,7 +57,10 @@ namespace InventorySystem.UI
 
         private void OnEnergyChanged(float beforeValue, float afterValue)
         {
-            EnergyValueText.text = String.Format("{0}", Math.Floor(afterValue));
+            if (EnergyValueText != null)
+            {
+                EnergyValueText.text = String.Format("{0}", Math.Floor(afterValue));
+            }
         }
 
         private void OnArmorChanged()

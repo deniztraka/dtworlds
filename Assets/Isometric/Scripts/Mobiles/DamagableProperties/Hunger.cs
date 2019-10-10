@@ -6,9 +6,10 @@ namespace DTWorlds.Mobiles.DamagableProperties
 {
     public class Hunger : BaseDamagableProperty
     {
-        public Hunger(BaseMobile mobile) :base(mobile)
-        {            
-            CurrentValue = 100;
+        public Hunger(BaseMobile mobile) : base(mobile)
+        {
+            MaxValue = 100;
+            CurrentValue = MaxValue;
         }
     }
 }

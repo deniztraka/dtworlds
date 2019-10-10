@@ -7,9 +7,24 @@ namespace DTWorlds.Mobiles.DamagableProperties
     public class BaseDamagableProperty : IDamagablePropertyX
     {
 
-        private BaseMobile mobile;
+        protected BaseMobile Mobile;
         private float currentValue;
-        public float MaxValue { get; }
+        private float maxValue;
+
+        public float MaxValue
+        {
+            get { return maxValue; }
+            set
+            {
+                maxValue = value;
+
+                //this is just for registered object updates when max value changed
+                if (OnAfterValueChangedEvent != null)
+                {
+                    OnAfterValueChangedEvent(currentValue, currentValue);
+                }
+            }
+        }
         public float CurrentValue
         {
             get { return currentValue; }
@@ -32,9 +47,7 @@ namespace DTWorlds.Mobiles.DamagableProperties
 
         public BaseDamagableProperty(BaseMobile mobile)
         {
-            this.mobile = mobile;
-            MaxValue = 100;
-            currentValue = 100;
+            Mobile = mobile;
         }
 
 
