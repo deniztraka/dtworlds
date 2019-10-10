@@ -144,10 +144,10 @@ namespace DTWorlds.Mobiles
             //max attack rate 2.5sn
 
             float weaponSpeed = 2f;
-            float swinSwpeedIncrease = 0f;
+            float swingSpeedIncrease = 0f;
 
             float energyTicks = Energy.CurrentValue / Energy.MaxValue;
-            var calculatedAttackRate = ((Mathf.Clamp(weaponSpeed, 1.5f, 3.5f) - energyTicks) * ((float)100.0 / ((float)100.0 + swinSwpeedIncrease)));
+            var calculatedAttackRate = ((Mathf.Clamp(weaponSpeed, 1.5f, 3.5f) - energyTicks) * ((float)100.0 / ((float)100.0 + swingSpeedIncrease)));
 
             return calculatedAttackRate;
 
