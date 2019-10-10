@@ -46,20 +46,20 @@ namespace InventorySystem.UI
         {
             if (HealthValueText != null)
             {
-                HealthValueText.text = String.Format("{0}", Math.Floor(afterValue));
+                HealthValueText.text = String.Format("{0}/{1}", Math.Floor(afterValue), playerBehaviour.Player.Health.MaxValue);
             }
         }
 
         private void OnHungerChanged(float beforeValue, float afterValue)
         {
-            HungerValueText.text = String.Format("{0}", Math.Floor(afterValue));
+            HungerValueText.text = String.Format("{0}/{1}", Math.Floor(afterValue), playerBehaviour.Player.Hunger.MaxValue);
         }
 
         private void OnEnergyChanged(float beforeValue, float afterValue)
         {
             if (EnergyValueText != null)
             {
-                EnergyValueText.text = String.Format("{0}", Math.Floor(afterValue));
+                EnergyValueText.text = String.Format("{0}/{1}", Math.Floor(afterValue), playerBehaviour.Player.Energy.MaxValue);
             }
         }
 

@@ -6,6 +6,7 @@ using DTWorlds.Mobiles.AttackTypes;
 using DTWorlds.UnityBehaviours;
 using DTWorlds.Mobiles.DamagableProperties;
 using Kryz.CharacterStats;
+using System;
 
 namespace DTWorlds.Mobiles
 {
@@ -107,15 +108,16 @@ namespace DTWorlds.Mobiles
             {
                 CurrentDirection = this.movementType.Move(movementSpeed);
 
-                // TODO: Energy lowers quicker when running
-                // if (isRunning && !(this.movementType.MovementAxis.GetXAxis() == 0 && this.movementType.MovementAxis.GetYAxis() == 0))
-                // {
-                //     Energy.CurrentValue -= 0.1f;
-                // }
-                // else
-                // {
-                //     Energy.CurrentValue += 0.01f;
-                // }
+                //TODO: Energy lowers quicker when running
+                if (isRunning && !(this.movementType.MovementAxis.GetXAxis() == 0 && this.movementType.MovementAxis.GetYAxis() == 0))
+                {
+                    Energy.CurrentValue -= 0.1f;
+                }
+                else
+                {
+                    Energy.CurrentValue += 0.01f;
+                    Health.CurrentValue += 0.1f;
+                }
             }
         }
 
@@ -136,9 +138,19 @@ namespace DTWorlds.Mobiles
 
         public float GetAttackRate()
         {
-            //stamina ticks = max stamina / current stamina
-            //float attackRate = ((Base Weapon Speed - Stamina Ticks) * (100.0 / (100 + Swing Speed Increase))) always round down
-            return 1f;
+            //weapon speed should be between 1.5 and 3.5 - lower is quicker
+            //swing speed increase should be between 0 and 60 - higher is quicker
+            //min attack rate 0.3sn
+            //max attack rate 2.5sn
+
+            float weaponSpeed = 2f;
+            float swinSwpeedIncrease = 0f;
+
+            float energyTicks = Energy.CurrentValue / Energy.MaxValue;
+            var calculatedAttackRate = ((Mathf.Clamp(weaponSpeed, 1.5f, 3.5f) - energyTicks) * ((float)100.0 / ((float)100.0 + swinSwpeedIncrease)));
+
+            return calculatedAttackRate;
+
         }
     }
 }

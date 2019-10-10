@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DTWorlds.Interfaces;
 using DTWorlds.UnityBehaviours;
+using System;
 
 namespace DTWorlds.Mobiles.AttackTypes
 {
@@ -11,6 +12,9 @@ namespace DTWorlds.Mobiles.AttackTypes
         private GameObject weaponSlot;
         private AttackingAnimationHandler animationHandler;
         private bool isAttacking;
+
+        //DateTime lastAttackTime;
+
         public bool IsAttacking
         {
             get { return isAttacking; }
@@ -34,13 +38,15 @@ namespace DTWorlds.Mobiles.AttackTypes
             isAttacking = true;
             animationHandler.SetAttackSpeedMultiplier(speedMultiplier);
             animationHandler.PlayAttackingAnimation(direction, false);
-            //Debug.Log("attacked");
+            //Debug.Log(speedMultiplier);
+            //lastAttackTime = DateTime.Now;
         }
 
         private void AttackingEnds()
         {
-            //Debug.Log("bitti");
+            //Debug.Log((DateTime.Now - lastAttackTime).TotalSeconds.ToString());
             isAttacking = false;
+
         }
     }
 
