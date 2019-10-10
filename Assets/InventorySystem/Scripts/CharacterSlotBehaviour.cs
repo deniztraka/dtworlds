@@ -30,8 +30,12 @@ namespace InventorySystem
                 {
                     vicinityBehaviour.DeleteRelatedItem(inventorySlot.SlotIndex);
                 }
+                var draggedItemInstance = desc.item.GetComponent<InventoryItemBehaviour>().ItemInstance;
+                SetAnimation(draggedItemInstance.ItemTemplate as BaseEquipment);
 
-                SetAnimation(desc.item.GetComponent<InventoryItemBehaviour>().ItemInstance.ItemTemplate as BaseEquipment);
+                var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
+                draggedItemInstance.SetModifiers(playerBehaviour.Player);
+
 
                 UpdateImage();
                 var tempColor = RelatedImage.color;
@@ -39,7 +43,7 @@ namespace InventorySystem
                 RelatedImage.color = tempColor;
                 HideSlotItemImage();
 
-                SetAnimation(desc.item.GetComponent<InventoryItemBehaviour>().ItemInstance.ItemTemplate as BaseEquipment);
+                SetAnimation(draggedItemInstance.ItemTemplate as BaseEquipment);
             }
         }
 

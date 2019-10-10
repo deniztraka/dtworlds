@@ -16,7 +16,7 @@ namespace DTWorlds.Items
     public class ItemInstance
     {
 
-
+        private bool isModifiersSet;
         private const string statsTextFormat = "{2}:<b>{1}{0}</b>";
 
         public BaseItem ItemTemplate;
@@ -35,27 +35,36 @@ namespace DTWorlds.Items
 
         public virtual void SetModifiers(BaseMobile mobile)
         {
-            var bonusList = ItemTemplate.GetBonusList();
-            foreach (var bonus in bonusList)
+            if (!isModifiersSet)
             {
-                var characterStat = GetField<CharacterStat>(mobile, bonus.ModifierName);
-                if (characterStat != null)
+                var bonusList = ItemTemplate.GetBonusList();
+                foreach (var bonus in bonusList)
                 {
-                    characterStat.AddModifier(new StatModifier(bonus.Value + (int)this.Quality, StatModType.Flat, this));
+                    var characterStat = GetField<CharacterStat>(mobile, bonus.ModifierName);
+                    if (characterStat != null)
+                    {
+                        characterStat.AddModifier(new StatModifier(bonus.Value + (int)this.Quality, StatModType.Flat, this));
+                    }
                 }
+
+                isModifiersSet = true;
             }
         }
 
         public void RemoveModifiers(BaseMobile mobile)
         {
-            var bonusList = ItemTemplate.GetBonusList();
-            foreach (var bonus in bonusList)
+            if (isModifiersSet)
             {
-                var characterStat = GetField<CharacterStat>(mobile, bonus.ModifierName);
-                if (characterStat != null)
+                var bonusList = ItemTemplate.GetBonusList();
+                foreach (var bonus in bonusList)
                 {
-                    characterStat.RemoveAllModifiersFromSource(this);
+                    var characterStat = GetField<CharacterStat>(mobile, bonus.ModifierName);
+                    if (characterStat != null)
+                    {
+                        characterStat.RemoveAllModifiersFromSource(this);
+                    }
                 }
+                isModifiersSet = false;
             }
         }
 
@@ -80,7 +89,7 @@ namespace DTWorlds.Items
 
         internal string GetQualityText()
         {
-            return String.Format("- {0} -",this.Quality.ToString());
+            return String.Format("- {0} -", this.Quality.ToString());
         }
     }
 }
