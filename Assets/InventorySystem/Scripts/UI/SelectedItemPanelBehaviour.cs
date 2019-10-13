@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DTWorlds.Items;
 using DTWorlds.Items.Behaviours;
 using DTWorlds.Items.Equipments;
 using DTWorlds.UnityBehaviours;
@@ -27,6 +28,13 @@ namespace InventorySystem.UI
         private InventoryBehaviour inventoryBehaviour;
 
         private InventorySlotBehaviour prevInventorySlotBehaviour;
+
+
+        public Color WeakItemColor;
+        public Color RegularItemColor;
+        public Color ExceptionalItemColor;
+        public Color RareItemColor;
+        public Color LegendItemColor;
 
         public Image ItemImage;
         public Text TitleText;
@@ -95,6 +103,29 @@ namespace InventorySystem.UI
                 ItemImage.sprite = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.Icon;
                 tempColor.a = 1;
                 ItemImage.color = tempColor;
+
+                var itemColor = Color.black;
+                switch (msg.InventoryItemBehaviour.ItemInstance.Quality)
+                {
+                    case ItemQuality.Weak:
+                        itemColor = WeakItemColor;
+                        break;
+                    case ItemQuality.Regular:
+                        itemColor = RegularItemColor;
+                        break;
+                    case ItemQuality.Exceptional:
+                        itemColor = ExceptionalItemColor;
+                        break;
+                    case ItemQuality.Rare:
+                        itemColor = RareItemColor;
+                        break;
+                    case ItemQuality.Legend:
+                        itemColor = LegendItemColor;
+                        break;
+                }
+
+                TitleText.color = itemColor;
+                QualityText.color = itemColor;
 
                 TitleText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemName;
                 DescText.text = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate.ItemDescription;
@@ -226,11 +257,11 @@ namespace InventorySystem.UI
         {
             if (inventoryItemBehaviour != null)
             {
-                 var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
-                 var chosenSlot = inventoryItemBehaviour.GetComponentInParent<CharacterSlotBehaviour>();
-                 playerBehaviour.Unequip(chosenSlot);
-                
-               
+                var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
+                var chosenSlot = inventoryItemBehaviour.GetComponentInParent<CharacterSlotBehaviour>();
+                playerBehaviour.Unequip(chosenSlot);
+
+
             }
         }
     }

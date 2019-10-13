@@ -1389,6 +1389,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178434dfa764c8244850cb4109d54407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeakItemColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 0.78431374}
+  RegularItemColor: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 0.78431374}
+  ExceptionalItemColor: {r: 0.21960784, g: 0.8117647, b: 0.17254902, a: 0.78431374}
+  RareItemColor: {r: 0.4745098, g: 0.62352943, b: 0.972549, a: 0.78431374}
+  LegendItemColor: {r: 1, g: 0.44705883, b: 0.20392157, a: 0.78431374}
   ItemImage: {fileID: 158377968}
   TitleText: {fileID: 1994023429}
   QualityText: {fileID: 610686966}
@@ -5502,7 +5507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+  m_Color: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6738,7 +6743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8692,7 +8697,7 @@ PrefabInstance:
     - target: {fileID: 93324972581196617, guid: 511bbeba69ee6ea4ab42142699a12c20,
         type: 3}
       propertyPath: ItemInstance.Quality
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 511bbeba69ee6ea4ab42142699a12c20, type: 3}
@@ -8854,6 +8859,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6062534858661656925, guid: 77ea08fa396da004abf36e30a66f5dc0,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6370550870767146586, guid: 77ea08fa396da004abf36e30a66f5dc0,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8863,11 +8873,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 6062534858661656925, guid: 77ea08fa396da004abf36e30a66f5dc0,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ea08fa396da004abf36e30a66f5dc0, type: 3}
