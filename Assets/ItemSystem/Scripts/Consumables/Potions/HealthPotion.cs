@@ -18,7 +18,7 @@ namespace DTWorlds.Items.Consumables.Potions
             return new List<ItemBonus>();
         }
 
-        public override void Use()
+        public override void Use(BaseMobile mobile)
         {
             Debug.Log("Item is used.");
         }
