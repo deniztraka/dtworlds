@@ -181,6 +181,10 @@ namespace InventorySystem
                 Destroy(inventoryItem.gameObject);
                 HasItem = false;
                 IsSelected = false;
+                          
+
+                var message = new SelectedItemMessage(null, true);
+                gameObject.SendMessageUpwards(IsSelected ? "OnInventoryItemSelected" : "OnInventoryItemUnSelected", message, SendMessageOptions.DontRequireReceiver);
             }
         }
     }

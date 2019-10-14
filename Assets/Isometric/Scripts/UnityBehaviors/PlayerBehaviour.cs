@@ -36,6 +36,7 @@ namespace DTWorlds.UnityBehaviours
         {
             player = new Player(gameObject, 1);
             player.SetMovementType(new IsometricMovement(new JoyStickMovementInput(joystick)));
+            player.Health.CurrentValue = 50;
             //player.SetMovementType(new IsometricMovement(new KeyboardMovementInput()));
         }
 

@@ -116,7 +116,7 @@ namespace DTWorlds.Mobiles
                 else
                 {
                     Energy.CurrentValue += 0.01f;
-                    Health.CurrentValue += 0.1f;
+                    //Health.CurrentValue += 0.1f;
                 }
             }
         }

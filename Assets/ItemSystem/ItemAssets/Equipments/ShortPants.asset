@@ -31,8 +31,3 @@ MonoBehaviour:
     Name: DexterityBonus
     ModifierName: Dexterity
     Value: 0
-  StrengthBonus:
-    UIName: STR
-    Name: StrengthBonus
-    ModifierName: Strength
-    Value: 0

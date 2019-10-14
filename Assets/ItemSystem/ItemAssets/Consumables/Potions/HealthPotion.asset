@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
   ItemName: HealthPotion
-  Icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  Icon: {fileID: 21300000, guid: 934218f2ce611fd4481a3a8bfddcfa24, type: 3}
   Weight: 0
   MaxStack: 20
   Quality: 1

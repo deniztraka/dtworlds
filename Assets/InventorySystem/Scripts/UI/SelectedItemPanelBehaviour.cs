@@ -27,7 +27,6 @@ namespace InventorySystem.UI
         private Color tempColor;
         private InventoryItemBehaviour inventoryItemBehaviour;
         private InventoryBehaviour inventoryBehaviour;
-
         private InventorySlotBehaviour prevInventorySlotBehaviour;
 
 
@@ -47,6 +46,7 @@ namespace InventorySystem.UI
         public Button EquipButton;
         public Button UnequipButton;
         public Button PickUpButton;
+        public Button ConsumeButton;
         public Button[] CharacterSlotSelectedButtons;
         public Button[] VicinitySlotSelectedButtons;
         public Button[] InventorySlotSelectedButtons;
@@ -71,7 +71,7 @@ namespace InventorySystem.UI
 
         void MakeAllButtonsDisabled()
         {
-            SetButtonsStatus(new Button[] { DropButton, EquipButton, UnequipButton, PickUpButton }, false);
+            SetButtonsStatus(new Button[] { DropButton, EquipButton, UnequipButton, PickUpButton, ConsumeButton }, false);
         }
 
         void SetButtonsStatus(Button[] buttonList, bool status)
@@ -149,12 +149,22 @@ namespace InventorySystem.UI
                 }
 
                 var equipment = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate as BaseEquipment;
-                if (equipment == null)
+                if (equipment == null && msg.IsInPlayerInventory)
                 {
                     if (EquipButton.interactable)
                     {
-                        EquipButton.gameObject.SetActive(true);
+                        EquipButton.gameObject.SetActive(false);
                         EquipButton.interactable = false;
+                    }
+                }
+
+                var consumable = msg.InventoryItemBehaviour.ItemInstance.ItemTemplate as BaseConsumable;
+                if (consumable == null && msg.IsInPlayerInventory)
+                {
+                    if (ConsumeButton.interactable)
+                    {
+                        ConsumeButton.gameObject.SetActive(false);
+                        ConsumeButton.interactable = false;
                     }
                 }
             }
@@ -263,6 +273,30 @@ namespace InventorySystem.UI
                 playerBehaviour.Unequip(chosenSlot);
 
 
+            }
+        }
+
+        public void OnConsumeButtonClicked()
+        {
+            if (inventoryItemBehaviour != null)
+            {
+                var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
+
+                var consumable = inventoryItemBehaviour.ItemInstance.ItemTemplate as BaseConsumable;
+                consumable.Consume(inventoryItemBehaviour.ItemInstance, playerBehaviour.Player);
+
+                inventoryItemBehaviour.ItemInstance.Quantity--;
+
+                if (inventoryItemBehaviour.ItemInstance.Quantity <= 0)
+                {
+                    if (inventoryItemBehaviour.ItemInstance.Quantity <= 0)
+                    {
+                        var inventorySlot = inventoryItemBehaviour.GetComponentInParent<InventorySlotBehaviour>();
+                        inventorySlot.DeleteItem();
+
+                    }
+
+                }
             }
         }
     }

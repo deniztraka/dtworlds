@@ -18,9 +18,9 @@ namespace DTWorlds.Items.Consumables.Potions
             return new List<ItemBonus>();
         }
 
-        public override void Use(BaseMobile mobile)
+        public override void Consume(ItemInstance instance, BaseMobile mobile)
         {
-            Debug.Log("Item is used.");
+            mobile.Health.CurrentValue += (((int)instance.Quality + 0.5f) * 10);
         }
     }
 }
