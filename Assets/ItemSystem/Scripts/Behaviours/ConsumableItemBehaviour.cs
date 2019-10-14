@@ -1,12 +1,13 @@
 ﻿using InventorySystem;
 using DTWorlds.Items.Consumables;
+using DTWorlds.Mobiles;
 
 namespace DTWorlds.Items.Behaviours
 {
 
     public class ConsumableItemBehaviour : ItemBehaviour
     {
-        public void Use()
+        public void Use(BaseMobile mobile)
         {
             if (this.ItemInstance.Quantity > 0)
             {
@@ -19,7 +20,7 @@ namespace DTWorlds.Items.Behaviours
                     {
                         //item is in inventory
                         var consumable = ItemInstance.ItemTemplate as BaseConsumable;
-                        consumable.Use();
+                        consumable.Use(mobile);
                     }
                 }
             }

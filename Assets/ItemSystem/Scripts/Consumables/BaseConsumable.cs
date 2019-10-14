@@ -12,6 +12,6 @@ namespace DTWorlds.Items.Consumables
 
     public abstract class BaseConsumable : BaseItem
     {
-        public abstract void Use();
+        public abstract void Use(BaseMobile mobile);
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DTWorlds.Items;
 using DTWorlds.Items.Behaviours;
+using DTWorlds.Items.Consumables;
 using DTWorlds.Items.Equipments;
 using DTWorlds.UnityBehaviours;
 using UnityEngine;
