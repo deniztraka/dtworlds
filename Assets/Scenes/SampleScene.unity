@@ -1326,7 +1326,7 @@ RectTransform:
   m_GameObject: {fileID: 303708830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 802417238}
   - {fileID: 2106523774}
@@ -8701,6 +8701,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 511bbeba69ee6ea4ab42142699a12c20, type: 3}
+--- !u!1001 &5750175100869452473
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5750175100209823230, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthPotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823230, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750175100209823216, guid: 32598bdea8dd74542be8060a1f765378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 32598bdea8dd74542be8060a1f765378, type: 3}
 --- !u!1001 &6370550870271870316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8859,11 +8933,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6062534858661656925, guid: 77ea08fa396da004abf36e30a66f5dc0,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.11764706
-      objectReference: {fileID: 0}
     - target: {fileID: 6370550870767146586, guid: 77ea08fa396da004abf36e30a66f5dc0,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8873,6 +8942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062534858661656925, guid: 77ea08fa396da004abf36e30a66f5dc0,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.11764706
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ea08fa396da004abf36e30a66f5dc0, type: 3}
