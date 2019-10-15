@@ -283,19 +283,20 @@ namespace InventorySystem.UI
                 var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
 
                 var consumable = inventoryItemBehaviour.ItemInstance.ItemTemplate as BaseConsumable;
-                consumable.Consume(inventoryItemBehaviour.ItemInstance, playerBehaviour.Player);
+                var consumeResult = consumable.Consume(inventoryItemBehaviour.ItemInstance, playerBehaviour.Player);
 
-                inventoryItemBehaviour.ItemInstance.Quantity--;
-
-                if (inventoryItemBehaviour.ItemInstance.Quantity <= 0)
+                if (consumeResult)
                 {
+                    inventoryItemBehaviour.ItemInstance.Quantity--;
+
                     if (inventoryItemBehaviour.ItemInstance.Quantity <= 0)
                     {
-                        var inventorySlot = inventoryItemBehaviour.GetComponentInParent<InventorySlotBehaviour>();
-                        inventorySlot.DeleteItem();
-
+                        if (inventoryItemBehaviour.ItemInstance.Quantity <= 0)
+                        {
+                            var inventorySlot = inventoryItemBehaviour.GetComponentInParent<InventorySlotBehaviour>();
+                            inventorySlot.DeleteItem();
+                        }
                     }
-
                 }
             }
         }

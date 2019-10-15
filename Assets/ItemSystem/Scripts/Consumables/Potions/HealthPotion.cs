@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace DTWorlds.Items.Consumables.Potions
 {
-[CreateAssetMenu(fileName = "HealthPotion.asset", menuName = "Items/Consumables/Potions/HealthPotion", order = 1)]
+    [CreateAssetMenu(fileName = "HealthPotion.asset", menuName = "Items/Consumables/Potions/HealthPotion", order = 1)]
     public class HealthPotion : BasePotion
     {
 
@@ -18,9 +18,15 @@ namespace DTWorlds.Items.Consumables.Potions
             return new List<ItemBonus>();
         }
 
-        public override void Consume(ItemInstance instance, BaseMobile mobile)
+        public override bool Consume(ItemInstance instance, BaseMobile mobile)
         {
+            if (mobile.Health.CurrentValue == mobile.Health.MaxValue)
+            {
+                Debug.Log("mobile is already at max health.");
+                return false;
+            }
             mobile.Health.CurrentValue += (((int)instance.Quality + 0.5f) * 10);
+            return true;
         }
     }
 }
