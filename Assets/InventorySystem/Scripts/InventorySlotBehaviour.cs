@@ -132,6 +132,19 @@ namespace InventorySystem
             dragAndDropCell.UpdateBackgroundState(IsSelected);
         }
 
+        internal bool Stack(int quantity)
+        {
+            var inventoryItem = GetInventoryItem();
+            int finalQuantity = quantity + inventoryItem.ItemInstance.Quantity;
+            if(finalQuantity > inventoryItem.ItemInstance.ItemTemplate.MaxStack){
+                return false;
+            }
+
+            inventoryItem.ItemInstance.Quantity = finalQuantity;
+            Refresh();
+            return true;
+        }
+
 
         // Update is called once per frame
         public virtual void OnClick()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DTWorlds.Items;
 using DTWorlds.Items.Behaviours;
 using InventorySystem.UI;
 using UnityEngine;
@@ -38,7 +39,63 @@ namespace InventorySystem
             }
         }
 
+        public void Stack(InventoryItemBehaviour itemWithSameType, int quantity)
+        {
+            itemWithSameType.ItemInstance.Quantity += quantity;
+        }
 
+        public InventoryItemBehaviour GetItemByTemplate(BaseItem itemTemplate)
+        {
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var inventoryItemBehaviour = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>().GetInventoryItem();
+                    if (inventoryItemBehaviour != null && inventoryItemBehaviour.ItemInstance.ItemTemplate.Equals(itemTemplate))
+                    {
+                        return inventoryItemBehaviour;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        public InventoryItemBehaviour GetSameTypeItem(ItemInstance itemInstance)
+        {
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var inventoryItemBehaviour = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>().GetInventoryItem();
+                    if (inventoryItemBehaviour != null &&
+                    inventoryItemBehaviour.ItemInstance.ItemTemplate.GetInstanceID().Equals(itemInstance.ItemTemplate.GetInstanceID()) &&
+                    inventoryItemBehaviour.ItemInstance.Quality == itemInstance.Quality)
+                    {
+                        return inventoryItemBehaviour;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        public InventoryItemBehaviour GetItemById(string uniqueIdentifier)
+        {
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var inventoryItemBehaviour = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>().GetInventoryItem();
+                    if (inventoryItemBehaviour != null && inventoryItemBehaviour.ItemInstance.UniqueIdentifier.Equals(uniqueIdentifier))
+                    {
+                        return inventoryItemBehaviour;
+                    }
+                }
+            }
+
+            return null;
+        }
 
         protected void Initialize()
         {
@@ -65,6 +122,8 @@ namespace InventorySystem
             isInitialized = true;
         }
 
+
+
         public InventorySlotBehaviour GetSelectedSlot()
         {
             for (int x = 0; x < SlotGrid.Length; x++)
@@ -85,8 +144,20 @@ namespace InventorySystem
             return null;
         }
 
-        public InventorySlotBehaviour AddItem(ItemBehaviour item)
+        public virtual InventorySlotBehaviour AddItem(ItemBehaviour item)
         {
+            var itemFound = GetStackableItem(item.ItemInstance);
+            if (itemFound != null)
+            {
+                var stackSlot = itemFound.GetComponentInParent<InventorySlotBehaviour>();
+                var stackResult = stackSlot.Stack(item.ItemInstance.Quantity);
+                if (stackResult)
+                {
+                    return stackSlot;
+                }
+            }
+
+            //empty slot found
             var emptySlot = GetEmptySlot();
             if (emptySlot == null)
             {
@@ -96,6 +167,26 @@ namespace InventorySystem
             emptySlot.AddItem(item.ItemInstance);
 
             return emptySlot;
+        }
+
+        private InventoryItemBehaviour GetStackableItem(ItemInstance itemInstance)
+        {
+            for (int x = 0; x < SlotGrid.Length; x++)
+            {
+                for (int y = 0; y < SlotGrid[x].Length; y++)
+                {
+                    var inventoryItemBehaviour = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>().GetInventoryItem();
+                    if (inventoryItemBehaviour != null &&
+                    inventoryItemBehaviour.ItemInstance.ItemTemplate.GetInstanceID().Equals(itemInstance.ItemTemplate.GetInstanceID()) &&
+                    inventoryItemBehaviour.ItemInstance.Quality == itemInstance.Quality &&
+                    inventoryItemBehaviour.ItemInstance.Quantity + itemInstance.Quantity <= inventoryItemBehaviour.ItemInstance.ItemTemplate.MaxStack)
+                    {
+                        return inventoryItemBehaviour;
+                    }
+                }
+            }
+
+            return null;
         }
 
         public InventorySlotBehaviour GetEmptySlot()
