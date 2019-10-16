@@ -26,56 +26,56 @@ namespace InventorySystem.UI
         private void Start()
         {
             playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
-            playerBehaviour.Player.Armor.OnAfterValueChangedEvent += new Kryz.CharacterStats.CharacterStat.CharacterStatEventHandler(OnArmorChanged);
-            playerBehaviour.Player.Strength.OnAfterValueChangedEvent += new Kryz.CharacterStats.CharacterStat.CharacterStatEventHandler(OnStrengthChanged);
-            playerBehaviour.Player.Dexterity.OnAfterValueChangedEvent += new Kryz.CharacterStats.CharacterStat.CharacterStatEventHandler(OnDexterityChanged);
+            playerBehaviour.Mobile.Armor.OnAfterValueChangedEvent += new Kryz.CharacterStats.CharacterStat.CharacterStatEventHandler(OnArmorChanged);
+            playerBehaviour.Mobile.Strength.OnAfterValueChangedEvent += new Kryz.CharacterStats.CharacterStat.CharacterStatEventHandler(OnStrengthChanged);
+            playerBehaviour.Mobile.Dexterity.OnAfterValueChangedEvent += new Kryz.CharacterStats.CharacterStat.CharacterStatEventHandler(OnDexterityChanged);
 
             //playerBehaviour.Player.Hunger.OnAfterValueChangedEvent += new DTWorlds.Mobiles.DamagableProperties.BaseDamagableProperty.DamagablePropertyValueChangedHandler(OnHungerChanged);
-            playerBehaviour.Player.Health.OnAfterValueChangedEvent += new DTWorlds.Mobiles.DamagableProperties.BaseDamagableProperty.DamagablePropertyValueChangedHandler(OnHealthChanged);
-            playerBehaviour.Player.Energy.OnAfterValueChangedEvent += new DTWorlds.Mobiles.DamagableProperties.BaseDamagableProperty.DamagablePropertyValueChangedHandler(OnEnergyChanged);
+            playerBehaviour.Mobile.Health.OnAfterValueChangedEvent += new DTWorlds.Mobiles.DamagableProperties.BaseDamagableProperty.DamagablePropertyValueChangedHandler(OnHealthChanged);
+            playerBehaviour.Mobile.Energy.OnAfterValueChangedEvent += new DTWorlds.Mobiles.DamagableProperties.BaseDamagableProperty.DamagablePropertyValueChangedHandler(OnEnergyChanged);
 
             OnArmorChanged();
             OnDexterityChanged();
             OnStrengthChanged();
             //OnHungerChanged((float)playerBehaviour.Player.Hunger.CurrentValue, (float)playerBehaviour.Player.Hunger.CurrentValue);
-            OnEnergyChanged((float)playerBehaviour.Player.Energy.CurrentValue, (float)playerBehaviour.Player.Energy.CurrentValue);
-            OnHealthChanged((float)playerBehaviour.Player.Health.CurrentValue, (float)playerBehaviour.Player.Health.CurrentValue);
+            OnEnergyChanged((float)playerBehaviour.Mobile.Energy.CurrentValue, (float)playerBehaviour.Mobile.Energy.CurrentValue);
+            OnHealthChanged((float)playerBehaviour.Mobile.Health.CurrentValue, (float)playerBehaviour.Mobile.Health.CurrentValue);
         }
 
         private void OnHealthChanged(float beforeValue, float afterValue)
         {
             if (HealthValueText != null)
             {
-                HealthValueText.text = String.Format("{0}/{1}", Math.Floor(afterValue), playerBehaviour.Player.Health.MaxValue);
+                HealthValueText.text = String.Format("{0}/{1}", Math.Floor(afterValue), playerBehaviour.Mobile.Health.MaxValue);
             }
         }
 
         private void OnHungerChanged(float beforeValue, float afterValue)
         {
-            HungerValueText.text = String.Format("{0}/{1}", Math.Floor(afterValue), playerBehaviour.Player.Hunger.MaxValue);
+            HungerValueText.text = String.Format("{0}/{1}", Math.Floor(afterValue), playerBehaviour.Mobile.Hunger.MaxValue);
         }
 
         private void OnEnergyChanged(float beforeValue, float afterValue)
         {
             if (EnergyValueText != null)
             {
-                EnergyValueText.text = String.Format("{0}/{1}", Math.Floor(afterValue), playerBehaviour.Player.Energy.MaxValue);
+                EnergyValueText.text = String.Format("{0}/{1}", Math.Floor(afterValue), playerBehaviour.Mobile.Energy.MaxValue);
             }
         }
 
         private void OnArmorChanged()
         {
-            ArmorValueText.text = String.Format("{0}", playerBehaviour.Player.Armor.Value);
+            ArmorValueText.text = String.Format("{0}", playerBehaviour.Mobile.Armor.Value);
         }
 
         private void OnStrengthChanged()
         {
-            StrengthValueText.text = String.Format("{0}", playerBehaviour.Player.Strength.Value);
+            StrengthValueText.text = String.Format("{0}", playerBehaviour.Mobile.Strength.Value);
         }
 
         private void OnDexterityChanged()
         {
-            DexterityValueText.text = String.Format("{0}", playerBehaviour.Player.Dexterity.Value);
+            DexterityValueText.text = String.Format("{0}", playerBehaviour.Mobile.Dexterity.Value);
         }
     }
 }

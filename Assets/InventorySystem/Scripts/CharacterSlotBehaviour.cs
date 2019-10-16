@@ -34,7 +34,7 @@ namespace InventorySystem
                 SetAnimation(draggedItemInstance.ItemTemplate as BaseEquipment);
 
                 var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
-                draggedItemInstance.SetModifiers(playerBehaviour.Player);
+                draggedItemInstance.SetModifiers(playerBehaviour.Mobile);
 
 
                 UpdateImage();
@@ -121,7 +121,7 @@ namespace InventorySystem
                 GameObject.Destroy(actualItem.gameObject);
 
                 var equipmentItem = inventoryItem.ItemInstance.ItemTemplate as BaseEquipment;
-                inventoryItem.ItemInstance.RemoveModifiers(playerBehaviour.Player);
+                inventoryItem.ItemInstance.RemoveModifiers(playerBehaviour.Mobile);
                 RemoveAnimation(equipmentItem.EquipmentType);
                 DeleteItem();
                 UpdateImage();
@@ -187,7 +187,7 @@ namespace InventorySystem
         {
             base.AddItem(item);
 
-            item.SetModifiers(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().Player);
+            item.SetModifiers(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().Mobile);
 
             var tempColor = RelatedImage.color;
             tempColor.a = (float)175 / 255;

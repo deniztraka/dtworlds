@@ -19,7 +19,7 @@ namespace DTWorlds.Items
         private bool isModifiersSet;
         private const string statsTextFormat = "{2}:<b>{1}{0}</b>";
 
-        public string UniqueIdentifier;
+        public string Id;
         public BaseItem ItemTemplate;
         public int Quantity;
         public ItemQuality Quality;

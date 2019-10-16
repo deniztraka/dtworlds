@@ -7,6 +7,7 @@ using DTWorlds.UnityBehaviours;
 using DTWorlds.Mobiles.DamagableProperties;
 using Kryz.CharacterStats;
 using System;
+using DTWorlds.Items.Inventory.Models;
 
 namespace DTWorlds.Mobiles
 {
@@ -58,6 +59,8 @@ namespace DTWorlds.Mobiles
                 isRunning = value;
             }
         }
+
+        public MobileInventory Inventory;
 
         public float MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
 

@@ -11,9 +11,9 @@ namespace DTWorlds.UnityBehaviours.UI
         void Start()
         {
             DamagablePropertyBar = gameObject.GetComponentInChildren<SimpleHealthBar>();
-            DamagableProperty = PlayerBehaviour.Player.Health;
+            DamagableProperty = PlayerBehaviour.Mobile.Health;
 
-            PlayerBehaviour.Player.Health.OnAfterValueChangedEvent += new Mobiles.DamagableProperties.Health.DamagablePropertyValueChangedHandler(this.OnAfterValueChanged);
+            PlayerBehaviour.Mobile.Health.OnAfterValueChangedEvent += new Mobiles.DamagableProperties.Health.DamagablePropertyValueChangedHandler(this.OnAfterValueChanged);
         }
     }
 }

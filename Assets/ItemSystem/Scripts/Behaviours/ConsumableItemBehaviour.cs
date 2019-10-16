@@ -25,9 +25,7 @@ namespace DTWorlds.Items.Behaviours
                     {
                         var inventorySlot = this.GetComponentInParent<InventorySlotBehaviour>();
                         inventorySlot.DeleteItem();
-
                     }
-
                 }
 
             }

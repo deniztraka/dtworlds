@@ -283,7 +283,7 @@ namespace InventorySystem.UI
                 var playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
 
                 var consumable = inventoryItemBehaviour.ItemInstance.ItemTemplate as BaseConsumable;
-                var consumeResult = consumable.Consume(inventoryItemBehaviour.ItemInstance, playerBehaviour.Player);
+                var consumeResult = consumable.Consume(inventoryItemBehaviour.ItemInstance, playerBehaviour.Mobile);
 
                 if (consumeResult)
                 {

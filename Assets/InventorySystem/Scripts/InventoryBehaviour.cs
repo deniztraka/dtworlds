@@ -87,7 +87,7 @@ namespace InventorySystem
                 for (int y = 0; y < SlotGrid[x].Length; y++)
                 {
                     var inventoryItemBehaviour = SlotGrid[x][y].GetComponent<InventorySlotBehaviour>().GetInventoryItem();
-                    if (inventoryItemBehaviour != null && inventoryItemBehaviour.ItemInstance.UniqueIdentifier.Equals(uniqueIdentifier))
+                    if (inventoryItemBehaviour != null && inventoryItemBehaviour.ItemInstance.Id.Equals(uniqueIdentifier))
                     {
                         return inventoryItemBehaviour;
                     }

@@ -43,7 +43,7 @@ namespace InventorySystem
                     for (int i = 0; i < resultCount; i++)
                     {
                         var itemBehaviour = results[i].GetComponent<ItemBehaviour>();
-                        var sameItem = GetItemById(itemBehaviour.ItemInstance.UniqueIdentifier);
+                        var sameItem = GetItemById(itemBehaviour.ItemInstance.Id);
                         if (sameItem == null)
                         {
                             // make relations in case of pickups

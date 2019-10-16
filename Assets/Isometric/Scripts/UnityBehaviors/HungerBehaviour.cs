@@ -23,7 +23,7 @@ namespace DTWorlds.UnityBehaviours
             {
                 var gameTimeObj = GameObject.FindGameObjectWithTag("GameTime");
                 var gameTimeHandler = gameTimeObj.GetComponent<GameTimeHandler>();
-                ModifyAmount = -playerBehaviour.Player.Hunger.MaxValue / gameTimeHandler.DayLengthInSeconds;
+                ModifyAmount = -playerBehaviour.Mobile.Hunger.MaxValue / gameTimeHandler.DayLengthInSeconds;
             }
         }
 
