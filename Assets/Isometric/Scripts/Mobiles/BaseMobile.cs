@@ -67,7 +67,7 @@ namespace DTWorlds.Mobiles
 
         public BaseMobile()
         {
-
+            var Inventory = new MobileInventory(this);
         }
 
         public BaseMobile(GameObject gameObject, float movementSpeed)

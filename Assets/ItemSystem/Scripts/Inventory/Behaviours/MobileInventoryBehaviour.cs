@@ -8,13 +8,18 @@ namespace DTWorlds.Items.Inventory.Behaviours
 {
     public class MobileInventoryBehaviour : BaseStorageBehaviour
     {
+
         public BaseMobileBehaviour BaseMobileBehaviour;
-        private void Awake()
+
+        private void Start()
         {
             if (BaseStorage == null && BaseMobileBehaviour != null)
             {
-                BaseStorage = new MobileInventory(BaseMobileBehaviour.Mobile);
+                BaseStorage = BaseMobileBehaviour.Mobile.Inventory;
+
             }
+
+
         }
     }
 }

@@ -8,6 +8,7 @@ using InventorySystem;
 using DTWorlds.Items.Equipments;
 using System;
 using InventorySystem.UI;
+using DTWorlds.Items.Inventory.Behaviours;
 
 namespace DTWorlds.UnityBehaviours
 {
@@ -16,6 +17,7 @@ namespace DTWorlds.UnityBehaviours
         public FixedJoystick joystick;
 
         public InventoryBehaviour InventoryBehaviour;
+
 
         private BaseMobile mobile;
 
