@@ -7,16 +7,20 @@ namespace DTWorlds.Items.Inventory.Models
 {
     public abstract class BaseStorage
     {
-        public BaseStorage()
-        {
-            itemList = new List<ItemInstance>();
-        }
+        public delegate void StorageEventHandler(ItemInstance item);
+        public event StorageEventHandler OnAfterItemAdded;
+
         private List<ItemInstance> itemList;
         private float maxWeight;
         public float MaxWeight
         {
             get { return maxWeight; }
             set { maxWeight = value; }
+        }
+
+        public BaseStorage()
+        {
+            itemList = new List<ItemInstance>();
         }
 
         public List<ItemInstance> ItemList
@@ -33,6 +37,10 @@ namespace DTWorlds.Items.Inventory.Models
         public virtual void AddItem(ItemInstance item)
         {
             itemList.Add(item);
+            if (OnAfterItemAdded != null)
+            {
+                OnAfterItemAdded(item);
+            }
         }
 
         public virtual void Update(ItemInstance item)
@@ -41,6 +49,5 @@ namespace DTWorlds.Items.Inventory.Models
             toUpdate.Quality = item.Quality;
             toUpdate.Quantity = item.Quantity;
         }
-
     }
 }

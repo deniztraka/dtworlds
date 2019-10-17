@@ -16,6 +16,7 @@ namespace DTWorlds.Items
     public class ItemInstance
     {
 
+
         private bool isModifiersSet;
         private const string statsTextFormat = "{2}:<b>{1}{0}</b>";
 
@@ -23,6 +24,14 @@ namespace DTWorlds.Items
         public BaseItem ItemTemplate;
         public int Quantity;
         public ItemQuality Quality;
+
+        public ItemInstance(string id, BaseItem itemTemplate, ItemQuality quality, int quantity)
+        {
+            Id = id;
+            ItemTemplate = itemTemplate;
+            Quality = quality;
+            Quantity = quantity;
+        }
 
         public T getCopy<T>()
         {

@@ -11,15 +11,15 @@ namespace DTWorlds.Items.Inventory.Behaviours
 
         public BaseMobileBehaviour BaseMobileBehaviour;
 
-        private void Start()
+        protected override void Start()
         {
-            if (BaseStorage == null && BaseMobileBehaviour != null)
+            base.Start();
+            
+            if (Storage == null && BaseMobileBehaviour != null)
             {
-                BaseStorage = BaseMobileBehaviour.Mobile.Inventory;
-
+                Storage = BaseMobileBehaviour.Mobile.Inventory;
+                Storage.OnAfterItemAdded += new BaseStorage.StorageEventHandler(OnAfterItemAdded);
             }
-
-
         }
     }
 }
