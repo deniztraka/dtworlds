@@ -67,7 +67,7 @@ namespace DTWorlds.Mobiles
 
         public BaseMobile()
         {
-            var Inventory = new MobileInventory(this);
+
         }
 
         public BaseMobile(GameObject gameObject, float movementSpeed)
@@ -85,7 +85,7 @@ namespace DTWorlds.Mobiles
             Energy = new Energy(this);
             Hunger = new Hunger(this);
 
-
+            Inventory = new MobileInventory(this);
 
             //setting up attacking system.
             var animationSpriteTransform = gameObject.transform.Find("AnimationSprite");

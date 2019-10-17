@@ -15,9 +15,12 @@ namespace DTWorlds.Items.Inventory.Behaviours
             base.Start();
             if (Storage != null)
             {
-
                 var item = ItemDatabase.GetItemByName("Short Pants");
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), item, ItemQuality.Rare, 1));
+                for (int i = 0; i < 10; i++)
+                {
+                    Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), item, ItemQuality.Rare, 1));
+                }
+
             }
         }
     }
