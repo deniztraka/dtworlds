@@ -15,11 +15,19 @@ namespace DTWorlds.Items.Inventory.Behaviours
             base.Start();
             if (Storage != null)
             {
-                var item = ItemDatabase.GetItemByName("Short Pants");
-                for (int i = 0; i < 10; i++)
-                {
-                    Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), item, ItemQuality.Rare, 1));
-                }
+                var shortPants = ItemDatabase.GetItemByName("Short Pants");
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Weak, 1));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Regular, 2));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Exceptional, 3));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Rare, 4));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Legend, 99));                
+
+                var healthPotion = ItemDatabase.GetItemByName("Health Potion");
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Weak, 100));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Regular, 1));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Exceptional, 1000));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Rare, 3));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Legend, 2));
 
             }
         }

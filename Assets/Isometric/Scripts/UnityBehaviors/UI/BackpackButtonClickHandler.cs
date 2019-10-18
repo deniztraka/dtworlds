@@ -17,12 +17,12 @@ namespace DTWorlds.UnityBehaviours.UI
             if (isOpened)
             {
                 InventoryPanel.transform.localScale = new Vector3(0, 0, 0);     
-                VicinityPackBehaviour.Clear();
+                //VicinityPackBehaviour.Clear();
             }
             else
             {
                 InventoryPanel.transform.localScale = new Vector3(1, 1, 1);
-                VicinityPackBehaviour.CheckVicinity();
+                //VicinityPackBehaviour.CheckVicinity();
             }
 
             isOpened = !isOpened;

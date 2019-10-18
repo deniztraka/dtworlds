@@ -9,6 +9,7 @@ namespace DTWorlds.Items.Inventory.Models
     {
         public delegate void StorageEventHandler(ItemInstance item);
         public event StorageEventHandler OnAfterItemAdded;
+        public event StorageEventHandler OnAfterItemDeleted;
 
         private List<ItemInstance> itemList;
         private float maxWeight;
@@ -48,6 +49,14 @@ namespace DTWorlds.Items.Inventory.Models
             var toUpdate = itemList.First(i => i.Id.Equals(item.Id));
             toUpdate.Quality = item.Quality;
             toUpdate.Quantity = item.Quantity;
+        }
+
+        public virtual void Delete(ItemInstance item){
+            itemList.Remove(item);
+            if (OnAfterItemDeleted != null)
+            {
+                OnAfterItemDeleted(item);
+            }
         }
     }
 }

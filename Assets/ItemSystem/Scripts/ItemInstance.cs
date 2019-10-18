@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using DTWorlds.Items.Consumables;
+using DTWorlds.Items.Equipments;
 using DTWorlds.Mobiles;
 using Kryz.CharacterStats;
 using UnityEngine;
@@ -78,8 +80,9 @@ namespace DTWorlds.Items
             }
         }
 
-        public virtual string GetStatsText()
+        public virtual string GetStatsText(string format)
         {
+            var currentFormat = !String.IsNullOrWhiteSpace(format) ? format : statsTextFormat;
             var sb = new StringBuilder();
             var bonusList = ItemTemplate.GetBonusList();
             foreach (var bonus in bonusList)
@@ -89,9 +92,7 @@ namespace DTWorlds.Items
 
                 if (effectedValue != 0)
                 {
-                    sb.Append(" ");
-                    sb.AppendFormat(statsTextFormat, effectedValue, effectedValue > 0 ? "+" : "-", bonus.UIName);
-                    sb.Append(" ");
+                    sb.AppendFormat(currentFormat, effectedValue, effectedValue > 0 ? "+" : "-", bonus.UIName);
                 }
             }
             return sb.ToString();
@@ -100,6 +101,18 @@ namespace DTWorlds.Items
         internal string GetQualityText()
         {
             return String.Format("- {0} -", this.Quality.ToString());
+        }
+
+        public bool IsEquippable()
+        {
+            var equipment = this.ItemTemplate as BaseEquipment;
+            return equipment != null;
+        }
+
+        public bool IsUsuable()
+        {
+            var consumable = this.ItemTemplate as BaseConsumable;
+            return consumable != null;
         }
     }
 }
