@@ -10,6 +10,7 @@ namespace DTWorlds.Items.Inventory.Models
         public delegate void StorageEventHandler(ItemInstance item);
         public event StorageEventHandler OnAfterItemAdded;
         public event StorageEventHandler OnAfterItemDeleted;
+        public event StorageEventHandler OnAfterItemUpdated;
 
         private List<ItemInstance> itemList;
         private float maxWeight;
@@ -37,10 +38,61 @@ namespace DTWorlds.Items.Inventory.Models
 
         public virtual void AddItem(ItemInstance item)
         {
-            itemList.Add(item);
-            if (OnAfterItemAdded != null)
+            var canBeStacked = false;
+            var stackables = itemList.FindAll(i =>
+                i.ItemTemplate.GetInstanceID().Equals(item.ItemTemplate.GetInstanceID()) &&
+                i.Quality == item.Quality &&
+                (i.Quantity < item.ItemTemplate.MaxStack));
+            //(i.Quantity + item.Quantity <= item.ItemTemplate.MaxStack  ) );
+
+            canBeStacked = stackables.Count != 0;
+
+            if (canBeStacked)
             {
-                OnAfterItemAdded(item);
+                StackItem(item, stackables);
+                //Debug.Log(addCount);
+                //var updatedItem = item;
+                //updatedItem.Quantity = addCount;
+                //AddItem(updatedItem);
+            }
+            else
+            {
+                itemList.Add(item);
+                if (OnAfterItemAdded != null)
+                {
+                    OnAfterItemAdded(item);
+                }
+            }
+        }
+
+        protected virtual void StackItem(ItemInstance item, List<ItemInstance> stackables)
+        {
+            var stackableItem = stackables.First();
+
+            var tempStackCount = stackableItem.Quantity + item.Quantity;
+            if (tempStackCount > stackableItem.ItemTemplate.MaxStack)
+            {
+                stackableItem.Quantity = stackableItem.ItemTemplate.MaxStack;
+                var newItemQuantity = tempStackCount - stackableItem.ItemTemplate.MaxStack;
+                //Debug.Log(newItemQuantity);
+
+                var newItem = item;
+                newItem.Quantity = newItemQuantity;
+                itemList.Add(newItem);
+                if (OnAfterItemAdded != null)
+                {
+                    OnAfterItemAdded(item);
+                }
+            }
+            else
+            {
+                stackableItem.Quantity += item.Quantity;
+            }
+
+
+            if (OnAfterItemUpdated != null)
+            {
+                OnAfterItemUpdated(stackableItem);
             }
         }
 
@@ -51,12 +103,18 @@ namespace DTWorlds.Items.Inventory.Models
             toUpdate.Quantity = item.Quantity;
         }
 
-        public virtual void Delete(ItemInstance item){
+        public virtual void Delete(ItemInstance item)
+        {
             itemList.Remove(item);
             if (OnAfterItemDeleted != null)
             {
                 OnAfterItemDeleted(item);
             }
+        }
+
+        public List<ItemInstance> GetItemsByType(ItemType itemType)
+        {
+            return itemList.FindAll(i => i.ItemTemplate.Type.Equals(itemType)).ToList();
         }
     }
 }

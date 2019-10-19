@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DTWorlds.Items.Behaviours;
@@ -101,6 +102,89 @@ namespace DTWorlds.Items.Inventory.Behaviours
             return null;
         }
 
+        private List<ItemInstance> FilterByType(ItemType type)
+        {
+            return Storage.GetItemsByType(type);
+        }
+
+        private void AddItems(List<ItemInstance> items)
+        {
+            var itemArray = items.ToArray();
+            for (int i = 0; i < itemArray.Length; i++)
+            {
+                AddItem(itemArray[i]);
+            }
+        }
+
+        public void FilterByEquipment()
+        {
+            ClearSlots();
+            var items = FilterByType(ItemType.Equipment);
+            OnAfterItemsAdded(items);
+        }
+
+        public void FilterByWeapons()
+        {
+            ClearSlots();
+            var items = FilterByType(ItemType.Weapon);
+            OnAfterItemsAdded(items);
+        }
+
+        public void FilterByPotions()
+        {
+            ClearSlots();
+            var items = FilterByType(ItemType.Potion);
+            OnAfterItemsAdded(items);
+        }
+
+        public void FilterByFood()
+        {
+            ClearSlots();
+            var items = FilterByType(ItemType.Food);
+            OnAfterItemsAdded(items);
+        }
+
+        public void FilterByMisc()
+        {
+            ClearSlots();
+            var items = FilterByType(ItemType.Misc);
+            OnAfterItemsAdded(items);
+        }
+
+        public void ListAll()
+        {
+            ClearSlots();
+            OnAfterItemsAdded(Storage.ItemList);
+        }
+
+        public void TestButton()
+        {
+            var healthPotion = ItemDatabase.GetItemByName("Health Potion");            
+            Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Weak, 3));  
+            Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Regular, 1));  
+        }
+
+
+        private void ClearSlots()
+        {
+            Transform[] childArray = new Transform[transform.childCount];
+            var index = 0;
+            foreach (Transform child in transform)
+            {
+                childArray[index] = child;
+                index++;
+            }
+            transform.DetachChildren();
+
+            for (int i = 0; i < childArray.Length; i++)
+            {
+
+                GameObject.Destroy(childArray[i].gameObject);
+            }
+        }
+
+
+
         public virtual void AddItem(ItemInstance item)
         {
             Storage.AddItem(item);
@@ -132,15 +216,21 @@ namespace DTWorlds.Items.Inventory.Behaviours
             }
         }
 
+        public virtual void OnAfterItemsAdded(List<ItemInstance> items)
+        {
+            foreach (var item in items)
+            {
+                OnAfterItemAdded(item);
+            }
+        }
+
         protected virtual void OnAfterItemAdded(ItemInstance item)
         {
             var instantiatedSlot = Instantiate(InventorySlotPrefab, Vector3.zero, Quaternion.identity, this.transform) as BaseStorageSlotBehaviour;
             instantiatedSlot.AddItem(item);
             AttachSlotEvents(instantiatedSlot);
 
-            var gridLayoutGroup = GetComponent<GridLayoutGroup>();
-            var contentRect = GetComponent<RectTransform>();
-            contentRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, contentRect.rect.height + gridLayoutGroup.cellSize.y + gridLayoutGroup.spacing.y);
+            RefreshViewportHeight();
         }
 
         protected virtual void OnAfterItemDeleted(ItemInstance item)
@@ -149,9 +239,26 @@ namespace DTWorlds.Items.Inventory.Behaviours
             var itemBehaviour = createdGameObject.GetComponent<ItemBehaviour>();
             itemBehaviour.ItemInstance = item;
 
+            RefreshViewportHeight();
+        }
+
+        protected virtual void OnAfterItemUpdated(ItemInstance item)
+        {
+            foreach (Transform child in transform)
+            {
+                var slot = child.gameObject.GetComponent<MobileInventorySlotBehaviour>();
+                if (slot.ItemId == item.Id)
+                {
+                    slot.RefreshSlot();
+                }
+            }
+        }
+
+        protected virtual void RefreshViewportHeight()
+        {
             var gridLayoutGroup = GetComponent<GridLayoutGroup>();
             var contentRect = GetComponent<RectTransform>();
-            contentRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, contentRect.rect.height - gridLayoutGroup.cellSize.y + gridLayoutGroup.spacing.y);
+            contentRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, transform.childCount * (gridLayoutGroup.cellSize.y + gridLayoutGroup.spacing.y));
         }
 
     }

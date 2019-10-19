@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DTWorlds.Items.Inventory.Models;
@@ -7,6 +8,6 @@ namespace DTWorlds.Items.Inventory.Behaviours
 {
     public class MobileInventorySlotBehaviour : BaseStorageSlotBehaviour
     {
-
+                
     }
 }

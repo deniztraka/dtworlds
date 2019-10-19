@@ -16,6 +16,15 @@ namespace DTWorlds.Items
         Legend = 4
     }
 
+    public enum ItemType
+    {
+        Weapon = 0,
+        Equipment = 1,
+        Potion = 2,
+        Food = 3,
+        Misc = 4
+    }
+
 
     public abstract class BaseItem : ScriptableObject
     {
@@ -26,6 +35,7 @@ namespace DTWorlds.Items
         public ItemQuality Quality;
         public GameObject ItemPrefab;
         public string ItemDescription;
+        public ItemType Type;
         public abstract List<ItemBonus> GetBonusList();
     }
 }

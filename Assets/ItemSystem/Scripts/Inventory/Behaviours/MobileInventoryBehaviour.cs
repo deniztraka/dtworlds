@@ -22,6 +22,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 Storage = BaseMobileBehaviour.Mobile.Inventory;
                 Storage.OnAfterItemAdded += new BaseStorage.StorageEventHandler(OnAfterItemAdded);
                 Storage.OnAfterItemDeleted += new BaseStorage.StorageEventHandler(OnAfterItemDeleted);
+                Storage.OnAfterItemUpdated += new BaseStorage.StorageEventHandler(OnAfterItemUpdated);
             }
         }
 

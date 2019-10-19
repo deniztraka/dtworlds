@@ -20,3 +20,4 @@ MonoBehaviour:
   ItemPrefab: {fileID: 5750175100209823230, guid: 32598bdea8dd74542be8060a1f765378,
     type: 3}
   ItemDescription: to refresh some blood spilled
+  Type: 2

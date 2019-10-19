@@ -65,7 +65,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
             GetComponent<Image>().color = IsSelected ? SelectedColor : NormalColor;
         }
 
-        private void RefreshSlot()
+        public virtual void RefreshSlot()
         {
             var titleTextComponent = transform.Find("ItemTitle").gameObject.GetComponent<Text>();
             var iconComponent = transform.Find("ItemIcon").gameObject.GetComponent<Image>();
