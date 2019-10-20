@@ -26,6 +26,7 @@ namespace DTWorlds.Items
         public BaseItem ItemTemplate;
         public int Quantity;
         public ItemQuality Quality;
+        public bool IsEquipped;
 
         public ItemInstance(string id, BaseItem itemTemplate, ItemQuality quality, int quantity)
         {
@@ -96,6 +97,12 @@ namespace DTWorlds.Items
                 }
             }
             return sb.ToString();
+        }
+
+        internal void SetEquipped(BaseMobile mobile)
+        {
+            IsEquipped = true;
+            SetModifiers(mobile);
         }
 
         internal string GetQualityText()

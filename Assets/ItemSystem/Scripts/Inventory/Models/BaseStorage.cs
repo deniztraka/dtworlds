@@ -114,7 +114,7 @@ namespace DTWorlds.Items.Inventory.Models
 
         public List<ItemInstance> GetItemsByType(ItemType itemType)
         {
-            return itemList.FindAll(i => i.ItemTemplate.Type.Equals(itemType)).ToList();
+            return itemList.FindAll(i => i.ItemTemplate.Type.Equals(itemType)).OrderBy(i=> i.IsEquipped).ToList();
         }
     }
 }

@@ -8,6 +8,5 @@ namespace DTWorlds.Items.Inventory.Behaviours
 {
     public class MobileInventorySlotBehaviour : BaseStorageSlotBehaviour
     {
-                
     }
 }

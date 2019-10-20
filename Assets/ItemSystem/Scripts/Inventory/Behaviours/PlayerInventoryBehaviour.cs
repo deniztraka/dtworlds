@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DTWorlds.Items.Inventory.CharacterEquipments.Behaviours;
 using DTWorlds.Items.Inventory.Models;
 using DTWorlds.UnityBehaviours;
 using UnityEngine;
@@ -9,7 +10,6 @@ namespace DTWorlds.Items.Inventory.Behaviours
 {
     public class PlayerInventoryBehaviour : MobileInventoryBehaviour
     {
-
         protected override void Start()
         {
             base.Start();
@@ -17,10 +17,10 @@ namespace DTWorlds.Items.Inventory.Behaviours
             {
                 var shortPants = ItemDatabase.GetItemByName("Short Pants");
                 Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Weak, 1));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Weak, 1));
+                //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Weak, 1));
                 // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Exceptional, 3));
                 // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Rare, 4));
-                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Legend, 99));                
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Legend, 1));
 
                 var healthPotion = ItemDatabase.GetItemByName("Health Potion");
                 //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Weak, 20));                
@@ -31,6 +31,33 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Legend, 2));
 
             }
+        }
+
+        public void Equip()
+        {
+            var selectedSlot = GetSelectedSlot();
+            if (selectedSlot == null)
+            {
+                Debug.Log("It's not an equipment.");
+                return;
+            }
+            var selectedItem = selectedSlot.GetItemInstance();
+            if (selectedItem == null)
+            {
+                Debug.Log("Selected item is null.");
+                return;
+            }
+
+            //if its get this far, we have item here
+            var playerBehaviour = BaseMobileBehaviour as PlayerBehaviour;
+            playerBehaviour.Equip(selectedItem);            
+            UpdateItem(selectedItem);
+            RenderProperButtons();
+        }
+
+        public void UnEquip()
+        {
+            
         }
     }
 }

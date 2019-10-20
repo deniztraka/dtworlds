@@ -22,6 +22,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
         }
 
         public Button EquipButton;
+        public Button UnEquipButton;
         public Button DropButton;
         public Button StoreButton;
         public Button UseButton;
@@ -66,14 +67,15 @@ namespace DTWorlds.Items.Inventory.Behaviours
             }
         }
 
-        private void RenderProperButtons()
+        public void RenderProperButtons()
         {
             var selectedSlot = GetSelectedSlot();
             if (selectedSlot != null)
             {
                 var selectedItemInstance = selectedSlot.GetItemInstance();
 
-                SetButton(EquipButton, true, selectedItemInstance.IsEquippable());
+                SetButton(EquipButton, true, selectedItemInstance.IsEquippable() && !selectedItemInstance.IsEquipped);
+                SetButton(UnEquipButton, true, selectedItemInstance.IsEquippable() && selectedItemInstance.IsEquipped);
                 SetButton(UseButton, true, selectedItemInstance.IsUsuable());
                 SetButton(DropButton, true, true);
             }
@@ -83,6 +85,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 SetButton(EquipButton, true, false);
                 SetButton(DropButton, true, false);
                 SetButton(UseButton, true, false);
+                SetButton(UnEquipButton, true, false);
 
                 //TODO: Implement store button after storage items are implemented
                 SetButton(StoreButton, false, false);
@@ -206,12 +209,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
                     consumable.Consume(itemInstance, null);
                 }
             }
-        }
-
-        public virtual void Equip()
-        {
-
-        }
+        }        
 
         public virtual void Store()
         {

@@ -26,6 +26,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
 
         public delegate void StorageSlotEventHandler(BaseStorageSlotBehaviour slot);
         public event StorageSlotEventHandler OnAfterSelected;
+        public event StorageSlotEventHandler OnAfterEquipped;
 
         private void Start()
         {
@@ -73,9 +74,13 @@ namespace DTWorlds.Items.Inventory.Behaviours
             var statsTextComponent = transform.Find("ItemStats").gameObject.GetComponent<Text>();
             var quantityTextComponent = transform.Find("ItemQuantity").gameObject.GetComponent<Text>();
             var qualityTextComponent = transform.Find("ItemQuality").gameObject.GetComponent<Text>();
+            var equippedImageObjet = transform.Find("EquippedImage").gameObject;
 
             if (HasItem && itemInstance != null)
             {
+                //Debug.Log(itemInstance.IsEquipped);
+                equippedImageObjet.SetActive(itemInstance.IsEquipped);
+
                 titleTextComponent.text = itemInstance.ItemTemplate.ItemName;
                 iconComponent.sprite = itemInstance.ItemTemplate.Icon;
                 descriptionTextComponent.text = itemInstance.ItemTemplate.ItemDescription;

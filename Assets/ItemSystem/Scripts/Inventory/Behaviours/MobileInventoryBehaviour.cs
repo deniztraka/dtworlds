@@ -40,7 +40,6 @@ namespace DTWorlds.Items.Inventory.Behaviours
         {
             if (item.Quantity <= 0)
             {
-
                 var selectedSlot = GetSelectedSlot();
                 selectedSlot.transform.SetParent(null);
                 Destroy(selectedSlot.gameObject);
@@ -78,7 +77,5 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 }
             }
         }
-
-
     }
 }

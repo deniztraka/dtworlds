@@ -9,6 +9,7 @@ using DTWorlds.Items.Equipments;
 using System;
 using InventorySystem.UI;
 using DTWorlds.Items.Inventory.Behaviours;
+using DTWorlds.Items;
 
 namespace DTWorlds.UnityBehaviours
 {
@@ -71,6 +72,6 @@ namespace DTWorlds.UnityBehaviours
         public void ModifyHunger(float amount)
         {
             mobile.Hunger.CurrentValue += amount;
-        }
+        }        
     }
 }

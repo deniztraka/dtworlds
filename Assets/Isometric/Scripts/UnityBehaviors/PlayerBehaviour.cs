@@ -8,11 +8,14 @@ using InventorySystem;
 using DTWorlds.Items.Equipments;
 using System;
 using InventorySystem.UI;
+using DTWorlds.Items;
+using DTWorlds.Items.Inventory.CharacterEquipments.Behaviours;
 
 namespace DTWorlds.UnityBehaviours
 {
     public class PlayerBehaviour : BaseMobileBehaviour
     {
+        public CharacterEquipmentPanelBehaviour CharacterEquipmentsPanelBehaviour;
 
         private void buildPlayer()
         {
@@ -39,6 +42,12 @@ namespace DTWorlds.UnityBehaviours
         internal void Unequip(CharacterSlotBehaviour chosenSlot)
         {
             chosenSlot.Unequip();
+        }
+
+        internal void Equip(ItemInstance selectedItem)
+        {
+            selectedItem.SetEquipped(Mobile);
+            CharacterEquipmentsPanelBehaviour.SetSlot(selectedItem);
         }
     }
 }

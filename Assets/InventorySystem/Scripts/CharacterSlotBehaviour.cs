@@ -57,7 +57,6 @@ namespace InventorySystem
                     var equippable = inventoryItem.ItemInstance.ItemTemplate.ItemPrefab.GetComponent<EquippableItemBehaviour>();
                     RelatedImage.sprite = equippable.EquippableItemSprite;
                 }
-
             }
             else
             {
