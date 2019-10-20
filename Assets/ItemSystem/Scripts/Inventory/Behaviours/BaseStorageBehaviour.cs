@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DTWorlds.Items.Behaviours;
+using DTWorlds.Items.Consumables;
 using DTWorlds.Items.Inventory.Models;
 using UnityEngine;
 using UnityEngine.UI;
@@ -159,11 +160,14 @@ namespace DTWorlds.Items.Inventory.Behaviours
 
         public void TestButton()
         {
-            var healthPotion = ItemDatabase.GetItemByName("Health Potion");            
-            Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Weak, 3));  
-            Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Regular, 1));  
+            var healthPotion = ItemDatabase.GetItemByName("Health Potion");
+            Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Weak, 3));
+            Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Regular, 1));
         }
 
+        public void UpdateItem(ItemInstance item){
+            Storage.Update(item);
+        }
 
         private void ClearSlots()
         {
@@ -192,7 +196,16 @@ namespace DTWorlds.Items.Inventory.Behaviours
 
         public virtual void Use()
         {
-
+            var selectedSlot = GetSelectedSlot();
+            if (selectedSlot != null)
+            {
+                var itemInstance = selectedSlot.GetItemInstance();
+                if (itemInstance.IsUsuable())
+                {
+                    var consumable = itemInstance.ItemTemplate as BaseConsumable;
+                    consumable.Consume(itemInstance, null);
+                }
+            }
         }
 
         public virtual void Equip()
@@ -259,6 +272,11 @@ namespace DTWorlds.Items.Inventory.Behaviours
             var gridLayoutGroup = GetComponent<GridLayoutGroup>();
             var contentRect = GetComponent<RectTransform>();
             contentRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, transform.childCount * (gridLayoutGroup.cellSize.y + gridLayoutGroup.spacing.y));
+        }
+
+        protected void DeleteItem(ItemInstance itemInstance)
+        {
+            Storage.Delete(itemInstance);
         }
 
     }

@@ -43,17 +43,12 @@ namespace DTWorlds.Items.Inventory.Models
                 i.ItemTemplate.GetInstanceID().Equals(item.ItemTemplate.GetInstanceID()) &&
                 i.Quality == item.Quality &&
                 (i.Quantity < item.ItemTemplate.MaxStack));
-            //(i.Quantity + item.Quantity <= item.ItemTemplate.MaxStack  ) );
 
             canBeStacked = stackables.Count != 0;
 
             if (canBeStacked)
             {
                 StackItem(item, stackables);
-                //Debug.Log(addCount);
-                //var updatedItem = item;
-                //updatedItem.Quantity = addCount;
-                //AddItem(updatedItem);
             }
             else
             {
@@ -101,6 +96,11 @@ namespace DTWorlds.Items.Inventory.Models
             var toUpdate = itemList.First(i => i.Id.Equals(item.Id));
             toUpdate.Quality = item.Quality;
             toUpdate.Quantity = item.Quantity;
+
+            if (OnAfterItemUpdated != null)
+            {
+                OnAfterItemUpdated(item);
+            }
         }
 
         public virtual void Delete(ItemInstance item)
