@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DTWorlds.Items.Behaviours;
 using DTWorlds.Items.Consumables;
 using DTWorlds.Items.Equipments;
+using DTWorlds.Items.Inventory.Behaviours;
 using DTWorlds.Items.Inventory.Models;
 using DTWorlds.UnityBehaviours;
 using UnityEngine;
@@ -15,6 +16,11 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
     {
         public Image SlotImage;
         public string ItemId;
+
+        public GameObject SelectedItemPanelObj;
+        public GameObject CharacterStatsPanelObj;
+
+        public PlayerInventoryBehaviour PlayerInventoryBehaviour;
 
         void RemoveAnimation(EquipmentType equipmentType)
         {
@@ -73,7 +79,7 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
 
                 var tempColor = SlotImage.color;
                 tempColor.a = (float)175 / 255;
-                SlotImage.color = tempColor;                
+                SlotImage.color = tempColor;
             }
             else
             {
@@ -81,8 +87,35 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
                 ItemId = null;
                 var tempColor = SlotImage.color;
                 tempColor.a = 0f;
-                SlotImage.color = tempColor;                
+                SlotImage.color = tempColor;
             }
+        }
+
+        public void OnClick()
+        {
+            var selectedCharacterSlotPanelBehaviour = SelectedItemPanelObj.GetComponent<SelectedCharacterSlotPanelBehaviour>();
+
+            if (String.IsNullOrEmpty(ItemId))
+            {
+                selectedCharacterSlotPanelBehaviour.SetPanel(null);
+                SelectedItemPanelObj.SetActive(false);
+                CharacterStatsPanelObj.SetActive(true);
+                return;
+            }
+
+            var itemInstance = PlayerInventoryBehaviour.GetItemById(ItemId);
+            if (itemInstance == null)
+            {
+                SelectedItemPanelObj.SetActive(false);
+                selectedCharacterSlotPanelBehaviour.SetPanel(null);
+                CharacterStatsPanelObj.SetActive(true);
+                return;
+            }
+            
+            CharacterStatsPanelObj.SetActive(false);
+            SelectedItemPanelObj.SetActive(true);
+            selectedCharacterSlotPanelBehaviour.SetPanel(itemInstance);
+            
         }
     }
 }

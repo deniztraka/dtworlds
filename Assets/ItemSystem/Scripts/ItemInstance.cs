@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using DTWorlds.Items.Behaviours;
 using DTWorlds.Items.Consumables;
 using DTWorlds.Items.Equipments;
 using DTWorlds.Mobiles;
+using DTWorlds.UnityBehaviours;
 using Kryz.CharacterStats;
 using UnityEngine;
 
@@ -64,6 +66,8 @@ namespace DTWorlds.Items
             }
         }
 
+
+
         public void RemoveModifiers(BaseMobile mobile)
         {
             if (isModifiersSet)
@@ -103,7 +107,40 @@ namespace DTWorlds.Items
         {
             IsEquipped = true;
             SetModifiers(mobile);
+            SetAnimation(mobile);
         }
+
+        internal void SetUnEquipped(BaseMobile mobile)
+        {
+            IsEquipped = false;
+            RemoveModifiers(mobile);
+            SetAnimation(mobile);
+        }
+
+        private void SetAnimation(BaseMobile mobile)
+        {
+            var equipment = this.ItemTemplate as BaseEquipment;
+
+            var movementAnimationHandler = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementAnimationHandler>();
+            Animator animator = null;
+            switch (equipment.EquipmentType)
+            {
+                case EquipmentType.Chest:
+                    break;
+                case EquipmentType.Legs:
+                    animator = movementAnimationHandler.LegsSlot.GetComponentInChildren<Animator>();
+                    animator.runtimeAnimatorController = IsEquipped ?
+                        equipment.ItemPrefab.GetComponent<EquippableItemBehaviour>().AnimatorController : null;
+                    break;
+                case EquipmentType.Boots:
+                    break;
+                case EquipmentType.RightHand:
+                    break;
+                case EquipmentType.LeftHand:
+                    break;
+            }
+        }
+
 
         internal string GetQualityText()
         {

@@ -36,7 +36,7 @@ namespace DTWorlds.Items.Inventory.Models
             return itemList.Find(i => i.Id.Equals(id));
         }
 
-        public virtual void AddItem(ItemInstance item)
+        public virtual ItemInstance AddItem(ItemInstance item)
         {
             var canBeStacked = false;
             var stackables = itemList.FindAll(i =>
@@ -58,6 +58,8 @@ namespace DTWorlds.Items.Inventory.Models
                     OnAfterItemAdded(item);
                 }
             }
+
+            return item;
         }
 
         protected virtual void StackItem(ItemInstance item, List<ItemInstance> stackables)
@@ -114,7 +116,12 @@ namespace DTWorlds.Items.Inventory.Models
 
         public List<ItemInstance> GetItemsByType(ItemType itemType)
         {
-            return itemList.FindAll(i => i.ItemTemplate.Type.Equals(itemType)).OrderBy(i=> i.IsEquipped).ToList();
+            return itemList.FindAll(i => i.ItemTemplate.Type.Equals(itemType)).OrderBy(i => i.IsEquipped).ToList();
+        }
+
+        public ItemInstance GetSameTypeEquippedItem(ItemType itemType)
+        {
+            return itemList.FindAll(i => i.ItemTemplate.Type.Equals(itemType) && i.IsEquipped).FirstOrDefault();
         }
     }
 }

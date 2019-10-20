@@ -44,6 +44,12 @@ namespace DTWorlds.UnityBehaviours
             chosenSlot.Unequip();
         }
 
+        internal void Unequip(ItemInstance selectedItem)
+        {
+            selectedItem.SetUnEquipped(Mobile);
+            CharacterEquipmentsPanelBehaviour.SetSlot(selectedItem);
+        }
+
         internal void Equip(ItemInstance selectedItem)
         {
             selectedItem.SetEquipped(Mobile);
