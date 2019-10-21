@@ -14,6 +14,7 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
     public class CharacterEquipmentPanelBehaviour : MonoBehaviour
     {
         public MobileInventoryBehaviour MobileInventoryBehaviour;
+        public SelectedItemPanelBehaviour SelectedItemPanelBehaviour;
 
         public CharacterEquipmentSlotBehaviour ChestSlot;
         public CharacterEquipmentSlotBehaviour LeftHandSlot;
@@ -21,27 +22,70 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
         public CharacterEquipmentSlotBehaviour LegsSlot;
         public CharacterEquipmentSlotBehaviour BootsSlot;
 
-        internal void SetSlot(ItemInstance selectedItem)
+
+
+        internal void SetSlot(ItemInstance itemInstance)
         {
-            var baseEquipment = selectedItem.ItemTemplate as BaseEquipment;
+            var baseEquipment = itemInstance.ItemTemplate as BaseEquipment;
             switch (baseEquipment.EquipmentType)
             {
                 case EquipmentType.Legs:
-                    LegsSlot.SetItem(selectedItem);
+                    LegsSlot.SetItem(itemInstance);
                     break;
                 case EquipmentType.Boots:
-                    BootsSlot.SetItem(selectedItem);
+                    BootsSlot.SetItem(itemInstance);
                     break;
                 case EquipmentType.Chest:
-                    ChestSlot.SetItem(selectedItem);
+                    ChestSlot.SetItem(itemInstance);
                     break;
                 case EquipmentType.RightHand:
-                    RightHandSlot.SetItem(selectedItem);
+                    RightHandSlot.SetItem(itemInstance);
                     break;
                 case EquipmentType.LeftHand:
-                    LeftHandSlot.SetItem(selectedItem);
+                    LeftHandSlot.SetItem(itemInstance);
                     break;
             }
+        }
+
+        public void OnSlotSelected(CharacterEquipmentSlotBehaviour slot)
+        {
+            SelectedItemPanelBehaviour.gameObject.SetActive(true);
+            SelectedItemPanelBehaviour.SetPanel(slot.GetItemInstance());
+
+            if (slot.GetInstanceID().Equals(LegsSlot.GetInstanceID()))
+            {
+                ChestSlot.SetSelected(false);
+                BootsSlot.SetSelected(false);
+                RightHandSlot.SetSelected(false);
+                LeftHandSlot.SetSelected(false);
+            }
+            else if (slot.GetInstanceID().Equals(BootsSlot.GetInstanceID()))
+            {
+
+            }
+            else if (slot.GetInstanceID().Equals(ChestSlot.GetInstanceID()))
+            {
+
+            }
+            else if (slot.GetInstanceID().Equals(RightHandSlot.GetInstanceID()))
+            {
+
+            }
+            else if (slot.GetInstanceID().Equals(LeftHandSlot.GetInstanceID()))
+            {
+
+            }
+
+            MobileInventoryBehaviour.ClearSelection();
+        }
+
+        public void OnSlotUnSelected(CharacterEquipmentSlotBehaviour slot)
+        {
+
+            SelectedItemPanelBehaviour.gameObject.SetActive(false);
+            SelectedItemPanelBehaviour.SetPanel(null);
+
+            //MobileInventoryBehaviour.ClearSelection();
         }
     }
 }

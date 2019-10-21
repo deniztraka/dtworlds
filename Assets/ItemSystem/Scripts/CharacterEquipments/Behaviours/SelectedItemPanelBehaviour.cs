@@ -10,9 +10,9 @@ using DTWorlds.UnityBehaviours;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
+namespace DTWorlds.Items.Inventory.Behaviours
 {
-    public class SelectedCharacterSlotPanelBehaviour : MonoBehaviour
+    public class SelectedItemPanelBehaviour : MonoBehaviour
     {
         private Color tempColor;
         public Image ItemImage;
@@ -21,7 +21,12 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
         public Text DescText;
         public Text StatsText;
         public Button UnequipButton;
-        public RectTransform CharacterStatsPanel;
+
+        public Color WeakItemColor;
+        public Color RegularItemColor;
+        public Color ExceptionalItemColor;
+        public Color RareItemColor;
+        public Color LegendItemColor;
 
         void Start()
         {
@@ -40,31 +45,30 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
             if (itemInstance != null)
             {
                 ItemImage.sprite = itemInstance.ItemTemplate.Icon;
-                //tempColor.a = 1;
                 //ItemImage.color = tempColor;
 
-                //var itemColor = Color.black;
-                // switch (itemInstance.Quality)
-                // {
-                //     case ItemQuality.Weak:
-                //         itemColor = WeakItemColor;
-                //         break;
-                //     case ItemQuality.Regular:
-                //         itemColor = RegularItemColor;
-                //         break;
-                //     case ItemQuality.Exceptional:
-                //         itemColor = ExceptionalItemColor;
-                //         break;
-                //     case ItemQuality.Rare:
-                //         itemColor = RareItemColor;
-                //         break;
-                //     case ItemQuality.Legend:
-                //         itemColor = LegendItemColor;
-                //         break;
-                // }
+                var itemColor = Color.black;
+                switch (itemInstance.Quality)
+                {
+                    case ItemQuality.Weak:
+                        itemColor = WeakItemColor;
+                        break;
+                    case ItemQuality.Regular:
+                        itemColor = RegularItemColor;
+                        break;
+                    case ItemQuality.Exceptional:
+                        itemColor = ExceptionalItemColor;
+                        break;
+                    case ItemQuality.Rare:
+                        itemColor = RareItemColor;
+                        break;
+                    case ItemQuality.Legend:
+                        itemColor = LegendItemColor;
+                        break;
+                }
 
-                //TitleText.color = itemColor;
-                //QualityText.color = itemColor;
+                TitleText.color = itemColor;
+                QualityText.color = itemColor;
 
                 TitleText.text = itemInstance.ItemTemplate.ItemName;
                 DescText.text = itemInstance.ItemTemplate.ItemDescription;

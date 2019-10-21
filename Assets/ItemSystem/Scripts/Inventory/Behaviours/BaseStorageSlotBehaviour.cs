@@ -26,7 +26,6 @@ namespace DTWorlds.Items.Inventory.Behaviours
 
         public delegate void StorageSlotEventHandler(BaseStorageSlotBehaviour slot);
         public event StorageSlotEventHandler OnAfterSelected;
-        public event StorageSlotEventHandler OnAfterEquipped;
 
         private void Start()
         {

@@ -14,11 +14,15 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
 {
     public class CharacterEquipmentSlotBehaviour : MonoBehaviour
     {
+
+        private ItemInstance itemInstance;
+
         public Image SlotImage;
         public string ItemId;
 
+        public bool IsSelected;
+
         public GameObject SelectedItemPanelObj;
-        public GameObject CharacterStatsPanelObj;
 
         public PlayerInventoryBehaviour PlayerInventoryBehaviour;
 
@@ -65,8 +69,66 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
             }
         }
 
+        internal void SetSelected(bool isSelected)
+        {
+            if (IsSelected == isSelected)
+            {
+                return;
+            }
+
+            IsSelected = isSelected;
+
+
+
+            if (IsSelected)
+            {
+                if (String.IsNullOrEmpty(ItemId))
+                {
+                    return;
+                }
+
+                var itemInstance = PlayerInventoryBehaviour.GetItemById(ItemId);
+                if (itemInstance == null)
+                {
+                    return;
+                }
+
+                var tempColor = SlotImage.color;
+                tempColor.a = 1f;
+                SlotImage.color = tempColor;
+
+                //Debug.Log(itemInstance.ItemTemplate.ItemName);
+
+                //Debug.Log(itemInstance.ItemTemplate.ItemName + " is selected.");
+                gameObject.SendMessageUpwards("OnSlotSelected", this, SendMessageOptions.DontRequireReceiver);
+
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(ItemId))
+                {
+                    var itemInstance = PlayerInventoryBehaviour.GetItemById(ItemId);
+                    var tempColor = SlotImage.color;
+                    tempColor.a = (float)175 / 255;
+                    SlotImage.color = tempColor;
+                    //Debug.Log("is not selected.");
+                    //Debug.Log(itemInstance.ItemTemplate.ItemName + " is deselected.");
+                    gameObject.SendMessageUpwards("OnSlotUnSelected", this, SendMessageOptions.DontRequireReceiver);
+                }
+
+                //you do not have item here.
+            }
+        }
+
+        public ItemInstance GetItemInstance()
+        {
+            return itemInstance;
+        }
+
+
         public void SetItem(ItemInstance item)
         {
+            itemInstance = item;
             ItemId = item.IsEquipped ? item.Id : null;
 
             var equipment = item.ItemTemplate as BaseEquipment;
@@ -93,29 +155,7 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
 
         public void OnClick()
         {
-            var selectedCharacterSlotPanelBehaviour = SelectedItemPanelObj.GetComponent<SelectedCharacterSlotPanelBehaviour>();
-
-            if (String.IsNullOrEmpty(ItemId))
-            {
-                selectedCharacterSlotPanelBehaviour.SetPanel(null);
-                SelectedItemPanelObj.SetActive(false);
-                CharacterStatsPanelObj.SetActive(true);
-                return;
-            }
-
-            var itemInstance = PlayerInventoryBehaviour.GetItemById(ItemId);
-            if (itemInstance == null)
-            {
-                SelectedItemPanelObj.SetActive(false);
-                selectedCharacterSlotPanelBehaviour.SetPanel(null);
-                CharacterStatsPanelObj.SetActive(true);
-                return;
-            }
-            
-            CharacterStatsPanelObj.SetActive(false);
-            SelectedItemPanelObj.SetActive(true);
-            selectedCharacterSlotPanelBehaviour.SetPanel(itemInstance);
-            
+            SetSelected(!IsSelected);
         }
     }
 }

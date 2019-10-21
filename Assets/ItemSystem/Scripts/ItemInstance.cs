@@ -142,7 +142,7 @@ namespace DTWorlds.Items
         }
 
 
-        internal string GetQualityText()
+        public string GetQualityText()
         {
             return String.Format("- {0} -", this.Quality.ToString());
         }

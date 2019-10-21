@@ -12,6 +12,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
     public abstract class BaseStorageBehaviour : MonoBehaviour
     {
         public BaseStorageSlotBehaviour InventorySlotPrefab;
+        public SelectedItemPanelBehaviour SelectedItemPanelBehaviour;
         public ItemDatabase ItemDatabase;
 
         private BaseStorage baseStorage;
@@ -45,14 +46,20 @@ namespace DTWorlds.Items.Inventory.Behaviours
          */
         public virtual void OnAfterSlotSelected(BaseStorageSlotBehaviour slot)
         {
-
             for (int i = 0; i < transform.childCount; i++)
             {
                 var childSlot = transform.GetChild(i).GetComponent<BaseStorageSlotBehaviour>();
                 if (!childSlot.GetItemInstance().Id.Equals(slot.GetItemInstance().Id))
                 {
+                    //Debug.Log(i);
                     childSlot.SetSelected(false);
                 }
+            }
+
+            if (SelectedItemPanelBehaviour != null)
+            {
+                SelectedItemPanelBehaviour.gameObject.SetActive(true);
+                SelectedItemPanelBehaviour.SetPanel(slot.GetItemInstance());
             }
 
             RenderProperButtons();
@@ -168,7 +175,8 @@ namespace DTWorlds.Items.Inventory.Behaviours
             Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Regular, 1));
         }
 
-        public void UpdateItem(ItemInstance item){
+        public void UpdateItem(ItemInstance item)
+        {
             Storage.Update(item);
         }
 
@@ -209,7 +217,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
                     consumable.Consume(itemInstance, null);
                 }
             }
-        }        
+        }
 
         public virtual void Store()
         {
@@ -275,6 +283,15 @@ namespace DTWorlds.Items.Inventory.Behaviours
         protected void DeleteItem(ItemInstance itemInstance)
         {
             Storage.Delete(itemInstance);
+        }
+
+        public void ClearSelection()
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                var childSlot = transform.GetChild(i).GetComponent<BaseStorageSlotBehaviour>();
+                childSlot.SetSelected(false);
+            }
         }
 
     }

@@ -10,6 +10,8 @@ namespace DTWorlds.Items.Inventory.Behaviours
 {
     public class PlayerInventoryBehaviour : MobileInventoryBehaviour
     {
+        public List<CharacterEquipmentSlotBehaviour> CharacterEquipmentSlotBehaviours;
+
         protected override void Start()
         {
             base.Start();
@@ -18,20 +20,43 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 var shortPantsTemplate = ItemDatabase.GetItemByName("Short Pants");
                 var equippedItem = Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Weak, 1));
                 Equip(equippedItem);
-                //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Weak, 1));
-                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Exceptional, 3));
-                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Rare, 4));
-                //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPants, ItemQuality.Legend, 1));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Regular, 1));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Exceptional, 1));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Rare, 1));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Legend, 1));
 
-                // var healthPotion = ItemDatabase.GetItemByName("Health Potion");
-                // //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Weak, 20));                
-                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Weak, 1));
-                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Weak, 1));
-                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Exceptional, 1000));
-                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Rare, 3));
-                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotion, ItemQuality.Legend, 2));
+                var healthPotionTemplate = ItemDatabase.GetItemByName("Health Potion");
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Weak, 20));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Regular, 3));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Exceptional, 20));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Rare, 99));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Legend, 85));
 
             }
+        }
+
+        public override void OnAfterSlotSelected(BaseStorageSlotBehaviour slot)
+        {
+            foreach (var characterEquipmentSlot in CharacterEquipmentSlotBehaviours)
+            {
+                characterEquipmentSlot.SetSelected(false);
+            }
+
+            base.OnAfterSlotSelected(slot);
+
+            if (slot.IsSelected)
+            {
+                SelectedItemPanelBehaviour.gameObject.SetActive(true);
+                SelectedItemPanelBehaviour.SetPanel(slot.GetItemInstance());
+                // Debug.Log(slot.GetItemInstance().ItemTemplate.ItemName + " is selected.");
+            }
+            else
+            {
+                SelectedItemPanelBehaviour.gameObject.SetActive(false);
+                SelectedItemPanelBehaviour.SetPanel(null);
+                // Debug.Log(slot.GetItemInstance().ItemTemplate.ItemName + " is deselected.");
+            }
+
         }
 
         public void Equip()
@@ -39,13 +64,11 @@ namespace DTWorlds.Items.Inventory.Behaviours
             var selectedSlot = GetSelectedSlot();
             if (selectedSlot == null)
             {
-                //Debug.Log("It's not an equipment.");
                 return;
             }
             var selectedItem = selectedSlot.GetItemInstance();
             if (selectedItem == null)
             {
-                //Debug.Log("Selected item is null.");
                 return;
             }
 
