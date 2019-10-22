@@ -11470,6 +11470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55aaca78841a9743a974a8ac0f1149b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerInventoryBehaviour: {fileID: 1320089272}
   ItemImage: {fileID: 879051701}
   TitleText: {fileID: 126260689}
   QualityText: {fileID: 554011244}
@@ -22708,7 +22709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2071000504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22772,8 +22773,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OnUnEquipButtonClicked
+      - m_Target: {fileID: 963663196}
+        m_MethodName: UnEquip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

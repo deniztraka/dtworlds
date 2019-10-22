@@ -82,7 +82,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 var selectedItemInstance = selectedSlot.GetItemInstance();
 
                 SetButton(EquipButton, true, selectedItemInstance.IsEquippable() && !selectedItemInstance.IsEquipped);
-                SetButton(UnEquipButton, true, selectedItemInstance.IsEquippable() && selectedItemInstance.IsEquipped);
+                //SetButton(UnEquipButton, true, selectedItemInstance.IsEquippable() && selectedItemInstance.IsEquipped);
                 SetButton(UseButton, true, selectedItemInstance.IsUsuable());
                 SetButton(DropButton, true, true);
             }
@@ -92,11 +92,13 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 SetButton(EquipButton, true, false);
                 SetButton(DropButton, true, false);
                 SetButton(UseButton, true, false);
-                SetButton(UnEquipButton, true, false);
+                //SetButton(UnEquipButton, true, false);
 
                 //TODO: Implement store button after storage items are implemented
                 SetButton(StoreButton, false, false);
             }
+
+            SetButton(UnEquipButton, false, false);
         }
 
         public BaseStorageSlotBehaviour GetSelectedSlot()

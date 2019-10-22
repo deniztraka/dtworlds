@@ -14,6 +14,9 @@ namespace DTWorlds.Items.Inventory.Behaviours
 {
     public class SelectedItemPanelBehaviour : MonoBehaviour
     {
+        private ItemInstance itemInstance;
+
+        public PlayerInventoryBehaviour PlayerInventoryBehaviour;
         private Color tempColor;
         public Image ItemImage;
         public Text TitleText;
@@ -44,6 +47,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
         {
             if (itemInstance != null)
             {
+                this.itemInstance = itemInstance;
                 ItemImage.sprite = itemInstance.ItemTemplate.Icon;
                 //ItemImage.color = tempColor;
 
@@ -74,7 +78,27 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 DescText.text = itemInstance.ItemTemplate.ItemDescription;
                 QualityText.text = itemInstance.GetQualityText();
                 StatsText.text = itemInstance.GetStatsText(" {2}:<b>{1}{0}</b> ");
+
+
+
+                UnequipButton.gameObject.SetActive(itemInstance.IsEquippable());
+                UnequipButton.interactable = itemInstance.IsEquipped;
             }
+            else
+            {
+                UnequipButton.gameObject.SetActive(false);
+                UnequipButton.interactable = false;
+            }
+        }
+
+        public void UnEquip()
+        {
+            if (itemInstance != null)
+            {
+                Debug.Log("hede");
+                PlayerInventoryBehaviour.UnEquip(itemInstance);
+            }
+
         }
     }
 }

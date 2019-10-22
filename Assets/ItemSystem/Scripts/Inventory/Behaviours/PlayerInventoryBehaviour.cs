@@ -90,9 +90,11 @@ namespace DTWorlds.Items.Inventory.Behaviours
             playerBehaviour.Equip(itemInstance);
             UpdateItem(itemInstance);
             RenderProperButtons();
+
+            SelectedItemPanelBehaviour.SetPanel(itemInstance);
         }
 
-        private void UnEquip(ItemInstance equipedItem)
+        public void UnEquip(ItemInstance equipedItem)
         {
             if (equipedItem != null)
             {
@@ -100,6 +102,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 playerBehaviour.Unequip(equipedItem);
                 UpdateItem(equipedItem);
                 RenderProperButtons();
+                SelectedItemPanelBehaviour.SetPanel(equipedItem);
             }
         }
 
@@ -125,9 +128,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
 
             //if its get this far, we have item here
             UnEquip(selectedItem);
-
-
-
         }
+
     }
 }
