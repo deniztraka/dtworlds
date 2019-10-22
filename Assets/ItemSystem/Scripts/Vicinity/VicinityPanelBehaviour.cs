@@ -10,6 +10,7 @@ namespace DTWorlds.Items.Inventory.Behaviours.Vicinity
 {
     public class VicinityPanelBehaviour : MonoBehaviour
     {
+        private IEnumerator coroutine;
         private GameObject playerObject;
         private Collider2D[] results = new Collider2D[999];
         private List<ItemInstance> ItemList;
@@ -18,6 +19,8 @@ namespace DTWorlds.Items.Inventory.Behaviours.Vicinity
         public GameObject SlotContentObject;
 
         public Player Player;
+
+        public bool IsOpen;
 
 
 
@@ -28,6 +31,23 @@ namespace DTWorlds.Items.Inventory.Behaviours.Vicinity
             playerObject = GameObject.FindGameObjectWithTag("Player");
             var playerBehaviour = playerObject.GetComponent<PlayerBehaviour>();
             Player = playerBehaviour.Mobile as Player;
+
+            //TODO: check only if player is moving?
+            StartCoroutine(StartCheck());
+        }
+
+        IEnumerator StartCheck()
+        {
+            //Debug.Log(IsOpen);
+            while (true)
+            {
+                if (IsOpen)
+                {
+                    //Debug.Log("Checking vicinity items");
+                    CheckVicinity();
+                }
+                yield return new WaitForSeconds(1f);
+            }
         }
 
         internal void Clear()
@@ -49,7 +69,8 @@ namespace DTWorlds.Items.Inventory.Behaviours.Vicinity
 
         public void CheckVicinity()
         {
-            if (playerObject != null)
+            Clear();
+            if (playerObject != null && IsOpen)
             {
 
                 var radius = playerObject.GetComponent<CircleCollider2D>().radius;

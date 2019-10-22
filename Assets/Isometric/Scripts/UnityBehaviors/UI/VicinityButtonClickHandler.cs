@@ -15,15 +15,15 @@ namespace DTWorlds.UnityBehaviours.UI
 
             if (isOpened)
             {
-                VicinityPanelBehaviour.transform.localScale = new Vector3(0, 0, 0);  
-                
-                
+                VicinityPanelBehaviour.transform.localScale = new Vector3(0, 0, 0);                                  
                 VicinityPanelBehaviour.Clear();
+                VicinityPanelBehaviour.IsOpen = false;
             }
             else
             {
-                VicinityPanelBehaviour.transform.localScale = new Vector3(1, 1, 1);
-                VicinityPanelBehaviour.CheckVicinity();  
+                VicinityPanelBehaviour.transform.localScale = new Vector3(1, 1, 1);                
+                VicinityPanelBehaviour.IsOpen = true;
+                VicinityPanelBehaviour.CheckVicinity();
             }
 
             isOpened = !isOpened;

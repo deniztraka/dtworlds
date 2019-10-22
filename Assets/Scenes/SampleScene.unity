@@ -309,7 +309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00021725731, y: 131.64012}
+  m_AnchoredPosition: {x: -0.00021725731, y: 334.1989}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &22059944
@@ -4447,7 +4447,7 @@ RectTransform:
   m_GameObject: {fileID: 799420628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1797838386}
   - {fileID: 2011851824}
@@ -4512,6 +4512,7 @@ MonoBehaviour:
   VicinityItemSlotPrefab: {fileID: 8622397824384888301, guid: a7d976ded5aa3a34f8cd90456fedb821,
     type: 3}
   SlotContentObject: {fileID: 22059942}
+  IsOpen: 0
 --- !u!1 &804417259 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 109282, guid: 60da1df1f7edb3747bea8f735b2768d1,
@@ -6906,7 +6907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 216369.5}
+  m_AnchoredPosition: {x: 0, y: 219349.45}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1320089272
@@ -8223,8 +8224,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1220977683}
   m_HandleRect: {fileID: 1220977682}
   m_Direction: 2
-  m_Value: -0.0000010432171
-  m_Size: 0.5612
+  m_Value: 1
+  m_Size: 0.60094446
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
