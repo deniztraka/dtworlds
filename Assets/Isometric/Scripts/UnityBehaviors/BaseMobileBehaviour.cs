@@ -4,10 +4,8 @@ using DTWorlds.Mobiles;
 using DTWorlds.Mobiles.MovementTypes;
 using DTWorlds.Mobiles.MovementInputs;
 using UnityEngine;
-using InventorySystem;
 using DTWorlds.Items.Equipments;
 using System;
-using InventorySystem.UI;
 using DTWorlds.Items.Inventory.Behaviours;
 using DTWorlds.Items;
 
@@ -16,8 +14,6 @@ namespace DTWorlds.UnityBehaviours
     public abstract class BaseMobileBehaviour : MonoBehaviour
     {
         public FixedJoystick joystick;
-
-        public InventoryBehaviour InventoryBehaviour;
 
 
         private BaseMobile mobile;

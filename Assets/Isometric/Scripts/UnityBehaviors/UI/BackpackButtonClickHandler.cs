@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using InventorySystem;
 
 namespace DTWorlds.UnityBehaviours.UI
 {
     public class BackpackButtonClickHandler : MonoBehaviour
     {
         public GameObject InventoryPanel;
-        public VicinityPackBehaviour VicinityPackBehaviour;
         private bool isOpened;
 
         public void ToggleInventoryPanel()
