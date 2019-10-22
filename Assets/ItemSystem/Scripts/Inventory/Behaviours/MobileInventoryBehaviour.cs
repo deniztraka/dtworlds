@@ -77,5 +77,55 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 }
             }
         }
+
+        public override void Drop()
+        {
+            var selectedSlot = GetSelectedSlot();
+            if (selectedSlot != null)
+            {
+                var itemInstance = selectedSlot.GetItemInstance();
+                if (itemInstance.IsEquipped)
+                {
+                    UnEquip(itemInstance);
+                }
+
+                Storage.Delete(itemInstance);
+                Destroy(selectedSlot.gameObject);
+
+                SelectedItemPanelBehaviour.SetPanel(null);
+                SelectedItemPanelBehaviour.gameObject.SetActive(false);
+            }
+        }
+
+        public virtual void Equip(ItemInstance itemInstance)
+        {
+
+            //Check if any equipped item in same slot, then unequip it.
+            var equipedItem = Storage.GetSameTypeEquippedItem(itemInstance.ItemTemplate.Type);
+            if (equipedItem != null)
+            {
+                UnEquip(equipedItem);
+            }
+
+            //if its get this far, we have item here
+            var playerBehaviour = BaseMobileBehaviour as PlayerBehaviour;
+            playerBehaviour.Equip(itemInstance);
+            UpdateItem(itemInstance);
+            RenderProperButtons();
+
+            SelectedItemPanelBehaviour.SetPanel(itemInstance);
+        }
+
+        public virtual void UnEquip(ItemInstance equipedItem)
+        {
+            if (equipedItem != null)
+            {
+                var playerBehaviour = BaseMobileBehaviour as PlayerBehaviour;
+                playerBehaviour.Unequip(equipedItem);
+                UpdateItem(equipedItem);
+                RenderProperButtons();
+                SelectedItemPanelBehaviour.SetPanel(equipedItem);
+            }
+        }
     }
 }

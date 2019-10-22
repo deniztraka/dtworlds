@@ -74,6 +74,15 @@ namespace DTWorlds.Items.Inventory.Behaviours
             }
         }
 
+        public void DisableButtons()
+        {
+            SetButton(EquipButton, true, false);
+            SetButton(UseButton, true, false);
+            SetButton(DropButton, true, false);
+            SetButton(UnEquipButton, false, false);
+            SetButton(StoreButton, false, false);
+        }
+
         public void RenderProperButtons()
         {
             var selectedSlot = GetSelectedSlot();
@@ -231,7 +240,8 @@ namespace DTWorlds.Items.Inventory.Behaviours
             var selectedSlot = GetSelectedSlot();
             if (selectedSlot != null)
             {
-                Storage.Delete(selectedSlot.GetItemInstance());
+                var itemInstance = selectedSlot.GetItemInstance();
+                Storage.Delete(itemInstance);
                 Destroy(selectedSlot.gameObject);
 
             }

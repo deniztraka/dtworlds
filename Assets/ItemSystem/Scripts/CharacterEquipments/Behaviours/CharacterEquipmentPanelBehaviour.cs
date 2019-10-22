@@ -50,7 +50,8 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
         public void OnSlotSelected(CharacterEquipmentSlotBehaviour slot)
         {
             SelectedItemPanelBehaviour.gameObject.SetActive(true);
-            SelectedItemPanelBehaviour.SetPanel(slot.GetItemInstance());
+            var itemInstance = slot.GetItemInstance();
+            SelectedItemPanelBehaviour.SetPanel(itemInstance);
 
             if (slot.GetInstanceID().Equals(LegsSlot.GetInstanceID()))
             {
@@ -61,20 +62,34 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
             }
             else if (slot.GetInstanceID().Equals(BootsSlot.GetInstanceID()))
             {
-
+                ChestSlot.SetSelected(false);
+                LegsSlot.SetSelected(false);
+                RightHandSlot.SetSelected(false);
+                LeftHandSlot.SetSelected(false);
             }
             else if (slot.GetInstanceID().Equals(ChestSlot.GetInstanceID()))
             {
-
+                BootsSlot.SetSelected(false);
+                LegsSlot.SetSelected(false);
+                RightHandSlot.SetSelected(false);
+                LeftHandSlot.SetSelected(false);
             }
             else if (slot.GetInstanceID().Equals(RightHandSlot.GetInstanceID()))
             {
-
+                BootsSlot.SetSelected(false);
+                LegsSlot.SetSelected(false);
+                ChestSlot.SetSelected(false);
+                LeftHandSlot.SetSelected(false);
             }
             else if (slot.GetInstanceID().Equals(LeftHandSlot.GetInstanceID()))
             {
-
+                BootsSlot.SetSelected(false);
+                LegsSlot.SetSelected(false);
+                ChestSlot.SetSelected(false);
+                RightHandSlot.SetSelected(false);
             }
+
+            MobileInventoryBehaviour.DisableButtons();
 
             MobileInventoryBehaviour.ClearSelection();
         }

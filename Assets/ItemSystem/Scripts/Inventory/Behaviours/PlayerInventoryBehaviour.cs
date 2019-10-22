@@ -52,8 +52,9 @@ namespace DTWorlds.Items.Inventory.Behaviours
             }
             else
             {
-                SelectedItemPanelBehaviour.gameObject.SetActive(false);
                 SelectedItemPanelBehaviour.SetPanel(null);
+                SelectedItemPanelBehaviour.gameObject.SetActive(false);
+
                 // Debug.Log(slot.GetItemInstance().ItemTemplate.ItemName + " is deselected.");
             }
 
@@ -75,36 +76,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
             Equip(selectedItem);
         }
 
-        public void Equip(ItemInstance itemInstance)
-        {
 
-            //Check if any equipped item in same slot, then unequip it.
-            var equipedItem = Storage.GetSameTypeEquippedItem(itemInstance.ItemTemplate.Type);
-            if (equipedItem != null)
-            {
-                UnEquip(equipedItem);
-            }
-
-            //if its get this far, we have item here
-            var playerBehaviour = BaseMobileBehaviour as PlayerBehaviour;
-            playerBehaviour.Equip(itemInstance);
-            UpdateItem(itemInstance);
-            RenderProperButtons();
-
-            SelectedItemPanelBehaviour.SetPanel(itemInstance);
-        }
-
-        public void UnEquip(ItemInstance equipedItem)
-        {
-            if (equipedItem != null)
-            {
-                var playerBehaviour = BaseMobileBehaviour as PlayerBehaviour;
-                playerBehaviour.Unequip(equipedItem);
-                UpdateItem(equipedItem);
-                RenderProperButtons();
-                SelectedItemPanelBehaviour.SetPanel(equipedItem);
-            }
-        }
 
         internal ItemInstance GetItemById(string itemId)
         {
