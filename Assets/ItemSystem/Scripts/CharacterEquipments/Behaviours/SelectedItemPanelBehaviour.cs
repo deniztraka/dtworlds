@@ -95,7 +95,6 @@ namespace DTWorlds.Items.Inventory.Behaviours
         {
             if (itemInstance != null)
             {
-                Debug.Log("hede");
                 PlayerInventoryBehaviour.UnEquip(itemInstance);
             }
 
