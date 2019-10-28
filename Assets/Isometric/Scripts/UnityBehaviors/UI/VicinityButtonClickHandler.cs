@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DTWorlds.Items.Inventory.Behaviours.Vicinity;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DTWorlds.UnityBehaviours.UI
 {
@@ -18,12 +19,14 @@ namespace DTWorlds.UnityBehaviours.UI
                 VicinityPanelBehaviour.transform.localScale = new Vector3(0, 0, 0);                                  
                 VicinityPanelBehaviour.Clear();
                 VicinityPanelBehaviour.IsOpen = false;
+                
             }
             else
             {
                 VicinityPanelBehaviour.transform.localScale = new Vector3(1, 1, 1);                
                 VicinityPanelBehaviour.IsOpen = true;
                 VicinityPanelBehaviour.CheckVicinity();
+                VicinityPanelBehaviour.GetComponentInChildren<ScrollRect>().verticalNormalizedPosition = 1f; 
             }
 
             isOpened = !isOpened;

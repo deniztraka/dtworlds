@@ -6,6 +6,8 @@ using DTWorlds.Items.Behaviours;
 using DTWorlds.Mobiles;
 using DTWorlds.UnityBehaviours;
 using UnityEngine;
+using UnityEngine.UI;
+
 namespace DTWorlds.Items.Inventory.Behaviours.Vicinity
 {
     public class VicinityPanelBehaviour : MonoBehaviour
@@ -32,21 +34,21 @@ namespace DTWorlds.Items.Inventory.Behaviours.Vicinity
             var playerBehaviour = playerObject.GetComponent<PlayerBehaviour>();
             Player = playerBehaviour.Mobile as Player;
 
-            //TODO: check only if player is moving?
-            StartCoroutine(StartCheck());
+
+            StartCoroutine(StartCheck(Player));
         }
 
-        IEnumerator StartCheck()
+        IEnumerator StartCheck(Player player)
         {
             //Debug.Log(IsOpen);
             while (true)
             {
-                if (IsOpen)
+                if (IsOpen && player.IsMoving)
                 {
                     //Debug.Log("Checking vicinity items");
                     CheckVicinity();
                 }
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.5f);
             }
         }
 
@@ -55,7 +57,7 @@ namespace DTWorlds.Items.Inventory.Behaviours.Vicinity
             ItemList = new List<ItemInstance>();
             foreach (Transform child in SlotContentObject.transform)
             {
-                GameObject.Destroy(child.gameObject);
+                GameObject.DestroyImmediate(child.gameObject);
             }
         }
 
@@ -92,6 +94,16 @@ namespace DTWorlds.Items.Inventory.Behaviours.Vicinity
                     }
                 }
             }
+
+            RefreshViewportHeight();
+        }
+
+        protected virtual void RefreshViewportHeight()
+        {
+            var gridLayoutGroup = SlotContentObject.GetComponent<GridLayoutGroup>();
+            var contentRect = SlotContentObject.GetComponent<RectTransform>();
+            var height = gridLayoutGroup.transform.childCount * (gridLayoutGroup.cellSize.y + gridLayoutGroup.spacing.y);
+            contentRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, height);
         }
     }
 }

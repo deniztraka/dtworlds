@@ -60,6 +60,14 @@ namespace DTWorlds.Mobiles
             }
         }
 
+        public bool IsMoving
+        {
+            get
+            {
+                return !(this.movementType.MovementAxis.GetXAxis() == 0 && this.movementType.MovementAxis.GetYAxis() == 0);
+            }
+        }
+
         public MobileInventory Inventory;
 
         public float MovementSpeed { get => movementSpeed; set => movementSpeed = value; }

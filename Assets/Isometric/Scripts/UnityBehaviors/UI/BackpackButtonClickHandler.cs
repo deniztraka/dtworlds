@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DTWorlds.UnityBehaviours.UI
 {
@@ -20,6 +21,7 @@ namespace DTWorlds.UnityBehaviours.UI
             else
             {
                 InventoryPanel.transform.localScale = new Vector3(1, 1, 1);
+                InventoryPanel.GetComponentInChildren<ScrollRect>().verticalNormalizedPosition = 1f; 
                 //VicinityPackBehaviour.CheckVicinity();
             }
 
