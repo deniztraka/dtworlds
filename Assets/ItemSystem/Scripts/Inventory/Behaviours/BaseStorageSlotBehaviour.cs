@@ -11,6 +11,9 @@ namespace DTWorlds.Items.Inventory.Behaviours
     {
         private ItemInstance itemInstance;
 
+        public Sprite SelectedImage;
+        public Sprite NormalImage;
+
         public Color NormalColor;
         public Color SelectedColor;
 
@@ -62,7 +65,11 @@ namespace DTWorlds.Items.Inventory.Behaviours
         public void SetSelected(bool newStatus)
         {
             IsSelected = newStatus;
-            GetComponent<Image>().color = IsSelected ? SelectedColor : NormalColor;
+            var image = GetComponent<Image>();
+            
+
+            image.color = IsSelected ? SelectedColor : NormalColor;
+            image.sprite = IsSelected ? SelectedImage : NormalImage;
         }
 
         public virtual void RefreshSlot()
