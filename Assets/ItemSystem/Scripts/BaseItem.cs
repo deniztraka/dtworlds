@@ -35,6 +35,7 @@ namespace DTWorlds.Items
         public ItemQuality Quality;
         public GameObject ItemPrefab;
         public string ItemDescription;
+        public string ItemLongDescription;
         public ItemType Type;
         public abstract List<ItemBonus> GetBonusList();
     }

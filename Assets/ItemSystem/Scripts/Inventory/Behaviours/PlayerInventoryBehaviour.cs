@@ -20,17 +20,17 @@ namespace DTWorlds.Items.Inventory.Behaviours
                 var shortPantsTemplate = ItemDatabase.GetItemByName("Short Pants");
                 var equippedItem = Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Weak, 1));
                 Equip(equippedItem);
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Regular, 1));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Exceptional, 1));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Rare, 1));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Legend, 1));
+                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Regular, 1));
+                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Exceptional, 1));
+                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Rare, 1));
+                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Legend, 1));
 
                 var healthPotionTemplate = ItemDatabase.GetItemByName("Health Potion");
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Weak, 20));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Regular, 3));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Exceptional, 20));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Rare, 99));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Legend, 85));
+                //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Weak, 1));
+                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Regular, 1));
+                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Exceptional, 20));
+                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Rare, 99));
+                // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Legend, 85));
 
             }
         }

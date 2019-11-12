@@ -22,6 +22,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
         public Text TitleText;
         public Text QualityText;
         public Text DescText;
+        public Text LongDescText;
         public Text StatsText;
         public Button UnequipButton;
 
@@ -76,6 +77,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
 
                 TitleText.text = itemInstance.ItemTemplate.ItemName;
                 DescText.text = itemInstance.ItemTemplate.ItemDescription;
+                LongDescText.text = itemInstance.ItemTemplate.ItemLongDescription;
                 QualityText.text = itemInstance.GetQualityText();
                 StatsText.text = itemInstance.GetStatsText(" {2}:<b>{1}{0}</b> ");
 
