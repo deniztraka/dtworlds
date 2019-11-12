@@ -93,9 +93,9 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
                     return;
                 }
 
-                var tempColor = SlotImage.color;
-                tempColor.a = 1f;
-                SlotImage.color = tempColor;
+                //var tempColor = SlotImage.color;
+                //tempColor.a = 1f;
+                //SlotImage.color = tempColor;
 
                 //Debug.Log(itemInstance.ItemTemplate.ItemName);
 
@@ -108,9 +108,9 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
                 if (!String.IsNullOrEmpty(ItemId))
                 {
                     var itemInstance = PlayerInventoryBehaviour.GetItemById(ItemId);
-                    var tempColor = SlotImage.color;
-                    tempColor.a = (float)175 / 255;
-                    SlotImage.color = tempColor;
+                    //var tempColor = SlotImage.color;
+                    //tempColor.a = (float)175 / 255;
+                    //SlotImage.color = tempColor;
                     //Debug.Log("is not selected.");
                     //Debug.Log(itemInstance.ItemTemplate.ItemName + " is deselected.");
                     gameObject.SendMessageUpwards("OnSlotUnSelected", this, SendMessageOptions.DontRequireReceiver);
@@ -140,7 +140,8 @@ namespace DTWorlds.Items.Inventory.CharacterEquipments.Behaviours
                 SlotImage.sprite = equippable.EquippableItemSprite;
 
                 var tempColor = SlotImage.color;
-                tempColor.a = (float)175 / 255;
+                //tempColor.a = (float)175 / 255;
+                tempColor.a = (float)255/255;
                 SlotImage.color = tempColor;
             }
             else
