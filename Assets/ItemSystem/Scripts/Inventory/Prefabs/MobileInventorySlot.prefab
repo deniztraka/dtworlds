@@ -497,7 +497,7 @@ MonoBehaviour:
   NormalColor: {r: 1, g: 1, b: 1, a: 0.6862745}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
   WeakItemColor: {r: 0.30980393, g: 0.30980393, b: 0.30980393, a: 0.78431374}
-  RegularItemColor: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0.78431374}
+  RegularItemColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 0.78431374}
   ExceptionalItemColor: {r: 0.02745098, g: 0.39607844, b: 0, a: 0.78431374}
   RareItemColor: {r: 1, g: 0.99607843, b: 0, a: 0.78431374}
   LegendItemColor: {r: 0.8962264, g: 0.24953756, b: 0, a: 0.78431374}
@@ -600,9 +600,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 9a20f7d4b1c462d4eb9773a3d05d1266, type: 3}
     m_FontSize: 10
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 47

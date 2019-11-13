@@ -72,7 +72,7 @@ namespace DTWorlds.Items.Inventory.Behaviours
                         break;
                 }
 
-                TitleText.color = itemColor;
+                //TitleText.color = itemColor;
                 QualityText.color = itemColor;
 
                 TitleText.text = itemInstance.ItemTemplate.ItemName;
