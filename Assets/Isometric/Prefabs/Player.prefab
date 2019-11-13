@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1217970917383635523}
   - component: {fileID: 1217970917383635532}
   m_Layer: 0
-  m_Name: pantsSprite
+  m_Name: LegsSpriteAnimator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,11 +67,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 448978399
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -6035166741102504727, guid: d2f7535940953f84d8ff0ca3a73efceb,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1217970917383635532
@@ -92,7 +91,7 @@ Animator:
   m_GameObject: {fileID: 1217970917383635521}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ef69dc512b6d9374f86b96dd34204408, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -111,12 +110,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1217970917918465159}
   m_Layer: 0
-  m_Name: PantsSlot
+  m_Name: LegsSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1217970917918465159
 Transform:
   m_ObjectHideFlags: 0
@@ -202,7 +201,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 448978399
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 3245788303236191626, guid: 19ce960c0513ee34c910e36b5dfd939f,
@@ -248,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e170fe4644b20449d9e20ae2e9b21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pantsSlot: {fileID: 0}
+  LegsSlot: {fileID: 1217970917918465158}
 --- !u!114 &1217970918245168896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
-  InventoryBehaviour: {fileID: 0}
+  CharacterEquipmentsPanelBehaviour: {fileID: 0}
 --- !u!58 &891147812
 CircleCollider2D:
   m_ObjectHideFlags: 0

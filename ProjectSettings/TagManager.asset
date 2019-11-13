@@ -42,3 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Mobiles
+    uniqueID: 163657185
+    locked: 0
