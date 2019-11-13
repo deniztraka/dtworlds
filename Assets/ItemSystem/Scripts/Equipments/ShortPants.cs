@@ -8,7 +8,7 @@ namespace DTWorlds.Items.Equipments
     {
         public override List<ItemBonus> GetBonusList()
         {
-            return new List<ItemBonus>() { ArmorBonus, DexterityBonus };
+            return new List<ItemBonus>() { ArmorBonus/*, DexterityBonus */};
         }
     }
 }

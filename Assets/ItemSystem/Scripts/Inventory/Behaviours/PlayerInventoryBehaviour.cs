@@ -18,13 +18,13 @@ namespace DTWorlds.Items.Inventory.Behaviours
             if (Storage != null)
             {
                 var shortPantsTemplate = ItemDatabase.GetItemByName("Short Pants");
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Weak, 1));
+               // Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Weak, 1));
 
                 var equippedItem = Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Regular, 1));
                 Equip(equippedItem);
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Exceptional, 1));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Rare, 1));
-                Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Legend, 1));
+                //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Exceptional, 1));
+                //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Rare, 1));
+                //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), shortPantsTemplate, ItemQuality.Legend, 1));
 
                 var healthPotionTemplate = ItemDatabase.GetItemByName("Health Potion");
                 //Storage.AddItem(new ItemInstance(Guid.NewGuid().ToString(), healthPotionTemplate, ItemQuality.Weak, 1));

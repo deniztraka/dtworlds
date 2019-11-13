@@ -20,6 +20,7 @@ MonoBehaviour:
   ItemPrefab: {fileID: 5678345001401821203, guid: 511bbeba69ee6ea4ab42142699a12c20,
     type: 3}
   ItemDescription: to make things hidden
+  ItemLongDescription: 
   Type: 1
   EquipmentType: 4
   ArmorBonus:
