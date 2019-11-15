@@ -1388,12 +1388,12 @@ TextureImporter:
       name: human_base_running_se_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1409,12 +1409,12 @@ TextureImporter:
       name: human_base_running_se_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 82
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1430,12 +1430,12 @@ TextureImporter:
       name: human_base_running_se_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 146
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1451,12 +1451,12 @@ TextureImporter:
       name: human_base_running_se_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 210
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1472,12 +1472,12 @@ TextureImporter:
       name: human_base_running_se_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 274
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1493,12 +1493,12 @@ TextureImporter:
       name: human_base_running_se_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 338
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1514,12 +1514,12 @@ TextureImporter:
       name: human_base_running_se_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 402
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1535,12 +1535,12 @@ TextureImporter:
       name: human_base_running_se_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 466
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1556,12 +1556,12 @@ TextureImporter:
       name: human_base_running_se_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 530
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1577,12 +1577,12 @@ TextureImporter:
       name: human_base_running_se_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 594
         y: 3520
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1598,12 +1598,12 @@ TextureImporter:
       name: human_base_running_s_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1619,12 +1619,12 @@ TextureImporter:
       name: human_base_running_s_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1640,12 +1640,12 @@ TextureImporter:
       name: human_base_running_s_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 149
         y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1661,12 +1661,12 @@ TextureImporter:
       name: human_base_running_s_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 210
         y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1682,12 +1682,12 @@ TextureImporter:
       name: human_base_running_s_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 272
+        y: 3459
+        width: 40
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1703,12 +1703,12 @@ TextureImporter:
       name: human_base_running_s_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 333
         y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1724,12 +1724,12 @@ TextureImporter:
       name: human_base_running_s_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 405
         y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1745,12 +1745,12 @@ TextureImporter:
       name: human_base_running_s_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 467
         y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1766,12 +1766,12 @@ TextureImporter:
       name: human_base_running_s_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 528
         y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1787,12 +1787,12 @@ TextureImporter:
       name: human_base_running_s_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 592
         y: 3456
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 34
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1808,12 +1808,12 @@ TextureImporter:
       name: human_base_running_sw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 50
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1829,12 +1829,12 @@ TextureImporter:
       name: human_base_running_sw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 82
         y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1850,12 +1850,12 @@ TextureImporter:
       name: human_base_running_sw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 149
         y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1871,12 +1871,12 @@ TextureImporter:
       name: human_base_running_sw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 210
         y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1892,12 +1892,12 @@ TextureImporter:
       name: human_base_running_sw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 271
         y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 45
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1913,12 +1913,12 @@ TextureImporter:
       name: human_base_running_sw_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 332
+        y: 3395
+        width: 46
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1934,12 +1934,12 @@ TextureImporter:
       name: human_base_running_sw_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 403
         y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1955,12 +1955,12 @@ TextureImporter:
       name: human_base_running_sw_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 471
         y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1976,12 +1976,12 @@ TextureImporter:
       name: human_base_running_sw_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 531
         y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1997,12 +1997,12 @@ TextureImporter:
       name: human_base_running_sw_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 592
         y: 3392
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 41
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2018,12 +2018,12 @@ TextureImporter:
       name: human_base_running_w_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 3328
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 44
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2039,12 +2039,12 @@ TextureImporter:
       name: human_base_running_w_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 3328
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2060,12 +2060,12 @@ TextureImporter:
       name: human_base_running_w_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 3328
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2081,12 +2081,12 @@ TextureImporter:
       name: human_base_running_w_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 210
         y: 3328
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2102,12 +2102,12 @@ TextureImporter:
       name: human_base_running_w_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 272
         y: 3328
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 34
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2123,12 +2123,12 @@ TextureImporter:
       name: human_base_running_w_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 3328
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 336
+        y: 3333
+        width: 33
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2144,12 +2144,12 @@ TextureImporter:
       name: human_base_running_w_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 401
         y: 3328
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2165,12 +2165,12 @@ TextureImporter:
       name: human_base_running_w_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 467
         y: 3328
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2186,12 +2186,12 @@ TextureImporter:
       name: human_base_running_w_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 533
         y: 3328
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2207,12 +2207,12 @@ TextureImporter:
       name: human_base_running_w_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 597
         y: 3328
-        width: 64
+        width: 33
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2228,12 +2228,12 @@ TextureImporter:
       name: human_base_running_nw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 3264
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2249,12 +2249,12 @@ TextureImporter:
       name: human_base_running_nw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 3264
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2270,12 +2270,12 @@ TextureImporter:
       name: human_base_running_nw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 3264
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2291,12 +2291,12 @@ TextureImporter:
       name: human_base_running_nw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 211
         y: 3264
-        width: 64
+        width: 25
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2312,12 +2312,12 @@ TextureImporter:
       name: human_base_running_nw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 275
         y: 3264
-        width: 64
+        width: 23
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2333,12 +2333,12 @@ TextureImporter:
       name: human_base_running_nw_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 339
         y: 3264
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2354,12 +2354,12 @@ TextureImporter:
       name: human_base_running_nw_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 403
         y: 3264
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2375,12 +2375,12 @@ TextureImporter:
       name: human_base_running_nw_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 467
         y: 3264
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2396,12 +2396,12 @@ TextureImporter:
       name: human_base_running_nw_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 531
         y: 3264
-        width: 64
+        width: 26
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2417,12 +2417,12 @@ TextureImporter:
       name: human_base_running_nw_9
       rect:
         serializedVersion: 2
-        x: 576
-        y: 3264
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 587
+        y: 3200
+        width: 34
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2438,12 +2438,12 @@ TextureImporter:
       name: human_base_running_n_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 3200
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 44
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2459,12 +2459,12 @@ TextureImporter:
       name: human_base_running_n_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 75
         y: 3200
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2480,12 +2480,12 @@ TextureImporter:
       name: human_base_running_n_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 143
         y: 3200
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2501,12 +2501,12 @@ TextureImporter:
       name: human_base_running_n_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 206
         y: 3200
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2522,12 +2522,12 @@ TextureImporter:
       name: human_base_running_n_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 269
         y: 3200
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 34
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2543,12 +2543,12 @@ TextureImporter:
       name: human_base_running_n_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 3200
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 335
+        y: 3206
+        width: 33
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2564,12 +2564,12 @@ TextureImporter:
       name: human_base_running_n_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 400
         y: 3200
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2585,12 +2585,12 @@ TextureImporter:
       name: human_base_running_n_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 468
         y: 3200
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2606,12 +2606,12 @@ TextureImporter:
       name: human_base_running_n_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 529
         y: 3200
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2648,12 +2648,12 @@ TextureImporter:
       name: human_base_running_ne_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 6
         y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 50
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2669,12 +2669,12 @@ TextureImporter:
       name: human_base_running_ne_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 74
         y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2690,12 +2690,12 @@ TextureImporter:
       name: human_base_running_ne_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2711,12 +2711,12 @@ TextureImporter:
       name: human_base_running_ne_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 208
         y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2732,12 +2732,12 @@ TextureImporter:
       name: human_base_running_ne_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 259
+        y: 3140
+        width: 45
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2753,12 +2753,12 @@ TextureImporter:
       name: human_base_running_ne_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 326
+        y: 3140
+        width: 46
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2774,12 +2774,12 @@ TextureImporter:
       name: human_base_running_ne_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 398
         y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2795,12 +2795,12 @@ TextureImporter:
       name: human_base_running_ne_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 468
         y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2816,12 +2816,12 @@ TextureImporter:
       name: human_base_running_ne_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 527
         y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2837,12 +2837,12 @@ TextureImporter:
       name: human_base_running_ne_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 582
         y: 3136
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 41
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2858,12 +2858,12 @@ TextureImporter:
       name: human_base_running_e_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 15
         y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2879,12 +2879,12 @@ TextureImporter:
       name: human_base_running_e_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 81
         y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2900,12 +2900,12 @@ TextureImporter:
       name: human_base_running_e_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 149
         y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2921,12 +2921,12 @@ TextureImporter:
       name: human_base_running_e_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 210
         y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2942,12 +2942,12 @@ TextureImporter:
       name: human_base_running_e_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 264
+        y: 3078
+        width: 40
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2963,12 +2963,12 @@ TextureImporter:
       name: human_base_running_e_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 328
         y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2984,12 +2984,12 @@ TextureImporter:
       name: human_base_running_e_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 399
         y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3005,12 +3005,12 @@ TextureImporter:
       name: human_base_running_e_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 466
         y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3026,12 +3026,12 @@ TextureImporter:
       name: human_base_running_e_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 528
         y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3047,12 +3047,12 @@ TextureImporter:
       name: human_base_running_e_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 589
         y: 3072
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 34
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3068,12 +3068,12 @@ TextureImporter:
       name: human_base_walking_se_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 20
         y: 3008
-        width: 64
+        width: 25
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3089,12 +3089,12 @@ TextureImporter:
       name: human_base_walking_se_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 3008
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3110,12 +3110,12 @@ TextureImporter:
       name: human_base_walking_se_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 148
         y: 3008
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3131,12 +3131,12 @@ TextureImporter:
       name: human_base_walking_se_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 212
         y: 3008
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3152,12 +3152,12 @@ TextureImporter:
       name: human_base_walking_se_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 275
         y: 3008
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3173,12 +3173,12 @@ TextureImporter:
       name: human_base_walking_se_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 339
         y: 3008
-        width: 64
+        width: 25
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3194,12 +3194,12 @@ TextureImporter:
       name: human_base_walking_se_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 403
         y: 3008
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3215,12 +3215,12 @@ TextureImporter:
       name: human_base_walking_se_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 468
         y: 3008
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3236,12 +3236,12 @@ TextureImporter:
       name: human_base_walking_se_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 531
         y: 3008
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3257,12 +3257,12 @@ TextureImporter:
       name: human_base_walking_se_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 596
         y: 3008
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3278,12 +3278,12 @@ TextureImporter:
       name: human_base_walking_s_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3299,12 +3299,12 @@ TextureImporter:
       name: human_base_walking_s_1
       rect:
         serializedVersion: 2
-        x: 63
+        x: 84
         y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3320,12 +3320,12 @@ TextureImporter:
       name: human_base_walking_s_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 148
         y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3341,12 +3341,12 @@ TextureImporter:
       name: human_base_walking_s_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 213
         y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3362,12 +3362,12 @@ TextureImporter:
       name: human_base_walking_s_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 274
         y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3383,12 +3383,12 @@ TextureImporter:
       name: human_base_walking_s_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 335
         y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3404,12 +3404,12 @@ TextureImporter:
       name: human_base_walking_s_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 405
         y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3425,12 +3425,12 @@ TextureImporter:
       name: human_base_walking_s_7
       rect:
         serializedVersion: 2
-        x: 448
-        y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 472
+        y: 2943
+        width: 18
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3446,12 +3446,12 @@ TextureImporter:
       name: human_base_walking_s_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 535
         y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3467,12 +3467,12 @@ TextureImporter:
       name: human_base_walking_s_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 596
         y: 2944
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3488,12 +3488,12 @@ TextureImporter:
       name: human_base_walking_sw_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 12
+        y: 2881
+        width: 40
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3509,12 +3509,12 @@ TextureImporter:
       name: human_base_walking_sw_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 84
+        y: 2881
+        width: 24
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3530,12 +3530,12 @@ TextureImporter:
       name: human_base_walking_sw_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 151
+        y: 2881
+        width: 18
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3551,12 +3551,12 @@ TextureImporter:
       name: human_base_walking_sw_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 213
+        y: 2881
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3572,12 +3572,12 @@ TextureImporter:
       name: human_base_walking_sw_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 273
+        y: 2881
+        width: 34
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3593,12 +3593,12 @@ TextureImporter:
       name: human_base_walking_sw_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 333
+        y: 2881
+        width: 40
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3614,12 +3614,12 @@ TextureImporter:
       name: human_base_walking_sw_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 405
+        y: 2881
+        width: 26
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3635,12 +3635,12 @@ TextureImporter:
       name: human_base_walking_sw_7
       rect:
         serializedVersion: 2
-        x: 448
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 469
+        y: 2881
+        width: 20
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3656,12 +3656,12 @@ TextureImporter:
       name: human_base_walking_sw_8
       rect:
         serializedVersion: 2
-        x: 512
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 532
+        y: 2881
+        width: 25
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3677,12 +3677,12 @@ TextureImporter:
       name: human_base_walking_sw_9
       rect:
         serializedVersion: 2
-        x: 576
-        y: 2880
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 595
+        y: 2881
+        width: 32
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3698,12 +3698,12 @@ TextureImporter:
       name: human_base_walking_w_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 2816
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3719,12 +3719,12 @@ TextureImporter:
       name: human_base_walking_w_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 87
         y: 2816
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3740,12 +3740,12 @@ TextureImporter:
       name: human_base_walking_w_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 150
         y: 2816
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3761,12 +3761,12 @@ TextureImporter:
       name: human_base_walking_w_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 212
         y: 2816
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3782,12 +3782,12 @@ TextureImporter:
       name: human_base_walking_w_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 2816
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 274
+        y: 2817
+        width: 28
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3803,12 +3803,12 @@ TextureImporter:
       name: human_base_walking_w_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 338
         y: 2816
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3824,12 +3824,12 @@ TextureImporter:
       name: human_base_walking_w_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 2816
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 404
+        y: 2817
+        width: 27
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3845,12 +3845,12 @@ TextureImporter:
       name: human_base_walking_w_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 470
         y: 2816
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3866,12 +3866,12 @@ TextureImporter:
       name: human_base_walking_w_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 533
         y: 2816
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3887,12 +3887,12 @@ TextureImporter:
       name: human_base_walking_w_9
       rect:
         serializedVersion: 2
-        x: 576
-        y: 2817
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 595
+        y: 2816
+        width: 28
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3908,12 +3908,12 @@ TextureImporter:
       name: human_base_walking_nw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 21
         y: 2752
-        width: 64
+        width: 24
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3929,12 +3929,12 @@ TextureImporter:
       name: human_base_walking_nw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 2752
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3950,12 +3950,12 @@ TextureImporter:
       name: human_base_walking_nw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 2752
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3971,12 +3971,12 @@ TextureImporter:
       name: human_base_walking_nw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 211
         y: 2752
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3992,12 +3992,12 @@ TextureImporter:
       name: human_base_walking_nw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 274
         y: 2752
-        width: 64
+        width: 26
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4013,12 +4013,12 @@ TextureImporter:
       name: human_base_walking_nw_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 338
         y: 2752
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4034,12 +4034,12 @@ TextureImporter:
       name: human_base_walking_nw_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 403
         y: 2752
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4055,12 +4055,12 @@ TextureImporter:
       name: human_base_walking_nw_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 467
         y: 2752
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4076,12 +4076,12 @@ TextureImporter:
       name: human_base_walking_nw_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 529
         y: 2752
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4097,12 +4097,12 @@ TextureImporter:
       name: human_base_walking_nw_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 597
         y: 2752
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4118,12 +4118,12 @@ TextureImporter:
       name: human_base_walking_n_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4139,12 +4139,12 @@ TextureImporter:
       name: human_base_walking_n_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4160,12 +4160,12 @@ TextureImporter:
       name: human_base_walking_n_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4181,12 +4181,12 @@ TextureImporter:
       name: human_base_walking_n_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 211
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4202,12 +4202,12 @@ TextureImporter:
       name: human_base_walking_n_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 275
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4223,12 +4223,12 @@ TextureImporter:
       name: human_base_walking_n_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 339
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4244,12 +4244,12 @@ TextureImporter:
       name: human_base_walking_n_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 403
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4265,12 +4265,12 @@ TextureImporter:
       name: human_base_walking_n_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 467
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4286,12 +4286,12 @@ TextureImporter:
       name: human_base_walking_n_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 531
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4307,12 +4307,12 @@ TextureImporter:
       name: human_base_walking_n_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 595
         y: 2688
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4328,12 +4328,12 @@ TextureImporter:
       name: human_base_walking_ne_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 40
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4349,12 +4349,12 @@ TextureImporter:
       name: human_base_walking_ne_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4370,12 +4370,12 @@ TextureImporter:
       name: human_base_walking_ne_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 149
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4391,12 +4391,12 @@ TextureImporter:
       name: human_base_walking_ne_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 209
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4412,12 +4412,12 @@ TextureImporter:
       name: human_base_walking_ne_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 268
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 34
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4433,12 +4433,12 @@ TextureImporter:
       name: human_base_walking_ne_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 330
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 40
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4454,12 +4454,12 @@ TextureImporter:
       name: human_base_walking_ne_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 401
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4475,12 +4475,12 @@ TextureImporter:
       name: human_base_walking_ne_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 470
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4496,12 +4496,12 @@ TextureImporter:
       name: human_base_walking_ne_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 530
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4517,12 +4517,12 @@ TextureImporter:
       name: human_base_walking_ne_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 590
         y: 2624
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4538,12 +4538,12 @@ TextureImporter:
       name: human_base_walking_e_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 20
         y: 2560
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4559,12 +4559,12 @@ TextureImporter:
       name: human_base_walking_e_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 2560
-        width: 64
+        x: 83
+        y: 2562
+        width: 25
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4580,12 +4580,12 @@ TextureImporter:
       name: human_base_walking_e_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 148
         y: 2560
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4601,12 +4601,12 @@ TextureImporter:
       name: human_base_walking_e_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 212
         y: 2560
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4622,12 +4622,12 @@ TextureImporter:
       name: human_base_walking_e_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 276
         y: 2560
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4643,12 +4643,12 @@ TextureImporter:
       name: human_base_walking_e_5
       rect:
         serializedVersion: 2
-        x: 321
+        x: 340
         y: 2560
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4664,12 +4664,12 @@ TextureImporter:
       name: human_base_walking_e_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 404
         y: 2560
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4685,12 +4685,12 @@ TextureImporter:
       name: human_base_walking_e_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 468
         y: 2560
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4706,12 +4706,12 @@ TextureImporter:
       name: human_base_walking_e_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 532
         y: 2560
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4727,12 +4727,12 @@ TextureImporter:
       name: human_base_walking_e_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 596
         y: 2560
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4748,12 +4748,12 @@ TextureImporter:
       name: human_base_attacking_se_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2497
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 11
+        y: 2496
+        width: 31
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4790,12 +4790,12 @@ TextureImporter:
       name: human_base_attacking_se_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 2496
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4811,12 +4811,12 @@ TextureImporter:
       name: human_base_attacking_se_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 206
         y: 2496
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4832,12 +4832,12 @@ TextureImporter:
       name: human_base_attacking_se_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 278
         y: 2496
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4853,12 +4853,12 @@ TextureImporter:
       name: human_base_attacking_se_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 343
         y: 2496
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4874,12 +4874,12 @@ TextureImporter:
       name: human_base_attacking_se_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 400
         y: 2496
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4958,12 +4958,12 @@ TextureImporter:
       name: human_base_attacking_s_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 2432
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4979,12 +4979,12 @@ TextureImporter:
       name: human_base_attacking_s_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 78
         y: 2432
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 38
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5000,12 +5000,12 @@ TextureImporter:
       name: human_base_attacking_s_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 141
         y: 2432
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5021,12 +5021,12 @@ TextureImporter:
       name: human_base_attacking_s_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 199
         y: 2432
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 37
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5042,12 +5042,12 @@ TextureImporter:
       name: human_base_attacking_s_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 271
         y: 2432
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5063,12 +5063,12 @@ TextureImporter:
       name: human_base_attacking_s_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 338
         y: 2432
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5084,12 +5084,12 @@ TextureImporter:
       name: human_base_attacking_s_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 404
         y: 2432
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5105,12 +5105,12 @@ TextureImporter:
       name: human_base_attacking_sw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 21
         y: 2368
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5126,12 +5126,12 @@ TextureImporter:
       name: human_base_attacking_sw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 81
         y: 2368
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 38
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5147,12 +5147,12 @@ TextureImporter:
       name: human_base_attacking_sw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 143
         y: 2368
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 35
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5168,12 +5168,12 @@ TextureImporter:
       name: human_base_attacking_sw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 205
         y: 2368
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 38
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5189,12 +5189,12 @@ TextureImporter:
       name: human_base_attacking_sw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 270
         y: 2368
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 37
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5210,12 +5210,12 @@ TextureImporter:
       name: human_base_attacking_sw_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 336
         y: 2368
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 35
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5231,12 +5231,12 @@ TextureImporter:
       name: human_base_attacking_sw_6
       rect:
         serializedVersion: 2
-        x: 385
+        x: 394
         y: 2368
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 40
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5252,12 +5252,12 @@ TextureImporter:
       name: human_base_attacking_w_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 2304
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 41
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5273,12 +5273,12 @@ TextureImporter:
       name: human_base_attacking_w_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 81
         y: 2304
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5294,12 +5294,12 @@ TextureImporter:
       name: human_base_attacking_w_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 2304
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5315,12 +5315,12 @@ TextureImporter:
       name: human_base_attacking_w_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 205
         y: 2304
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5336,12 +5336,12 @@ TextureImporter:
       name: human_base_attacking_w_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 269
         y: 2304
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5357,12 +5357,12 @@ TextureImporter:
       name: human_base_attacking_w_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 330
         y: 2304
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5378,12 +5378,12 @@ TextureImporter:
       name: human_base_attacking_w_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 392
         y: 2304
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 38
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5399,12 +5399,12 @@ TextureImporter:
       name: human_base_attacking_nw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 22
         y: 2240
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5420,12 +5420,12 @@ TextureImporter:
       name: human_base_attacking_nw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 88
         y: 2240
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5441,12 +5441,12 @@ TextureImporter:
       name: human_base_attacking_nw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 154
         y: 2240
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5462,12 +5462,12 @@ TextureImporter:
       name: human_base_attacking_nw_3
       rect:
         serializedVersion: 2
-        x: 191
+        x: 208
         y: 2240
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5483,12 +5483,12 @@ TextureImporter:
       name: human_base_attacking_nw_4
       rect:
         serializedVersion: 2
-        x: 257
+        x: 272
         y: 2240
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5504,12 +5504,12 @@ TextureImporter:
       name: human_base_attacking_nw_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 335
         y: 2240
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5525,12 +5525,12 @@ TextureImporter:
       name: human_base_attacking_nw_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 401
         y: 2240
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5546,12 +5546,12 @@ TextureImporter:
       name: human_base_attacking_n_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 6
         y: 2176
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 41
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5567,12 +5567,12 @@ TextureImporter:
       name: human_base_attacking_n_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 81
         y: 2176
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5588,12 +5588,12 @@ TextureImporter:
       name: human_base_attacking_n_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 2177
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 144
+        y: 2176
+        width: 32
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5609,12 +5609,12 @@ TextureImporter:
       name: human_base_attacking_n_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 210
         y: 2176
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5630,12 +5630,12 @@ TextureImporter:
       name: human_base_attacking_n_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 274
         y: 2176
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5651,12 +5651,12 @@ TextureImporter:
       name: human_base_attacking_n_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 338
         y: 2176
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5672,12 +5672,12 @@ TextureImporter:
       name: human_base_attacking_n_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 402
         y: 2176
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 38
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5693,12 +5693,12 @@ TextureImporter:
       name: human_base_attacking_ne_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 17
         y: 2112
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5714,12 +5714,12 @@ TextureImporter:
       name: human_base_attacking_ne_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 2112
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 38
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5735,12 +5735,12 @@ TextureImporter:
       name: human_base_attacking_ne_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 149
         y: 2112
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 35
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5756,12 +5756,12 @@ TextureImporter:
       name: human_base_attacking_ne_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 212
         y: 2112
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 38
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5777,12 +5777,12 @@ TextureImporter:
       name: human_base_attacking_ne_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 276
         y: 2112
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 37
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5798,12 +5798,12 @@ TextureImporter:
       name: human_base_attacking_ne_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 340
         y: 2112
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 35
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5819,12 +5819,12 @@ TextureImporter:
       name: human_base_attacking_ne_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 405
         y: 2112
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 40
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5840,12 +5840,12 @@ TextureImporter:
       name: human_base_attacking_e_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 27
         y: 2048
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5861,12 +5861,12 @@ TextureImporter:
       name: human_base_attacking_e_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 2048
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 38
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5882,12 +5882,12 @@ TextureImporter:
       name: human_base_attacking_e_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 156
         y: 2048
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5903,12 +5903,12 @@ TextureImporter:
       name: human_base_attacking_e_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 219
         y: 2048
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 37
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5924,12 +5924,12 @@ TextureImporter:
       name: human_base_attacking_e_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 283
         y: 2048
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5945,12 +5945,12 @@ TextureImporter:
       name: human_base_attacking_e_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 347
         y: 2048
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5966,12 +5966,12 @@ TextureImporter:
       name: human_base_attacking_e_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 411
         y: 2048
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5987,12 +5987,12 @@ TextureImporter:
       name: human_base_attackingBow_se_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 13
         y: 1984
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6008,12 +6008,12 @@ TextureImporter:
       name: human_base_attackingBow_se_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 81
         y: 1984
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6029,12 +6029,12 @@ TextureImporter:
       name: human_base_attackingBow_se_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 143
         y: 1984
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6050,12 +6050,12 @@ TextureImporter:
       name: human_base_attackingBow_se_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 210
         y: 1984
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6071,12 +6071,12 @@ TextureImporter:
       name: human_base_attackingBow_se_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 272
         y: 1984
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6092,12 +6092,12 @@ TextureImporter:
       name: human_base_attackingBow_se_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 336
         y: 1984
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6113,12 +6113,12 @@ TextureImporter:
       name: human_base_attackingBow_se_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 400
         y: 1984
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6134,12 +6134,12 @@ TextureImporter:
       name: human_base_attackingBow_s_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 17
         y: 1920
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6155,12 +6155,12 @@ TextureImporter:
       name: human_base_attackingBow_s_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 1920
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6176,12 +6176,12 @@ TextureImporter:
       name: human_base_attackingBow_s_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 1920
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6197,12 +6197,12 @@ TextureImporter:
       name: human_base_attackingBow_s_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 205
         y: 1920
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 35
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6218,12 +6218,12 @@ TextureImporter:
       name: human_base_attackingBow_s_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 269
         y: 1920
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6239,12 +6239,12 @@ TextureImporter:
       name: human_base_attackingBow_s_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 333
         y: 1920
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 39
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6260,12 +6260,12 @@ TextureImporter:
       name: human_base_attackingBow_s_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 403
         y: 1920
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6281,12 +6281,12 @@ TextureImporter:
       name: human_base_attackingBow_sw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 1856
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 39
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6302,12 +6302,12 @@ TextureImporter:
       name: human_base_attackingBow_sw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 93
         y: 1856
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6323,12 +6323,12 @@ TextureImporter:
       name: human_base_attackingBow_sw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 158
         y: 1856
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6344,12 +6344,12 @@ TextureImporter:
       name: human_base_attackingBow_sw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 207
         y: 1856
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6365,12 +6365,12 @@ TextureImporter:
       name: human_base_attackingBow_sw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 273
         y: 1856
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6386,12 +6386,12 @@ TextureImporter:
       name: human_base_attackingBow_sw_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 336
         y: 1856
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 48
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6407,12 +6407,12 @@ TextureImporter:
       name: human_base_attackingBow_sw_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 405
         y: 1856
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6449,12 +6449,12 @@ TextureImporter:
       name: human_base_attackingBow_w_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 1792
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6470,12 +6470,12 @@ TextureImporter:
       name: human_base_attackingBow_w_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 88
         y: 1792
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6491,12 +6491,12 @@ TextureImporter:
       name: human_base_attackingBow_w_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 152
         y: 1792
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6512,12 +6512,12 @@ TextureImporter:
       name: human_base_attackingBow_w_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 214
         y: 1792
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6533,12 +6533,12 @@ TextureImporter:
       name: human_base_attackingBow_w_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 279
         y: 1792
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6554,12 +6554,12 @@ TextureImporter:
       name: human_base_attackingBow_w_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 342
         y: 1792
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6575,12 +6575,12 @@ TextureImporter:
       name: human_base_attackingBow_w_6
       rect:
         serializedVersion: 2
-        x: 385
+        x: 406
         y: 1792
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6596,12 +6596,12 @@ TextureImporter:
       name: human_base_attackingBow_nw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 25
         y: 1728
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6617,12 +6617,12 @@ TextureImporter:
       name: human_base_attackingBow_nw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 89
         y: 1728
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6638,12 +6638,12 @@ TextureImporter:
       name: human_base_attackingBow_nw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 154
         y: 1728
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6659,12 +6659,12 @@ TextureImporter:
       name: human_base_attackingBow_nw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 217
         y: 1728
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6680,12 +6680,12 @@ TextureImporter:
       name: human_base_attackingBow_nw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 282
         y: 1728
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6701,12 +6701,12 @@ TextureImporter:
       name: human_base_attackingBow_nw_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 345
         y: 1728
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6722,12 +6722,12 @@ TextureImporter:
       name: human_base_attackingBow_nw_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 410
         y: 1728
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6743,12 +6743,12 @@ TextureImporter:
       name: human_base_attackingBow_n_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 13
         y: 1664
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6764,12 +6764,12 @@ TextureImporter:
       name: human_base_attackingBow_n_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 77
         y: 1664
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6785,12 +6785,12 @@ TextureImporter:
       name: human_base_attackingBow_n_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 140
         y: 1664
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6806,12 +6806,12 @@ TextureImporter:
       name: human_base_attackingBow_n_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 203
         y: 1664
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6827,12 +6827,12 @@ TextureImporter:
       name: human_base_attackingBow_n_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 265
         y: 1664
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6848,12 +6848,12 @@ TextureImporter:
       name: human_base_attackingBow_n_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 326
         y: 1664
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6869,12 +6869,12 @@ TextureImporter:
       name: human_base_attackingBow_n_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 390
         y: 1664
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6890,12 +6890,12 @@ TextureImporter:
       name: human_base_attackingBow_ne_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 1600
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 39
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6911,12 +6911,12 @@ TextureImporter:
       name: human_base_attackingBow_ne_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 1600
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6932,12 +6932,12 @@ TextureImporter:
       name: human_base_attackingBow_ne_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 146
         y: 1600
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6953,12 +6953,12 @@ TextureImporter:
       name: human_base_attackingBow_ne_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 210
         y: 1600
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6974,12 +6974,12 @@ TextureImporter:
       name: human_base_attackingBow_ne_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 271
         y: 1600
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6995,12 +6995,12 @@ TextureImporter:
       name: human_base_attackingBow_ne_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 331
         y: 1600
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 48
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7016,12 +7016,12 @@ TextureImporter:
       name: human_base_attackingBow_ne_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 396
         y: 1600
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7037,12 +7037,12 @@ TextureImporter:
       name: human_base_attackingBow_e_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 1536
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7058,12 +7058,12 @@ TextureImporter:
       name: human_base_attackingBow_e_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 82
         y: 1536
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7079,12 +7079,12 @@ TextureImporter:
       name: human_base_attackingBow_e_2
       rect:
         serializedVersion: 2
-        x: 127
+        x: 145
         y: 1536
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7100,12 +7100,12 @@ TextureImporter:
       name: human_base_attackingBow_e_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 208
         y: 1536
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 35
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7121,12 +7121,12 @@ TextureImporter:
       name: human_base_attackingBow_e_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 271
         y: 1536
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7142,12 +7142,12 @@ TextureImporter:
       name: human_base_attackingBow_e_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 332
         y: 1536
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 39
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7163,12 +7163,12 @@ TextureImporter:
       name: human_base_attackingBow_e_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 398
         y: 1536
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7184,12 +7184,12 @@ TextureImporter:
       name: human_base_eating_se_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 1472
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7205,12 +7205,12 @@ TextureImporter:
       name: human_base_eating_se_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 1472
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7226,12 +7226,12 @@ TextureImporter:
       name: human_base_eating_se_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 1472
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7247,12 +7247,12 @@ TextureImporter:
       name: human_base_eating_se_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 211
         y: 1472
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7268,12 +7268,12 @@ TextureImporter:
       name: human_base_eating_se_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 275
         y: 1472
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7331,12 +7331,12 @@ TextureImporter:
       name: human_base_eating_s_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 1408
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7352,12 +7352,12 @@ TextureImporter:
       name: human_base_eating_s_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 1408
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7373,12 +7373,12 @@ TextureImporter:
       name: human_base_eating_s_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 1408
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7394,12 +7394,12 @@ TextureImporter:
       name: human_base_eating_s_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 211
         y: 1408
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7415,12 +7415,12 @@ TextureImporter:
       name: human_base_eating_s_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 271
         y: 1408
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7436,12 +7436,12 @@ TextureImporter:
       name: human_base_eating_sw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 21
         y: 1344
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7457,12 +7457,12 @@ TextureImporter:
       name: human_base_eating_sw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 85
         y: 1344
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7478,12 +7478,12 @@ TextureImporter:
       name: human_base_eating_sw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 149
         y: 1344
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7499,12 +7499,12 @@ TextureImporter:
       name: human_base_eating_sw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 213
         y: 1344
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7520,12 +7520,12 @@ TextureImporter:
       name: human_base_eating_sw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 271
         y: 1344
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7541,12 +7541,12 @@ TextureImporter:
       name: human_base_eating_w_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1280
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 15
+        y: 1220
+        width: 32
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7562,12 +7562,12 @@ TextureImporter:
       name: human_base_eating_w_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 1280
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 79
+        y: 1220
+        width: 30
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7583,12 +7583,12 @@ TextureImporter:
       name: human_base_eating_w_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 1280
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 143
+        y: 1220
+        width: 30
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7604,12 +7604,12 @@ TextureImporter:
       name: human_base_eating_w_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1280
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 207
+        y: 1220
+        width: 30
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7625,12 +7625,12 @@ TextureImporter:
       name: human_base_eating_w_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 1280
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 271
+        y: 1220
+        width: 30
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7751,12 +7751,12 @@ TextureImporter:
       name: human_base_eating_n_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 23
         y: 1152
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7772,12 +7772,12 @@ TextureImporter:
       name: human_base_eating_n_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 87
         y: 1152
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7793,12 +7793,12 @@ TextureImporter:
       name: human_base_eating_n_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 151
         y: 1152
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7814,12 +7814,12 @@ TextureImporter:
       name: human_base_eating_n_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 215
         y: 1152
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7835,12 +7835,12 @@ TextureImporter:
       name: human_base_eating_n_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 279
         y: 1152
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7856,12 +7856,12 @@ TextureImporter:
       name: human_base_eating_ne_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 25
         y: 1088
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7877,12 +7877,12 @@ TextureImporter:
       name: human_base_eating_ne_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 89
         y: 1088
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7898,12 +7898,12 @@ TextureImporter:
       name: human_base_eating_ne_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 153
         y: 1088
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7919,12 +7919,12 @@ TextureImporter:
       name: human_base_eating_ne_3
       rect:
         serializedVersion: 2
-        x: 193
+        x: 217
         y: 1088
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7940,12 +7940,12 @@ TextureImporter:
       name: human_base_eating_ne_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 281
         y: 1088
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7961,12 +7961,12 @@ TextureImporter:
       name: human_base_eating_e_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 1024
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7982,12 +7982,12 @@ TextureImporter:
       name: human_base_eating_e_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 1024
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8003,12 +8003,12 @@ TextureImporter:
       name: human_base_eating_e_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 1025
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 147
+        y: 1024
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8024,12 +8024,12 @@ TextureImporter:
       name: human_base_eating_e_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 211
         y: 1024
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8045,12 +8045,12 @@ TextureImporter:
       name: human_base_eating_e_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 275
         y: 1024
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8066,12 +8066,12 @@ TextureImporter:
       name: human_base_dying_se_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 20
         y: 960
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8087,12 +8087,12 @@ TextureImporter:
       name: human_base_dying_se_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 960
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8108,12 +8108,12 @@ TextureImporter:
       name: human_base_dying_se_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 148
         y: 960
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8129,12 +8129,12 @@ TextureImporter:
       name: human_base_dying_se_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 212
         y: 960
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8150,12 +8150,12 @@ TextureImporter:
       name: human_base_dying_se_4
       rect:
         serializedVersion: 2
-        x: 257
+        x: 271
         y: 960
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 47
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8171,12 +8171,12 @@ TextureImporter:
       name: human_base_dying_se_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 325
         y: 960
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 58
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8213,12 +8213,12 @@ TextureImporter:
       name: human_base_dying_s_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 27
         y: 896
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8234,12 +8234,12 @@ TextureImporter:
       name: human_base_dying_s_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 91
         y: 896
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8255,12 +8255,12 @@ TextureImporter:
       name: human_base_dying_s_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 896
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 45
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8276,12 +8276,12 @@ TextureImporter:
       name: human_base_dying_s_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 204
         y: 896
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 52
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8297,12 +8297,12 @@ TextureImporter:
       name: human_base_dying_s_4
       rect:
         serializedVersion: 2
-        x: 257
+        x: 256
         y: 896
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8321,9 +8321,9 @@ TextureImporter:
         x: 320
         y: 896
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8360,12 +8360,12 @@ TextureImporter:
       name: human_base_dying_sw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 832
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8381,12 +8381,12 @@ TextureImporter:
       name: human_base_dying_sw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 70
         y: 832
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 34
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8402,12 +8402,12 @@ TextureImporter:
       name: human_base_dying_sw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 139
         y: 832
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 44
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8423,12 +8423,12 @@ TextureImporter:
       name: human_base_dying_sw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 204
         y: 832
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 51
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8444,12 +8444,12 @@ TextureImporter:
       name: human_base_dying_sw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 257
         y: 832
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 63
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8468,9 +8468,9 @@ TextureImporter:
         x: 320
         y: 832
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8507,12 +8507,12 @@ TextureImporter:
       name: human_base_dying_w_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 21
         y: 768
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8528,12 +8528,12 @@ TextureImporter:
       name: human_base_dying_w_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 85
         y: 768
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8549,12 +8549,12 @@ TextureImporter:
       name: human_base_dying_w_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 138
         y: 768
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 45
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8570,12 +8570,12 @@ TextureImporter:
       name: human_base_dying_w_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 198
         y: 768
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 56
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8593,10 +8593,10 @@ TextureImporter:
         serializedVersion: 2
         x: 256
         y: 768
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 128
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8654,12 +8654,12 @@ TextureImporter:
       name: human_base_dying_nw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 704
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8675,12 +8675,12 @@ TextureImporter:
       name: human_base_dying_nw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 704
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8696,12 +8696,12 @@ TextureImporter:
       name: human_base_dying_nw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 704
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8717,12 +8717,12 @@ TextureImporter:
       name: human_base_dying_nw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 200
         y: 704
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 42
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8738,12 +8738,12 @@ TextureImporter:
       name: human_base_dying_nw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 260
         y: 704
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 46
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8759,12 +8759,12 @@ TextureImporter:
       name: human_base_dying_nw_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 322
         y: 704
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 56
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8780,12 +8780,12 @@ TextureImporter:
       name: human_base_dying_n_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 640
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8801,12 +8801,12 @@ TextureImporter:
       name: human_base_dying_n_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 82
         y: 640
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8822,12 +8822,12 @@ TextureImporter:
       name: human_base_dying_n_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 146
         y: 640
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 45
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8845,10 +8845,10 @@ TextureImporter:
         serializedVersion: 2
         x: 192
         y: 640
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 56
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8866,10 +8866,10 @@ TextureImporter:
         serializedVersion: 2
         x: 256
         y: 640
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 128
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8927,12 +8927,12 @@ TextureImporter:
       name: human_base_dying_ne_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 21
         y: 576
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8948,12 +8948,12 @@ TextureImporter:
       name: human_base_dying_ne_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 85
         y: 576
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 34
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8969,12 +8969,12 @@ TextureImporter:
       name: human_base_dying_ne_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 148
         y: 576
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 44
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8992,10 +8992,10 @@ TextureImporter:
         serializedVersion: 2
         x: 192
         y: 576
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 51
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9013,10 +9013,10 @@ TextureImporter:
         serializedVersion: 2
         x: 256
         y: 576
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 63
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9035,9 +9035,9 @@ TextureImporter:
         x: 320
         y: 576
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9074,12 +9074,12 @@ TextureImporter:
       name: human_base_dying_e_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9095,12 +9095,12 @@ TextureImporter:
       name: human_base_dying_e_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 36
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9116,12 +9116,12 @@ TextureImporter:
       name: human_base_dying_e_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 45
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9139,10 +9139,10 @@ TextureImporter:
         serializedVersion: 2
         x: 192
         y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 52
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9161,9 +9161,9 @@ TextureImporter:
         x: 256
         y: 512
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9182,9 +9182,9 @@ TextureImporter:
         x: 320
         y: 512
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9221,12 +9221,12 @@ TextureImporter:
       name: human_base_idling_se_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9242,12 +9242,12 @@ TextureImporter:
       name: human_base_idling_se_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9263,12 +9263,12 @@ TextureImporter:
       name: human_base_idling_se_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9284,12 +9284,12 @@ TextureImporter:
       name: human_base_idling_se_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 211
         y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9305,12 +9305,12 @@ TextureImporter:
       name: human_base_idling_se_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 275
         y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9326,12 +9326,12 @@ TextureImporter:
       name: human_base_idle_se
       rect:
         serializedVersion: 2
-        x: 320
+        x: 339
         y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9347,12 +9347,12 @@ TextureImporter:
       name: human_base_idling_s_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 21
         y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9368,12 +9368,12 @@ TextureImporter:
       name: human_base_idling_s_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 85
         y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9389,12 +9389,12 @@ TextureImporter:
       name: human_base_idling_s_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 149
         y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9410,12 +9410,12 @@ TextureImporter:
       name: human_base_idling_s_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 213
         y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9431,12 +9431,12 @@ TextureImporter:
       name: human_base_idling_s_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 277
         y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9452,12 +9452,12 @@ TextureImporter:
       name: human_base_idle_s
       rect:
         serializedVersion: 2
-        x: 320
+        x: 341
         y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9473,12 +9473,12 @@ TextureImporter:
       name: human_base_idling_sw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 13
         y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9494,12 +9494,12 @@ TextureImporter:
       name: human_base_idling_sw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 77
         y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9515,12 +9515,12 @@ TextureImporter:
       name: human_base_idling_sw_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 141
         y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9536,12 +9536,12 @@ TextureImporter:
       name: human_base_idling_sw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 205
         y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9557,12 +9557,12 @@ TextureImporter:
       name: human_base_idling_sw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 269
         y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9578,12 +9578,12 @@ TextureImporter:
       name: human_base_idle_sw
       rect:
         serializedVersion: 2
-        x: 320
+        x: 333
         y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 17
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9599,12 +9599,12 @@ TextureImporter:
       name: human_base_idling_w_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 13
         y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9620,12 +9620,12 @@ TextureImporter:
       name: human_base_idling_w_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 77
         y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9641,12 +9641,12 @@ TextureImporter:
       name: human_base_idling_w_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 141
         y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9662,12 +9662,12 @@ TextureImporter:
       name: human_base_idling_w_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 205
         y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9683,12 +9683,12 @@ TextureImporter:
       name: human_base_idling_w_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 269
         y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9704,12 +9704,12 @@ TextureImporter:
       name: human_base_idle_w
       rect:
         serializedVersion: 2
-        x: 320
+        x: 333
         y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9725,12 +9725,12 @@ TextureImporter:
       name: human_base_idling_nw_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9746,12 +9746,12 @@ TextureImporter:
       name: human_base_idling_nw_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 83
         y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9767,12 +9767,12 @@ TextureImporter:
       name: human_base_idling_nw_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 193
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 147
+        y: 192
+        width: 27
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9788,12 +9788,12 @@ TextureImporter:
       name: human_base_idling_nw_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 211
         y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9809,12 +9809,12 @@ TextureImporter:
       name: human_base_idling_nw_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 275
         y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9830,12 +9830,12 @@ TextureImporter:
       name: human_base_idle_nw
       rect:
         serializedVersion: 2
-        x: 320
+        x: 339
         y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9851,12 +9851,12 @@ TextureImporter:
       name: human_base_idling_n_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 20
         y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 31
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9872,12 +9872,12 @@ TextureImporter:
       name: human_base_idling_n_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 29
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9893,12 +9893,12 @@ TextureImporter:
       name: human_base_idling_n_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 148
         y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9914,12 +9914,12 @@ TextureImporter:
       name: human_base_idling_n_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 212
         y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9935,12 +9935,12 @@ TextureImporter:
       name: human_base_idling_n_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 276
         y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9956,12 +9956,12 @@ TextureImporter:
       name: human_base_idle_n
       rect:
         serializedVersion: 2
-        x: 320
+        x: 340
         y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9977,12 +9977,12 @@ TextureImporter:
       name: human_base_idling_ne_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 24
+        y: 65
+        width: 28
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9998,12 +9998,12 @@ TextureImporter:
       name: human_base_idling_ne_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 88
+        y: 65
+        width: 22
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10019,12 +10019,12 @@ TextureImporter:
       name: human_base_idling_ne_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 152
+        y: 65
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10040,12 +10040,12 @@ TextureImporter:
       name: human_base_idling_ne_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 216
+        y: 65
+        width: 21
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10061,12 +10061,12 @@ TextureImporter:
       name: human_base_idling_ne_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 280
+        y: 65
+        width: 27
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10082,12 +10082,12 @@ TextureImporter:
       name: human_base_idle_ne
       rect:
         serializedVersion: 2
-        x: 320
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 344
+        y: 65
+        width: 17
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10103,12 +10103,12 @@ TextureImporter:
       name: human_base_idling_e_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 24
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 18
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10124,12 +10124,12 @@ TextureImporter:
       name: human_base_idling_e_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 88
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 21
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10145,12 +10145,12 @@ TextureImporter:
       name: human_base_idling_e_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 152
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 25
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10166,12 +10166,12 @@ TextureImporter:
       name: human_base_idling_e_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 216
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10187,12 +10187,12 @@ TextureImporter:
       name: human_base_idling_e_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 280
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10208,12 +10208,12 @@ TextureImporter:
       name: human_base_idle_e
       rect:
         serializedVersion: 2
-        x: 320
+        x: 344
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
