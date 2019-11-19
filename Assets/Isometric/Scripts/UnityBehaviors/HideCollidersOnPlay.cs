@@ -8,19 +8,15 @@ namespace DTWorlds.UnityBehaviours
 {
     public class HideCollidersOnPlay : MonoBehaviour
     {
-        
-
         void Start()
         {
             var tileMapRenderer = GetComponent<TilemapRenderer>();
             var tempColor = tileMapRenderer.material.color;
-            
 
-            tileMapRenderer.material.color = new Color(tempColor.r, tempColor.g, tempColor.b, 0 );
+
+            tileMapRenderer.material.color = new Color(tempColor.r, tempColor.g, tempColor.b, 0);
 
         }
-
-
     }
 
 }

@@ -101,8 +101,13 @@ namespace DTWorlds.Mobiles
             {
                 var attackingAnimationHandler = animationSpriteTransform.gameObject.GetComponent<AttackingAnimationHandler>();
                 this.attackTypes = new List<IAttackType>();
-                this.attackTypes.Add(new MeleeAttack(null, attackingAnimationHandler));
-                this.attackTypes.Add(new RangeAttack(null, attackingAnimationHandler));
+                var meleeAttack = new MeleeAttack(null, attackingAnimationHandler);
+                meleeAttack.OnAfterAttacked += new MeleeAttack.AttackStateEventHandler(OnAfterAttacked);
+                meleeAttack.OnBeforeAttacking += new MeleeAttack.AttackStateEventHandler(OnBeforeAttacking);
+
+                var rangedAttack = new RangeAttack(null, attackingAnimationHandler);
+                this.attackTypes.Add(meleeAttack);
+                this.attackTypes.Add(rangedAttack);
                 this.currentAttackType = this.attackTypes[0];
             }
         }
@@ -162,6 +167,16 @@ namespace DTWorlds.Mobiles
 
             return calculatedAttackRate;
 
+        }
+
+        public virtual void OnAfterAttacked()
+        {
+            Debug.Log("on after attacked");
+        }
+
+        public virtual void OnBeforeAttacking()
+        {
+            Debug.Log("before attack");
         }
     }
 }

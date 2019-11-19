@@ -13,6 +13,10 @@ namespace DTWorlds.Mobiles.AttackTypes
         private AttackingAnimationHandler animationHandler;
         private bool isAttacking;
 
+        public delegate void AttackStateEventHandler();
+        public event AttackStateEventHandler OnAfterAttacked;
+        public event AttackStateEventHandler OnBeforeAttacking;
+
         //DateTime lastAttackTime;
 
         public bool IsAttacking
@@ -38,6 +42,9 @@ namespace DTWorlds.Mobiles.AttackTypes
             isAttacking = true;
             animationHandler.SetAttackSpeedMultiplier(speedMultiplier);
             animationHandler.PlayAttackingAnimation(direction, false);
+            if(OnBeforeAttacking != null){
+                OnBeforeAttacking();
+            }
             //Debug.Log(speedMultiplier);
             //lastAttackTime = DateTime.Now;
         }
@@ -45,6 +52,9 @@ namespace DTWorlds.Mobiles.AttackTypes
         private void AttackingEnds()
         {
             //Debug.Log((DateTime.Now - lastAttackTime).TotalSeconds.ToString());
+            if(OnAfterAttacked != null){
+                OnAfterAttacked();
+            }
             isAttacking = false;
 
         }
