@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DTWorlds.TileMap.Tiles;
 using DTWorlds.UnityBehaviours;
 using UnityEditor;
 using UnityEngine;
@@ -22,9 +23,22 @@ namespace DTWorlds.TileMap
         {
             if (Input.GetMouseButtonUp(0))
             {
-                var cell = tilemap.WorldToCell(PlayerBehaviour.transform.position);
-                //Debug.Log(cell);
-                var tile = tilemap.GetTile(cell);
+                var worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                worldPosition.z = 0;
+                var cell = tilemap.WorldToCell(worldPosition);
+                //var cell = tilemap.WorldToCell(PlayerBehaviour.transform.position);
+
+                if (cell == null)
+                {
+                    return;
+                }
+
+                var tile = tilemap.GetTile<DTTile>(cell);
+                if (tile == null)
+                {
+                    return;
+                }
+
                 Debug.Log(tile);
             }
         }

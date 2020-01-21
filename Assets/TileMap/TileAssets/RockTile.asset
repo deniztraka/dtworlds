@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6654ab8f7e70d4d87c6311093967bd, type: 3}
-  m_Name: DTTile
+  m_Script: {fileID: 11500000, guid: 6fffcf3dc2a2b9f4b81e59e84d8a6f5f, type: 3}
+  m_Name: RockTile
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 674b789cb2b42dc4eb9897920ea14c34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc57e2c2b69a9644992536568fcd5fd6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

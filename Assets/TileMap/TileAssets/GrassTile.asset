@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6654ab8f7e70d4d87c6311093967bd, type: 3}
-  m_Name: DTTile
+  m_Script: {fileID: 11500000, guid: 538f3c340b6bd0c498d74aff8e3ca2c6, type: 3}
+  m_Name: GrassTile
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 674b789cb2b42dc4eb9897920ea14c34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 17918effca6ac83498a346626d29f9e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -34,4 +34,4 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
   m_ColliderType: 2
-  Walkable: 0
+  Walkable: 1

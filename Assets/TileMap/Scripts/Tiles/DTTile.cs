@@ -8,11 +8,11 @@ namespace DTWorlds.TileMap.Tiles
 {
     public class DTTile : Tile
     {
-        public string SomeCustomProperty;
+        public bool Walkable;
 
 #if UNITY_EDITOR
         [MenuItem("Assets/Create/Tiles/DTTile")]
-        public static void CreatePrisonTile()
+        public static void CreateDTile()
         {
             string path = EditorUtility.SaveFilePanelInProject("Save DTTile", "DTTile", "asset", "Save DT tile", "Assets");
             if (path == "")
