@@ -28,29 +28,29 @@ namespace DTWorlds.TileMap
         //     }
         // }
 
-        public void TileMapOnClick()
-        {
-            var worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            worldPosition.z = 0;
-            var cell = tilemap.WorldToCell(worldPosition);
-            //var cell = tilemap.WorldToCell(PlayerBehaviour.transform.position);
+        // public void TileMapOnClick()
+        // {
+        //     var worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //     worldPosition.z = 0;
+        //     var cell = tilemap.WorldToCell(worldPosition);
+        //     //var cell = tilemap.WorldToCell(PlayerBehaviour.transform.position);
 
-            if (cell == null)
-            {
-                PlayerBehaviour.SetTarget(null);
-                return;
-            }
+        //     if (cell == null)
+        //     {
+        //         PlayerBehaviour.SetTarget(null);
+        //         return;
+        //     }
 
-            //var tile = tilemap.GetTile<DTTile>(cell);
-            var tileObject = tilemap.GetInstantiatedObject(cell);
-            if (tileObject == null)
-            {
-                PlayerBehaviour.SetTarget(null);
-                return;
-            }
+        //     //var tile = tilemap.GetTile<DTTile>(cell);
+        //     var tileObject = tilemap.GetInstantiatedObject(cell);
+        //     if (tileObject == null)
+        //     {
+        //         PlayerBehaviour.SetTarget(null);
+        //         return;
+        //     }
 
-            var tileObjectBehaviour = tileObject.GetComponent<TileObjectBehaviour>();
-            PlayerBehaviour.SetTarget(tileObjectBehaviour);
-        }
+        //     var tileObjectBehaviour = tileObject.GetComponent<TileObjectBehaviour>();
+        //     PlayerBehaviour.SetTarget(tileObjectBehaviour);
+        // }
     }
 }

@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DTWorlds.Interfaces;
 using DTWorlds.Mobiles;
 using DTWorlds.UnityBehaviours;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace DTWorlds.TileMap
@@ -18,26 +20,38 @@ namespace DTWorlds.TileMap
         public bool IsSelected;
 
         public Sprite SelectedSprite;
-        
+
         public void Start()
         {
             Source = 100;
-            spriteRenderer = GetComponent<SpriteRenderer>();            
+            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         void OnMouseDown()
-        {            
-            if(playerBehaviour == null){
+        {
+            if (playerBehaviour == null)
+            {
                 playerBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
             }
 
-            playerBehaviour.SetTarget(null);
+            if (!IsSelected)
+            {
+                playerBehaviour.SetTarget(this);
+            }
+            else
+            {
+                playerBehaviour.SetTarget(null);
+                SetSelected(false);
+            }
+        }
 
-            IsSelected = !IsSelected;
+        internal void SetSelected(bool val)
+        {
+
+            IsSelected = val;
             if (IsSelected)
             {
                 spriteRenderer.sprite = SelectedSprite;
-                playerBehaviour.SetTarget(this);
             }
             else
             {

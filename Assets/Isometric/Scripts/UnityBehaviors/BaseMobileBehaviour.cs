@@ -9,12 +9,15 @@ using System;
 using DTWorlds.Items.Inventory.Behaviours;
 using DTWorlds.Items;
 using DTWorlds.Interfaces;
+using DTWorlds.TileMap;
 
 namespace DTWorlds.UnityBehaviours
 {
     public abstract class BaseMobileBehaviour : MonoBehaviour
     {
         public FixedJoystick joystick;
+
+        private TileObjectBehaviour target;
 
         private BaseMobile mobile;
 
@@ -23,12 +26,27 @@ namespace DTWorlds.UnityBehaviours
             get { return mobile; }
         }
 
-        public void SetTarget(IInteractable target){                        
-            mobile.Target = target;
-        }
+        public void SetTarget(TileObjectBehaviour target)
+        {
+            this.mobile.Target = null;
 
-        public IInteractable GetTarget(IInteractable target){
-            return mobile.Target;
+            if(this.target != null){
+                this.target.SetSelected(false);                
+            }
+
+            if(target == null){
+                this.target = null;
+                this.mobile.Target = null;
+                return;
+            }
+
+            // Debug.Log("asd"); 
+            // this.target = target.GetComponent<TileObjectBehaviour>();
+            // mobile.Target = this.target;
+
+            this.target = target;
+            this.target.SetSelected(true);
+            this.mobile.Target = target;
         }
 
         public void InitMobile(BaseMobile mobile)
@@ -42,17 +60,13 @@ namespace DTWorlds.UnityBehaviours
         public void SetAttacking(bool state)
         {
             this.isAtacking = state;
-        }       
+        }
 
         void Update()
         {
             if (isAtacking)
             {
-                
-
-
-                    Attack();
-                
+                Attack();
             }
         }
 
