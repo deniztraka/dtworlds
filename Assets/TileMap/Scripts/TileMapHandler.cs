@@ -20,34 +20,37 @@ namespace DTWorlds.TileMap
             tilemap = gameObject.GetComponent<Tilemap>();
         }
 
-        private void Update()
+        // private void Update()
+        // {
+        //     if (Input.GetMouseButtonUp(0))
+        //     {
+        //         TileMapOnClick();
+        //     }
+        // }
+
+        public void TileMapOnClick()
         {
-            if (Input.GetMouseButtonUp(0))
+            var worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            worldPosition.z = 0;
+            var cell = tilemap.WorldToCell(worldPosition);
+            //var cell = tilemap.WorldToCell(PlayerBehaviour.transform.position);
+
+            if (cell == null)
             {
-                var worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                worldPosition.z = 0;
-                var cell = tilemap.WorldToCell(worldPosition);
-                //var cell = tilemap.WorldToCell(PlayerBehaviour.transform.position);
-
-                if (cell == null)
-                {
-                    PlayerBehaviour.SetTarget(null);
-                    return;
-                }
-
-                //var tile = tilemap.GetTile<DTTile>(cell);
-                var tileObject = tilemap.GetInstantiatedObject(cell);
-                if(tileObject == null){
-                    PlayerBehaviour.SetTarget(null);
-                    return;
-                }
-
-                var tileSource = tileObject.GetComponent<TileSource>();                
-                PlayerBehaviour.SetTarget(tileSource);
+                PlayerBehaviour.SetTarget(null);
+                return;
             }
-        }        
+
+            //var tile = tilemap.GetTile<DTTile>(cell);
+            var tileObject = tilemap.GetInstantiatedObject(cell);
+            if (tileObject == null)
+            {
+                PlayerBehaviour.SetTarget(null);
+                return;
+            }
+
+            var tileObjectBehaviour = tileObject.GetComponent<TileObjectBehaviour>();
+            PlayerBehaviour.SetTarget(tileObjectBehaviour);
+        }
     }
-
-
-
 }
