@@ -8,6 +8,7 @@ using DTWorlds.Items.Equipments;
 using System;
 using DTWorlds.Items.Inventory.Behaviours;
 using DTWorlds.Items;
+using DTWorlds.Interfaces;
 
 namespace DTWorlds.UnityBehaviours
 {
@@ -15,12 +16,19 @@ namespace DTWorlds.UnityBehaviours
     {
         public FixedJoystick joystick;
 
-
         private BaseMobile mobile;
 
         public BaseMobile Mobile
         {
             get { return mobile; }
+        }
+
+        public void SetTarget(IInteractable target){
+            mobile.Target = target;
+        }
+
+        public IInteractable GetTarget(IInteractable target){
+            return mobile.Target;
         }
 
         public void InitMobile(BaseMobile mobile)
@@ -34,14 +42,17 @@ namespace DTWorlds.UnityBehaviours
         public void SetAttacking(bool state)
         {
             this.isAtacking = state;
-        }
-
+        }       
 
         void Update()
         {
             if (isAtacking)
             {
-                Attack();
+                
+
+
+                    Attack();
+                
             }
         }
 
@@ -68,6 +79,6 @@ namespace DTWorlds.UnityBehaviours
         public void ModifyHunger(float amount)
         {
             mobile.Hunger.CurrentValue += amount;
-        }        
+        }
     }
 }

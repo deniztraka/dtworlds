@@ -19,8 +19,7 @@ namespace DTWorlds.Mobiles
             base.OnBeforeAttacking();
 
             //fing something ITargetable on the direction of the user
-            //then call ITargetable.attack
-            Debug.Log("hede");
+            //then call ITargetable.attack            
         }
     }
 }

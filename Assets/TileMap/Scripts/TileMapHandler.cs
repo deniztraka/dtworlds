@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DTWorlds.Interfaces;
 using DTWorlds.TileMap.Tiles;
 using DTWorlds.UnityBehaviours;
 using UnityEditor;
@@ -30,19 +31,21 @@ namespace DTWorlds.TileMap
 
                 if (cell == null)
                 {
+                    PlayerBehaviour.SetTarget(null);
                     return;
                 }
 
-                var tile = tilemap.GetTile<DTTile>(cell);
-                if (tile == null)
-                {
+                //var tile = tilemap.GetTile<DTTile>(cell);
+                var tileObject = tilemap.GetInstantiatedObject(cell);
+                if(tileObject == null){
+                    PlayerBehaviour.SetTarget(null);
                     return;
                 }
 
-                Debug.Log(tile);
+                var tileSource = tileObject.GetComponent<TileSource>();                
+                PlayerBehaviour.SetTarget(tileSource);
             }
-        }
-
+        }        
     }
 
 

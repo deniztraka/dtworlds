@@ -71,7 +71,7 @@ namespace DTWorlds.Mobiles
         public MobileInventory Inventory;
 
         public float MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
-
+        public IInteractable Target { get; internal set; }
 
         public BaseMobile()
         {
@@ -171,6 +171,9 @@ namespace DTWorlds.Mobiles
 
         public virtual void OnAfterAttacked()
         {
+            if(Target != null){
+                Target.Interact(this);
+            }
             Debug.Log("on after attacked");
         }
 

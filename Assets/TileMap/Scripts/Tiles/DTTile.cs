@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using DTWorlds.Interfaces;
+using DTWorlds.UnityBehaviours;
+using DTWorlds.Mobiles;
 
 namespace DTWorlds.TileMap.Tiles
 {
@@ -24,7 +27,4 @@ namespace DTWorlds.TileMap.Tiles
         }
 #endif
     }
-
-
-
 }
