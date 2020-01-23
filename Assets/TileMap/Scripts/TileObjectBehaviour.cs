@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DTWorlds.Interfaces;
 using DTWorlds.Mobiles;
 using DTWorlds.UnityBehaviours;
+using SpriteGlow;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -16,6 +17,8 @@ namespace DTWorlds.TileMap
         private SpriteRenderer spriteRenderer;
         private PlayerBehaviour playerBehaviour;
 
+        private SpriteGlowEffect spriteGlowEffect;
+
         public int Source;
         public bool IsSelected;
 
@@ -25,6 +28,8 @@ namespace DTWorlds.TileMap
         {
             Source = 100;
             spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteGlowEffect = GetComponent<SpriteGlowEffect>();
+            spriteGlowEffect.enabled = false;            
         }
 
         void OnMouseDown()
@@ -52,10 +57,13 @@ namespace DTWorlds.TileMap
             if (IsSelected)
             {
                 spriteRenderer.sprite = SelectedSprite;
+                spriteGlowEffect.enabled = true;
             }
             else
             {
+                spriteGlowEffect.enabled = false;
                 spriteRenderer.sprite = null;
+                
             }
         }
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2115087501956078900}
   - component: {fileID: 6051249683524855515}
   - component: {fileID: 8469337398182112088}
+  - component: {fileID: -6808958342177810946}
   m_Layer: 0
   m_Name: RockTileObject
   m_TagString: Untagged
@@ -130,3 +131,21 @@ PolygonCollider2D:
       - {x: 0.24980354, y: -0.0010763407}
       - {x: 0.18844509, y: 0.06362277}
       - {x: 0.080079556, y: 0.16920894}
+--- !u!114 &-6808958342177810946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698252075897162259}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 1, g: 0.9606118, b: 0, a: 0.15294118}
+  glowBrightness: 1.74
+  outlineWidth: 1
+  alphaThreshold: 0.12
+  drawOutside: 1
+  enableInstancing: 0
