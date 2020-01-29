@@ -8,6 +8,7 @@ using DTWorlds.Mobiles.DamagableProperties;
 using Kryz.CharacterStats;
 using System;
 using DTWorlds.Items.Inventory.Models;
+using UnityEngine.Tilemaps;
 
 namespace DTWorlds.Mobiles
 {
@@ -180,64 +181,74 @@ namespace DTWorlds.Mobiles
             //Debug.Log(this.CurrentDirection);
 
             Vector3 direction = new Vector3(0, 0);
-            float distance = 0;
+            //float distance = 0;
             switch (this.CurrentDirection)
             {
                 case 0:
-                    distance = 0.125f;
-                    direction = new Vector3(1, 1);
-                    break;
-                case 1:
-                    distance = 0.25f;
-                    direction = new Vector3(0, 1);
-                    break;
-                case 2:
-                    distance = 0.125f;
-                    direction = new Vector3(-1, 1);
-                    break;
-                case 3:
-                    distance = 0.25f;
-                    direction = new Vector3(-1, 0);
-                    break;
-                case 4:
-                    distance = 0.125f;
-                    direction = new Vector3(-1, -1);
-                    break;
-                case 5:
-                    distance = 0.25f;
-                    direction = new Vector3(0, -1);
-                    break;
-                case 6:
-                    distance = 0.125f;
-                    direction = new Vector3(1, -1);
-                    break;
-                case 7:
-                    distance = 0.25f;
+                    //distance = 0.25f;
                     direction = new Vector3(1, 0);
                     break;
+                case 1:
+                    //distance = 0.5f;
+                    direction = new Vector3(1, 1);
+                    break;
+                case 2:
+                    //distance = 0.25f;
+                    direction = new Vector3(0, 1);
+                    break;
+                case 3:
+                    //distance = 0.5f;
+                    direction = new Vector3(-1, 1);
+                    break;
+                case 4:
+                    //distance = 0.25f;
+                    direction = new Vector3(-1, 0);
+                    break;
+                case 5:
+                    //distance = 0.5f;
+                    direction = new Vector3(-1, -1);
+                    break;
+                case 6:
+                    //distance = 0.25f;
+                    direction = new Vector3(0, -1);
+                    break;
+                case 7:
+                    //distance = 0.5f;
+                    direction = new Vector3(1, -1);
+                    break;
             }
-
-
 
             var currPos = this.gameObject.transform.position;
             var mobileMask = LayerMask.GetMask("Mobiles");
 
+            var floorObject = GameObject.FindGameObjectWithTag("Floor");
+            var floorTileMap = floorObject.GetComponent<Tilemap>();
+            var attackerCell = floorTileMap.WorldToCell(currPos);
+            var targetCell = attackerCell + direction;
 
-            Ray ray = new Ray(currPos, direction);
-            // Does the ray intersect any objects excluding the player layer
-            //Debug.DrawRay(currPos + (direction * distance / 2), direction * distance, Color.yellow, 1f);
-            var calculatedDistance = Vector3.Distance(direction * distance, currPos);
-            //Debug.Log(calculatedDistance);
-            
-            RaycastHit2D hit = Physics2D.Raycast(currPos, direction, distance, mobileMask);            
+            var ceiled = Vector3Int.FloorToInt(targetCell);
 
-            if (hit && hit.collider != null && hit.collider.gameObject != this.gameObject)
+            var targetPoint = floorTileMap.GetCellCenterWorld(ceiled);
+
+            // Debug.Log(direction);
+            // Debug.Log(attackerCell);
+            // Debug.Log(targetCell);
+            // Debug.Log(targetPoint);
+            // Debug.DrawLine(currPos, targetPoint, Color.yellow, 5);
+            RaycastHit2D[] results = new RaycastHit2D[10];
+            var hit = Physics2D.LinecastNonAlloc(currPos, targetPoint, results, mobileMask);
+            for (int i = 0; i < hit; i++)
             {
-                var enemyBehaviour = hit.collider.gameObject.GetComponent<EnemyBehaviour>();
-                if (enemyBehaviour != null)
+                var collidedObj = results[i];
+                if (collidedObj.collider != null && collidedObj.collider.gameObject != this.gameObject)
                 {
-                    enemyBehaviour.Mobile.TakeDamage(this);
-                    //Debug.Log("Enemy hit");
+                    var enemyBehaviour = collidedObj.collider.gameObject.GetComponent<EnemyBehaviour>();
+                    if (enemyBehaviour != null)
+                    {
+                        enemyBehaviour.Mobile.TakeDamage(this);
+                        //Debug.Log("Enemy hit");
+                        break;
+                    }
                 }
             }
         }
@@ -246,13 +257,12 @@ namespace DTWorlds.Mobiles
         {
             var rawDamage = fromMobile.GetRawDamage();
             this.Health.CurrentValue -= rawDamage;
-            Debug.Log(this.gameObject.name + " took " + rawDamage + " damage from " + fromMobile.gameObject.name);
-
+            Debug.Log(fromMobile.gameObject.name + " took " + rawDamage + " damage from " + this.gameObject.name);
         }
 
         private float GetRawDamage()
         {
-            return this.Strength.Value / 10;
+            return this.Strength.Value / 2;
         }
 
         public virtual void OnBeforeAttacking()
