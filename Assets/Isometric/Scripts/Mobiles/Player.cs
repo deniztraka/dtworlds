@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using DTWorlds.Items.Inventory.Models;
-using Kryz.CharacterStats;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DTWorlds.Mobiles
 {

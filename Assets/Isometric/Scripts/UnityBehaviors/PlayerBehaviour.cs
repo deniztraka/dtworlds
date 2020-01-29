@@ -8,6 +8,7 @@ namespace DTWorlds.UnityBehaviours
 {
     public class PlayerBehaviour : BaseMobileBehaviour
     {
+        public FixedJoystick joystick;
         public CharacterEquipmentPanelBehaviour CharacterEquipmentsPanelBehaviour;
 
         private void buildPlayer()

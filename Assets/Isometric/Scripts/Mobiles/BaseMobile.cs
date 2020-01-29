@@ -49,7 +49,7 @@ namespace DTWorlds.Mobiles
                 if (value)
                 {
                     //calculate movement speed in this case running
-                    movementSpeed = 2f;
+                    movementSpeed = 1.25f;
                 }
                 else
                 {
@@ -171,15 +171,93 @@ namespace DTWorlds.Mobiles
 
         public virtual void OnAfterAttacked()
         {
-            if(Target != null){
+            if (Target != null)
+            {
                 Target.Interact(this);
             }
-            Debug.Log("on after attacked");
+            //Debug.Log("on after attacked");
+
+            //Debug.Log(this.CurrentDirection);
+
+            Vector3 direction = new Vector3(0, 0);
+            float distance = 0;
+            switch (this.CurrentDirection)
+            {
+                case 0:
+                    distance = 0.125f;
+                    direction = new Vector3(1, 1);
+                    break;
+                case 1:
+                    distance = 0.25f;
+                    direction = new Vector3(0, 1);
+                    break;
+                case 2:
+                    distance = 0.125f;
+                    direction = new Vector3(-1, 1);
+                    break;
+                case 3:
+                    distance = 0.25f;
+                    direction = new Vector3(-1, 0);
+                    break;
+                case 4:
+                    distance = 0.125f;
+                    direction = new Vector3(-1, -1);
+                    break;
+                case 5:
+                    distance = 0.25f;
+                    direction = new Vector3(0, -1);
+                    break;
+                case 6:
+                    distance = 0.125f;
+                    direction = new Vector3(1, -1);
+                    break;
+                case 7:
+                    distance = 0.25f;
+                    direction = new Vector3(1, 0);
+                    break;
+            }
+
+
+
+            var currPos = this.gameObject.transform.position;
+            var mobileMask = LayerMask.GetMask("Mobiles");
+
+
+            Ray ray = new Ray(currPos, direction);
+            // Does the ray intersect any objects excluding the player layer
+            //Debug.DrawRay(currPos + (direction * distance / 2), direction * distance, Color.yellow, 1f);
+            var calculatedDistance = Vector3.Distance(direction * distance, currPos);
+            //Debug.Log(calculatedDistance);
+            
+            RaycastHit2D hit = Physics2D.Raycast(currPos, direction, distance, mobileMask);            
+
+            if (hit && hit.collider != null && hit.collider.gameObject != this.gameObject)
+            {
+                var enemyBehaviour = hit.collider.gameObject.GetComponent<EnemyBehaviour>();
+                if (enemyBehaviour != null)
+                {
+                    enemyBehaviour.Mobile.TakeDamage(this);
+                    //Debug.Log("Enemy hit");
+                }
+            }
+        }
+
+        private void TakeDamage(BaseMobile fromMobile)
+        {
+            var rawDamage = fromMobile.GetRawDamage();
+            this.Health.CurrentValue -= rawDamage;
+            Debug.Log(this.gameObject.name + " took " + rawDamage + " damage from " + fromMobile.gameObject.name);
+
+        }
+
+        private float GetRawDamage()
+        {
+            return this.Strength.Value / 10;
         }
 
         public virtual void OnBeforeAttacking()
         {
-            Debug.Log("before attack");
+            //Debug.Log("before attack");
         }
     }
 }

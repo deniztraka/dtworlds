@@ -14,9 +14,7 @@ using DTWorlds.TileMap;
 namespace DTWorlds.UnityBehaviours
 {
     public abstract class BaseMobileBehaviour : MonoBehaviour
-    {
-        public FixedJoystick joystick;
-
+    {        
         private TileObjectBehaviour target;
 
         private BaseMobile mobile;

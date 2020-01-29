@@ -5,10 +5,10 @@ using TimeOfTheDay;
 
 namespace DTWorlds.UnityBehaviours
 {
-    [RequireComponent(typeof(PlayerBehaviour))]
+    [RequireComponent(typeof(BaseMobileBehaviour))]
     public class HungerBehaviour : MonoBehaviour
     {
-        private PlayerBehaviour playerBehaviour;
+        private BaseMobileBehaviour baseMobileBehaviour;
 
         public bool IsEnabled;
         public float Frequency;
@@ -16,14 +16,14 @@ namespace DTWorlds.UnityBehaviours
 
         void Start()
         {
-            playerBehaviour = GetComponent<PlayerBehaviour>();
+            baseMobileBehaviour = GetComponent<BaseMobileBehaviour>();
             StartCoroutine(DecraseValue());
 
             if (ModifyAmount == 0)
             {
                 var gameTimeObj = GameObject.FindGameObjectWithTag("GameTime");
                 var gameTimeHandler = gameTimeObj.GetComponent<GameTimeHandler>();
-                ModifyAmount = -playerBehaviour.Mobile.Hunger.MaxValue / gameTimeHandler.DayLengthInSeconds;
+                ModifyAmount = -baseMobileBehaviour.Mobile.Hunger.MaxValue / gameTimeHandler.DayLengthInSeconds;
             }
         }
 
@@ -34,7 +34,7 @@ namespace DTWorlds.UnityBehaviours
                 yield return new WaitForSeconds(Frequency);
                 if (IsEnabled)
                 {
-                    playerBehaviour.ModifyHunger(ModifyAmount);
+                    baseMobileBehaviour.ModifyHunger(ModifyAmount);
                 }
             }
         }
