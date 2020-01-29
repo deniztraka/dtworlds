@@ -7,13 +7,13 @@ namespace DTWorlds.UnityBehaviours.UI
     public class HungerBarHandler : CharacterBarsHandler
     {
 
-        public PlayerBehaviour PlayerBehaviour;
+        public BaseMobileBehaviour BaseMobileBehaviour;
         void Start()
         {
             DamagablePropertyBar = gameObject.GetComponentInChildren<SimpleHealthBar>();
-            DamagableProperty = PlayerBehaviour.Mobile.Hunger;
+            DamagableProperty = BaseMobileBehaviour.Mobile.Hunger;
 
-            PlayerBehaviour.Mobile.Hunger.OnAfterValueChangedEvent += new Mobiles.DamagableProperties.BaseDamagableProperty.DamagablePropertyValueChangedHandler(this.OnAfterValueChanged);
+            BaseMobileBehaviour.Mobile.Hunger.OnAfterValueChangedEvent += new Mobiles.DamagableProperties.BaseDamagableProperty.DamagablePropertyValueChangedHandler(this.OnAfterValueChanged);
         }
     }
 }

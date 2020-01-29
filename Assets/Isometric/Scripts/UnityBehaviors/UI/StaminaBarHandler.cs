@@ -7,13 +7,13 @@ namespace DTWorlds.UnityBehaviours.UI
     public class StaminaBarHandler : CharacterBarsHandler
     {
 
-        public PlayerBehaviour PlayerBehaviour;
+        public BaseMobileBehaviour BaseMobileBehaviour;
         void Start()
         {
             DamagablePropertyBar = gameObject.GetComponentInChildren<SimpleHealthBar>();
-            DamagableProperty = PlayerBehaviour.Mobile.Energy;
+            DamagableProperty = BaseMobileBehaviour.Mobile.Energy;
 
-            PlayerBehaviour.Mobile.Energy.OnAfterValueChangedEvent += new Mobiles.DamagableProperties.BaseDamagableProperty.DamagablePropertyValueChangedHandler(this.OnAfterValueChanged);
+            BaseMobileBehaviour.Mobile.Energy.OnAfterValueChangedEvent += new Mobiles.DamagableProperties.BaseDamagableProperty.DamagablePropertyValueChangedHandler(this.OnAfterValueChanged);
         }
     }
 }
