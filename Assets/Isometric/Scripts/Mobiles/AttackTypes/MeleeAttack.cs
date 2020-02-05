@@ -39,7 +39,7 @@ namespace DTWorlds.Mobiles.AttackTypes
 
         public void Attack(int direction, float speedMultiplier)
         {
-            isAttacking = true;
+            isAttacking = true;            
             animationHandler.SetAttackSpeedMultiplier(speedMultiplier);
             animationHandler.PlayAttackingAnimation(direction, false);
             if(OnBeforeAttacking != null){

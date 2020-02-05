@@ -39,6 +39,8 @@ namespace DTWorlds.Mobiles
 
         private bool isRunning;
 
+        private float attackRange;
+
         public bool IsRunning
         {
             get
@@ -71,6 +73,8 @@ namespace DTWorlds.Mobiles
 
         public MobileInventory Inventory;
 
+        public float AttackRange { get => attackRange; set => attackRange = value; }
+
         public float MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
         public IInteractable Target { get; internal set; }
 
@@ -83,6 +87,7 @@ namespace DTWorlds.Mobiles
         {
             this.gameObject = gameObject;
             this.movementSpeed = movementSpeed;
+            this.attackRange = 0.4f;//calculate this with stats or weapon range
 
             Armor = new CharacterStat();
             Dexterity = new CharacterStat();
@@ -140,6 +145,7 @@ namespace DTWorlds.Mobiles
 
         public void Attack()
         {
+
             this.currentAttackType.Attack(CurrentDirection ?? 0, 1 / GetAttackRate());
         }
 
@@ -164,7 +170,7 @@ namespace DTWorlds.Mobiles
             float swingSpeedIncrease = 0f;
 
             float energyTicks = Energy.CurrentValue / Energy.MaxValue;
-            var calculatedAttackRate = ((Mathf.Clamp(weaponSpeed, 1.5f, 3.5f) - energyTicks) * ((float)100.0 / ((float)100.0 + swingSpeedIncrease)));
+            var calculatedAttackRate = ((Mathf.Clamp(weaponSpeed, 1.5f, 3.5f) - energyTicks) * ((float)100.0 / ((float)100.0 + swingSpeedIncrease)));           
 
             return calculatedAttackRate;
 
@@ -176,7 +182,6 @@ namespace DTWorlds.Mobiles
             {
                 Target.Interact(this);
             }
-            //Debug.Log("on after attacked");
 
             //Debug.Log(this.CurrentDirection);
 
@@ -185,35 +190,27 @@ namespace DTWorlds.Mobiles
             switch (this.CurrentDirection)
             {
                 case 0:
-                    //distance = 0.25f;
                     direction = new Vector3(1, 0);
                     break;
                 case 1:
-                    //distance = 0.5f;
                     direction = new Vector3(1, 1);
                     break;
                 case 2:
-                    //distance = 0.25f;
                     direction = new Vector3(0, 1);
                     break;
                 case 3:
-                    //distance = 0.5f;
                     direction = new Vector3(-1, 1);
                     break;
                 case 4:
-                    //distance = 0.25f;
                     direction = new Vector3(-1, 0);
                     break;
                 case 5:
-                    //distance = 0.5f;
                     direction = new Vector3(-1, -1);
                     break;
                 case 6:
-                    //distance = 0.25f;
                     direction = new Vector3(0, -1);
                     break;
                 case 7:
-                    //distance = 0.5f;
                     direction = new Vector3(1, -1);
                     break;
             }
@@ -242,10 +239,10 @@ namespace DTWorlds.Mobiles
                 var collidedObj = results[i];
                 if (collidedObj.collider != null && collidedObj.collider.gameObject != this.gameObject)
                 {
-                    var enemyBehaviour = collidedObj.collider.gameObject.GetComponent<EnemyBehaviour>();
-                    if (enemyBehaviour != null)
+                    var baseMobileBehaviour = collidedObj.collider.gameObject.GetComponent<BaseMobileBehaviour>();
+                    if (baseMobileBehaviour != null)
                     {
-                        enemyBehaviour.Mobile.TakeDamage(this);
+                        baseMobileBehaviour.Mobile.TakeDamage(this);
                         //Debug.Log("Enemy hit");
                         break;
                     }

@@ -78,7 +78,7 @@ namespace DTWorlds.Mobiles.MovementTypes
             float verticalInput = movementAxis.GetYAxis();
 
             Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
-            //inputVector = Vector2.ClampMagnitude(inputVector, 1);
+            //inputVector = Vector2.ClampMagnitude(inputVector, 1);            
             Vector2 movement = inputVector * movementSpeed * 1f;
             Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
             rigidbody.MovePosition(newPos);

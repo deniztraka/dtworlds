@@ -14,7 +14,7 @@ using DTWorlds.TileMap;
 namespace DTWorlds.UnityBehaviours
 {
     public abstract class BaseMobileBehaviour : MonoBehaviour
-    {        
+    {
         private TileObjectBehaviour target;
 
         private BaseMobile mobile;
@@ -28,11 +28,13 @@ namespace DTWorlds.UnityBehaviours
         {
             this.mobile.Target = null;
 
-            if(this.target != null){
-                this.target.SetSelected(false);                
+            if (this.target != null)
+            {
+                this.target.SetSelected(false);
             }
 
-            if(target == null){
+            if (target == null)
+            {
                 this.target = null;
                 this.mobile.Target = null;
                 return;
@@ -52,15 +54,23 @@ namespace DTWorlds.UnityBehaviours
             this.mobile = mobile;
         }
 
+        IEnumerator HoldAttacking(float time)
+        {
+            yield return new WaitForSeconds(time);
+
+            this.isAtacking = false;
+        }
+
         float nextAttack = 0;
 
         private bool isAtacking = false;
         public void SetAttacking(bool state)
         {
             this.isAtacking = state;
+            StartCoroutine(HoldAttacking(0.2f));
         }
 
-        void Update()
+        public virtual void Update()
         {
             if (isAtacking)
             {
